@@ -879,19 +879,238 @@
 <td align="center">value改变时触发change事件，event.detail={value:value,code:code,postcode:postcode}，其中字段code时统计用区划代码，postcode时邮政编码</td>
 </tr>
 </tbody></table>
-<p>3.案例分析</p>
-<p>3.1案例描述</p>
-<p>编写一个考生选择考试场次的小程序，考生首先利用邮箱和密码登录，输入自己的姓名和学号后选择考试场次。考生登陆时需要进行邮箱和密码认证，如果某项输入为空，或者邮箱填写不正确，或者输入的密码和确认密码不一致，将给出错误提示并要求重新填写。</p>
-<p>3.2实现效果</p>
-<p>根据案例描述可以做出如下图所示的效果。</p>
+<h2 id="3-案例分析"><a href="#3-案例分析" class="headerlink" title="3.案例分析"></a>3.案例分析</h2><h3 id="3-1案例描述"><a href="#3-1案例描述" class="headerlink" title="3.1案例描述"></a>3.1案例描述</h3><p>编写一个考生选择考试场次的小程序，考生首先利用邮箱和密码登录，输入自己的姓名和学号后选择考试场次。考生登陆时需要进行邮箱和密码认证，如果某项输入为空，或者邮箱填写不正确，或者输入的密码和确认密码不一致，将给出错误提示并要求重新填写。</p>
+<h3 id="3-2实现效果"><a href="#3-2实现效果" class="headerlink" title="3.2实现效果"></a>3.2实现效果</h3><p>根据案例描述可以做出如下图所示的效果。</p>
 <p>（1）在没有输入邮箱或密码情况下点击“登录”按钮，则会出现如图01所示的界面，在此时界面下方给出了“邮箱或密码不得为空！”的提示。</p>
-<p><img src="C:/Users/Yafei/AppData/Roaming/Typora/typora-user-images/image-20220129222538668.png" alt="image-20220129222538668"></p>
-<p>（2）输入邮箱地址时，邮箱地址input组件的边框颜色发生变化，如果邮箱格式输入不正确，则在输入完成时出现如图02所示的界面，此时显示“邮箱格式错误”的提示。</p>
-<p><img src="C:/Users/Yafei/AppData/Roaming/Typora/typora-user-images/image-20220129222842519.png" alt="image-20220129222842519"></p>
-<p>（3）输入密码时，如果两次输入的密码不一致，点击“登录”按钮会给出“两次输入密码不一致”的提示，如图03所示。</p>
-<p><img src="C:/Users/Yafei/AppData/Roaming/Typora/typora-user-images/image-20220129223138686.png" alt="image-20220129223138686"></p>
-<p>（4）如果邮箱和密码都正确，点击“登录”将进入</p>
-<p>3.3案例实现</p>
+<p><img src="https://img-blog.csdnimg.cn/68231b9f3314488a8f19bca798b55c8f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_19,color_FFFFFF,t_70,g_se,x_16" alt="01"></p>
+<p>（2）输入邮箱地址时，邮箱地址input组件的边框颜色发生变化，如果邮箱格式输入不正确，则在输入完成时会显示“邮箱格式错误”的提示。</p>
+<p>（3）输入密码时，如果两次输入的密码不一致，点击“登录”按钮会给出“两次输入密码不一致”的提示，如图02所示。</p>
+<p><img src="https://img-blog.csdnimg.cn/2220e32b3e76441885d0d2ed453fbb0f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_19,color_FFFFFF,t_70,g_se,x_16" alt="02"></p>
+<p>（4)如果邮箱和密码都正确，点击“登录”将进入”考试时段选择”界面，此时姓名input组建将自动获得焦点，输入完姓名和学号后，当点击“请选择考试时段：”文本时，在屏幕下方弹出三个场次的时间段，如图03所示。</p>
+<p><img src="https://img-blog.csdnimg.cn/39528256701f4f4599affd3f9f71b22b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_19,color_FFFFFF,t_70,g_se,x_16" alt="03"></p>
+<p>（5）所有信息输入和选择完成后点击“确定”按钮，此时将弹出“确认信息”对话框，如图04所示，如果信息无误点击“确认”按钮，此时出现“信息确认”对话框“如果信息不正确点击”取消“按钮可以重新填写。</p>
+<p><img src="https://img-blog.csdnimg.cn/264b021eb2f5404780374c0f74ee5523.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_19,color_FFFFFF,t_70,g_se,x_16" alt="04"></p>
+<h3 id="3-3案例实现"><a href="#3-3案例实现" class="headerlink" title="3.3案例实现"></a>3.3案例实现</h3><p>3.3.1编写index.wxml文件代码</p>
+<p>（1）在form组件中利用text组建和input组件实现电子邮件、密码和确认密码的输入提示及输入，后面放置1个button登录按钮实现form组建的提交事件，按钮后main防治了2个view组件用来显示当邮箱或密码与确认密码不一致是的错误提示。</p>
+<p>（2）代码中的事件绑定处理函数由2个：form组件提交事件绑定函数formSubmit和input组件输入变化事件绑定函数inputemail，这两个函数都在input.js文件中进行定义。</p>
+<p>（3）代码中主要使用了8种样式：page，.hr，.lineLayout，text，input，input：hover，button，.txt。</p>
+<pre><code>&lt;!--index.wxml--&gt;
+&lt;view class=&quot;box&quot;&gt;
+  &lt;view class=&quot;title&quot;&gt;考试场次选择&lt;/view&gt;
+  &lt;view class=&quot;hr&quot;&gt;&lt;/view&gt;
+  &lt;form bindsubmit=&quot;formSubmit&quot;&gt;
+    &lt;view class=&quot;lineLayout&quot;&gt;
+      &lt;text&gt;电子邮箱：&lt;/text&gt;
+      &lt;input type=&quot;text&quot; bindchange=&quot;inputemail&quot; name=&quot;email&quot; value=&quot;&#123;&#123;getEmail&#125;&#125;&quot; placeholder=&quot;请输入电子邮箱&quot; /&gt;
+    &lt;/view&gt;
+    &lt;view class=&quot;lineLayout&quot;&gt;
+      &lt;text&gt;输入密码：&lt;/text&gt;
+      &lt;input type=&quot;password&quot; name=&quot;password&quot; value=&quot;&#123;&#123;getPwd&#125;&#125;&quot; placeholder=&quot;请输入密码&quot; /&gt;
+    &lt;/view&gt;
+    &lt;view class=&quot;lineLayout&quot;&gt;
+      &lt;text&gt;确认密码：&lt;/text&gt;
+      &lt;input type=&quot;password&quot; name=&quot;confirm&quot; value=&quot;&#123;&#123;getPwdConfirm&#125;&#125;&quot; placeholder=&quot;请再次输入密码&quot; /&gt;
+    &lt;/view&gt;
+    &lt;view&gt;
+      &lt;button type=&quot;primary&quot; form-type=&quot;submit&quot;&gt;登录&lt;/button&gt;
+    &lt;/view&gt;
+    &lt;view&gt;
+      &lt;view class=&quot;txt&quot;&gt;&#123;&#123;showMsg01&#125;&#125;&lt;/view&gt;
+      &lt;view class=&quot;txt&quot;&gt;&#123;&#123;showMsg02&#125;&#125;&lt;/view&gt;
+    &lt;/view&gt;
+  &lt;/form&gt;
+&lt;/view&gt;
+</code></pre>
+<p>3.3.2编写index.wxss文件代码</p>
+<pre><code>/**index.wxss**/
+.lineLayout&#123;
+  display: inline-block;
+  margin: 10px;
+&#125;
+.hr&#123;
+  height: 2px;
+  background-color: greenyellow;
+  margin: 10px 0;
+&#125;
+.text&#123;
+  float: left;
+&#125;
+input&#123;
+  width: 180px;
+  height: 30px;
+  border-bottom: 2px solid silver;
+  float: right;
+&#125;
+input:hover&#123;
+  border-bottom: 2px solid chocolate;
+&#125;
+button&#123;
+  width: 150px;
+  margin: 20px auto;
+&#125;
+page&#123;
+  height: 100%;
+  background: gainsboro;
+&#125;
+.txt&#123;
+  color: red;
+  background: yellow;
+&#125;
+</code></pre>
+<p>3.3.3编写index.js文件代码</p>
+<p>代码主要定义了3个函数：formSubmit，inputemail和checkEmail。</p>
+<p>（1）form组件提交事件函数formSubmit。当点击form组件中的提交按钮后引发该事件。函数首先根据从邮箱和密码输入框中获取的字符串长度e.detail.value.email.length和e.detail.value.password.length判断输入的数据是否为空，如果为空给出错误提示，否则再判断密码和确认密码是否一致，如果不一致给出错误提示并清空两个输入框中的内容，如果一致则让页面跳转带detail页面。</p>
+<p>（2）邮件输入框输入变化函数inputemail。当输入框中输入的内容发生变化时引发该事件。函数首先获取邮件输入框中输入的值e.detail.value，然后调用自定义对象函数this.checkEmail（）判断输入的字符串是否符合邮箱格式要求。</p>
+<p>（3）自定义对象函数checkEmail。首先将正则表达式邮箱验证字符串复制给变量str，然后调用字符串的test函数来验证在邮箱输入框中输入的字符串email是否符合正则表达式的要求，如果符合要求则返回ture，表示通过验证，否则调用信息框给出错误提示，清空邮件输入框内容并返回false，表示没有通过验证。</p>
+<pre><code>// index.js
+Page(&#123;
+  data: &#123;
+   getEmail:&#39;&#39;,
+   getPwd:&#39;&#39;,
+   getPwdConfirm:&#39;&#39;
+  &#125;,
+  formSubmit:function(e)&#123;                    //提交表单（点击“注册”按钮）事件
+    if(e.detail.value.email.length==0||e.detail.value.password.length==0)&#123;  //判断邮箱和密码输入框内容是否为空
+      this.setData(&#123;
+        showMsg01:&#39;邮箱或密码不得为空！&#39;
+      &#125;)
+    &#125;else if(e.detail.value.password != e.detail.value.confirm)&#123;
+      this.setData(&#123;
+        showMsg02:&#39;两次输入密码不一致！&#39;,
+        getPwd:&#39;&#39;,                         //清空输入框内容
+        getPwdConfirm:&#39;&#39;
+      &#125;)
+    &#125;else&#123;
+      wx.navigateTo(&#123;
+        url: &#39;../detail/detail&#39;,
+      &#125;)
+    &#125;
+  &#125;,
+  inputemail:function(e)&#123;
+    var email=e.detail.value
+    var checkedNum=this.checkEmail(email)
+  &#125;,
+  checkEmail:function(email)&#123;
+    let str=/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]&#123;2,6&#125;$/
+    if(str.test(email))&#123;               //检查邮箱地址是否符合正则表达式要求
+      return true
+    &#125;else&#123;
+      wx.showToast(&#123;                  //显示消息提示框
+        title: &#39;邮箱格式错误&#39;,
+        icon:&#39;loading&#39;
+      &#125;)
+      this.setData(&#123;
+        getEmail:&#39;&#39;
+      &#125;)
+      return false
+    &#125;
+  &#125;
+&#125;)
+</code></pre>
+<p>3.3.4在pages文件夹中创建detail文件夹，在其中添加4个文件，然后编写detail.wxml文件代码。该页面的主要功能是：用户输入姓名和学号，并选择考试时段。耶main主要利用form组件，input组件和picker组件来实现相应功能。</p>
+<p>（1）文件代码绑定的事件处理函数包括：form组件提交事件函数formSubmit和picker组件选择变化事件函数chooseTime。这两个函数在detail.js文件中进行了定义。</p>
+<p>（2）文件代码中使用的样式包括：page，.flex，input，input：hover，picker，.btnLayout和button。这些样式在detail.wxss文件中进行定义。</p>
+<pre><code>&lt;!--pages/detail/detail.wxml--&gt;
+&lt;view class=&quot;box&quot;&gt;
+  &lt;view class=&quot;title&quot;&gt;考试时段选择&lt;/view&gt;
+  &lt;form bindsubmit=&quot;formSubmit&quot;&gt;
+    &lt;view class=&quot;flex&quot;&gt;
+      &lt;text&gt;姓名：&lt;/text&gt;
+      &lt;input type=&quot;text&quot; value=&quot;&#123;&#123;name&#125;&#125;&quot; name=&quot;name&quot; auto-focus /&gt;
+    &lt;/view&gt;
+    &lt;view class=&quot;flex&quot;&gt;
+      &lt;text&gt;学号：&lt;/text&gt;
+      &lt;input type=&quot;number&quot; value=&quot;&#123;&#123;id&#125;&#125;&quot; name=&quot;id&quot; /&gt;
+    &lt;/view&gt;
+    &lt;picker bindchange=&quot;chooseTime&quot; value=&quot;&#123;&#123;index&#125;&#125;&quot; range=&quot;&#123;&#123;array&#125;&#125;&quot; name=&quot;time&quot;&gt;请选择考试时段：&#123;&#123;array[index]&#125;&#125;&lt;/picker&gt;
+    &lt;view class=&quot;btnLayout&quot;&gt;
+      &lt;button type=&quot;primary&quot; form-type=&quot;submit&quot;&gt;确定&lt;/button&gt;
+      &lt;button type=&quot;primary&quot;&gt;取消&lt;/button&gt;
+    &lt;/view&gt;
+  &lt;/form&gt;
+&lt;/view&gt;
+</code></pre>
+<p>3.3.5编写detail.wxss文件代码</p>
+<pre><code>/* pages/detail/detail.wxss */
+page&#123;
+  height: 100%;
+  background: gainsboro;
+&#125;
+.flex&#123;
+  display: flex;
+  margin: 5px 0;
+  justify-content: flex-start;
+  align-items: center;
+&#125;
+.btnLayout&#123;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 50px 0;
+  width: 100%;
+&#125;
+input&#123;
+  width: 150px;
+  height: 30px;
+  border: 2px solid silver;
+  margin: 5px;
+&#125;
+input:hover&#123;
+  border: 2px solid chocolate;
+&#125;
+picker&#123;
+  margin: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+&#125;
+button&#123;
+  width: 80px;
+&#125;
+</code></pre>
+<p>3.3.6编写detail.js文件代码</p>
+<p>代码主要初始化了picker组件使用的数组array，定义了form组件提交事件函数formSubmit和picker组件选择变化事件函数chooseTime。</p>
+<p>（1）array数组初始化。在打他中初始化了array数组。</p>
+<p>（2）formSubmit函数。首先获取input组件中输入的姓名、学号以及picker组件的选项序号，然后调用wx.showModal（）模态对话框显示输入和选择的信息并给出正确的提示，如果点击“确定”按钮，则调用wx.showModal（）模态对话框显示确认信息，页面跳转到主页面；如果点击“取消”按钮，则在console中显示取消信息。</p>
+<p>（3）chooseTime函数。用于获取选择的考试时间段，利用e.detail.value表达式可以获得选项的序号，在视图层根据序号找到相应的时间段。</p>
+<pre><code>// pages/detail/detail.js
+Page(&#123;
+  data: &#123;
+    array:[
+      &#39;第一场 15:00&#39;,
+      &#39;第二场 16:20&#39;,
+      &#39;第三场 17:40&#39;
+    ]
+  &#125;,
+  formSubmit:function(e)&#123;
+    var name=e.detail.value.name;         //获取姓名输入框内容
+    var id=e.detail.value.id;             //获取学号输入框内容
+    var time=e.detail.value.time;
+    wx.showModal(&#123;                       //显示模态对话框
+      title: &#39;确认信息&#39;,
+      content:e.detail.value.name+&quot;同学，你的学号是&quot;+e.detail.value.id+&quot;，你选择的场次是：&quot;+this.data.array[time]+&quot;，请确认信息！&quot;,
+      success:function(res)&#123;            //wx.shoeModal接口调用成功的回调函数
+        if(res.confirm)&#123;
+          wx.showModal(&#123;
+            title: &#39;信息确认&#39;,
+            content:&#39;你的考场信息已经确认！&#39;
+          &#125;)
+          wx.navigateTo(&#123;              //页面跳转
+            url: &#39;../index/index&#39;,
+          &#125;)
+        &#125;else&#123;
+          console.log(&#39;用户点击取消&#39;)
+        &#125;
+      &#125;
+    &#125;)
+  &#125;,
+  chooseTime:function(e)&#123;
+    var index=e.detail.value        //获得picker组件选项下标
+    this.setData(&#123;
+      index:index
+    &#125;)
+  &#125;
+&#125;)
+</code></pre>
 
                 
             </div>
