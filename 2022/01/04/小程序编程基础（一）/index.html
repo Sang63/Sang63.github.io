@@ -1,0 +1,1428 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="小程序编程基础（一）, 桑桑和阿战">
+    <meta name="description" content="小程序编程基础（一）1.字体样式设置1.1知识点（1）各种字体样式属性名称及其含义。
+（2）利用style和class设置字体样式的方法。
+（3）在index.wxss和app.wxss中定义样式类的方法。
+
+
+
+属性
+含义
+属性值列举
+
+">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>小程序编程基础（一） | 桑桑和阿战</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.1"><link rel="alternate" href="/atom.xml" title="桑桑和阿战" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">桑桑和阿战</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">桑桑和阿战</div>
+        <div class="logo-desc">
+            
+            热爱可抵岁月漫长，彼此保护不是说说的
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">小程序编程基础（一）</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                                <span class="chip bg-color">微信小程序</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-01-04
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="小程序编程基础（一）"><a href="#小程序编程基础（一）" class="headerlink" title="小程序编程基础（一）"></a>小程序编程基础（一）</h2><h2 id="1-字体样式设置"><a href="#1-字体样式设置" class="headerlink" title="1.字体样式设置"></a>1.字体样式设置</h2><h3 id="1-1知识点"><a href="#1-1知识点" class="headerlink" title="1.1知识点"></a>1.1知识点</h3><p>（1）各种字体样式属性名称及其含义。</p>
+<p>（2）利用style和class设置字体样式的方法。</p>
+<p>（3）在index.wxss和app.wxss中定义样式类的方法。</p>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">含义</th>
+<th align="center">属性值列举</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">font-family</td>
+<td align="center">字体类型</td>
+<td align="center">serif,sans-serif,monospace,cursive,fantasy,…</td>
+</tr>
+<tr>
+<td align="center">font-size</td>
+<td align="center">字体大小</td>
+<td align="center">5px/rpx/cm,large,small,medium,larger,smaller,…</td>
+</tr>
+<tr>
+<td align="center">font-style</td>
+<td align="center">字体倾斜</td>
+<td align="center">italic,normal,oblique,…</td>
+</tr>
+<tr>
+<td align="center">font-weight</td>
+<td align="center">字体粗细</td>
+<td align="center">bold,bolder,lighter,…</td>
+</tr>
+</tbody></table>
+<h3 id="1-2案例描述"><a href="#1-2案例描述" class="headerlink" title="1.2案例描述"></a>1.2案例描述</h3><p>​        设计一个小程序，分别利用style和class属性设置字体样式，在index.wxss中定义样式类。所有的文字都包含在一个边框内，边框内上方有标题文字，边框和标题样式利用class属性来设置，在app.wxss中定义样式类。</p>
+<h3 id="1-3实现效果"><a href="#1-3实现效果" class="headerlink" title="1.3实现效果"></a>1.3实现效果</h3><p><img src="https://img-blog.csdnimg.cn/8b306273cc744ac6abd33e33dbc6cdb0.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_10,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="01"></p>
+<p>​        边框样式和标题样式是在app.wxss文件中定义的样式类，在index.wxml文件中利用class引用。标题下面的、双虚线上面的文字样式是在index.wxml中直接利用style来设置的，设置的字体的样式为：sans-serif、30像素。虚线下面的样式是通过index.wxss文件中定义，在index.wxml文件中利用class来引用的，设置的字体的样式为：Cursive、25像素、倾斜、加粗。</p>
+<h3 id="1-4案例实现"><a href="#1-4案例实现" class="headerlink" title="1.4案例实现"></a>1.4案例实现</h3><h4 id="1-4-1编写index-wxml文件代码"><a href="#1-4-1编写index-wxml文件代码" class="headerlink" title="1.4.1编写index.wxml文件代码"></a>1.4.1编写index.wxml文件代码</h4><p>​        style是直接在标签内部进行设置，而class要现在wxss文件中定义样式类，再在wxml文件中通过class属性引用。</p>
+<pre><code>&lt;!--index.wxml--&gt;
+
+&lt;view class=&#39;box&#39;&gt;
+ &lt;view class=&quot;title&quot;&gt;字体样式设置&lt;/view&gt;
+ &lt;view style=&#39;font-family:&quot;sans-serif&quot;;font-size:30px;&#39;&gt;
+  &lt;view&gt;利用style设置字体样式：&lt;/view&gt;
+  &lt;view&gt;字体：sans-serif，30像素&lt;/view&gt;
+ &lt;/view&gt;
+ ============================
+ &lt;view class=&quot;fontStyle&quot;&gt;
+  &lt;view&gt;利用class设置字体样式：&lt;/view&gt;
+  &lt;view&gt;字体：Cursive，25像素，倾斜，加粗&lt;/view&gt;
+ &lt;/view&gt;
+&lt;/view&gt;
+</code></pre>
+<h4 id="1-4-2编写app-wxss文件代码"><a href="#1-4-2编写app-wxss文件代码" class="headerlink" title="1.4.2编写app.wxss文件代码"></a>1.4.2编写app.wxss文件代码</h4><p>​        .box和.title两种全局样式类，以后案例都将使用这两种样式。</p>
+<pre><code>/** app.wxss **/
+
+.box&#123; &lt;!--定义用于设置边框样式--&gt;
+ margin: 20rpx;                             //外边距
+ padding: 20rpx;                            //内边距
+ border: 1px solid silver;                  //边框1px，实线，银灰色
+&#125;
+
+.title&#123;&lt;!--定义用于设置标题样式--&gt; 
+ font-size: 25px;                           //字体大小为25px
+ text-align: center;                        //文本水平对齐方式为居中
+ margin-bottom: 15px;                       //外边距为15px
+ color: brown;                              //设置颜色
+&#125;
+</code></pre>
+<h4 id="1-4-3编写index-wxss文件代码"><a href="#1-4-3编写index-wxss文件代码" class="headerlink" title="1.4.3编写index.wxss文件代码"></a>1.4.3编写index.wxss文件代码</h4><p>​       代码中定义.fontStyle样式类，该样式将在index.wxml文件中被使用。</p>
+<pre><code>/** index.wxss **/
+
+.fontStyle &#123;&lt;!--定义样式类--&gt;
+ font-size: 25px;                          //设置字体大小
+ font-family: cursive;                     //设置字体类型
+ font-style: italic;                       //设置字体倾斜
+ font-weight: bold;                        //设置字体加粗
+&#125;
+</code></pre>
+<h2 id="2-文本样式设置"><a href="#2-文本样式设置" class="headerlink" title="2.文本样式设置"></a>2.文本样式设置</h2><h3 id="2-1知识点"><a href="#2-1知识点" class="headerlink" title="2.1知识点"></a>2.1知识点</h3><p>​        文本属性可定义文本的外观。通过文本属性可以设置文本颜色，字符间距，文本对齐，文本装饰，文本缩进，等等。</p>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">含义</th>
+<th align="left">属性值举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">color</td>
+<td align="center">文本颜色</td>
+<td align="left">red,#0000ff,#0f0,rgb(red,green,blue),reba(red,green,blue,alpha)</td>
+</tr>
+<tr>
+<td align="center">text-align</td>
+<td align="center">文本对齐</td>
+<td align="left">left/right/center/justify</td>
+</tr>
+<tr>
+<td align="center">text-indent</td>
+<td align="center">文本缩进</td>
+<td align="left">left：固定尺寸的缩进，默认值为0，可以是负数和正数；%：定义基于父元素宽度的百分比的缩进；inherit：继承父元素text-indent属性的值</td>
+</tr>
+<tr>
+<td align="center">letter-spacing</td>
+<td align="center">字符间距</td>
+<td align="left">normal/&lt;长度值&gt;</td>
+</tr>
+<tr>
+<td align="center">word-spacing</td>
+<td align="center">单词间距</td>
+<td align="left">normal/&lt;长度值&gt;</td>
+</tr>
+<tr>
+<td align="center">word-space</td>
+<td align="center">文档中的空白处</td>
+<td align="left">normal、nowrap、pre、pre-line、pre-warp</td>
+</tr>
+<tr>
+<td align="center">text-decoration</td>
+<td align="center">文本装饰</td>
+<td align="left">none、overline、line-through、underline</td>
+</tr>
+<tr>
+<td align="center">text-decoration-color</td>
+<td align="center">文本装饰颜色</td>
+<td align="left">red,#0000ff,#0f0,rgb(red,green,blue),reba(red,green,blue,alpha)</td>
+</tr>
+</tbody></table>
+<h3 id="2-2案例描述"><a href="#2-2案例描述" class="headerlink" title="2.2案例描述"></a>2.2案例描述</h3><p>​        设计一个小程序，利用class属性设置文本样式，包括：设置文本颜色，字符间距，文本对齐，文本装饰，文本缩进，等等。</p>
+<h3 id="2-3实现效果"><a href="#2-3实现效果" class="headerlink" title="2.3实现效果"></a>2.3实现效果</h3><p><img src="https://img-blog.csdnimg.cn/2aba7736c6eb43c5a6458f88e3e43100.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_9,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="02"></p>
+<h3 id="2-4案例实现"><a href="#2-4案例实现" class="headerlink" title="2.4案例实现"></a>2.4案例实现</h3><h4 id="2-4-1编写index-wxml文件代码"><a href="#2-4-1编写index-wxml文件代码" class="headerlink" title="2.4.1编写index.wxml文件代码"></a>2.4.1编写index.wxml文件代码</h4><pre><code>&lt;view class=&quot;box&quot;&gt;
+  &lt;view class=&quot;title&quot;&gt;文本样式设置&lt;/view&gt;
+  &lt;view class=&quot;textStyle01&quot;&gt;
+    文本属性可定义文本的外观。通过设置文本属性，您可以改变文本的颜色、字符间距，对齐文本，装饰文本，对文本进行缩进，等等。
+  &lt;/view&gt;
+  ============================
+  &lt;view class=&quot;textStyle02&quot;&gt; 
+    North China University of Technology(NCUT) is located in the western part of Beijing, whitch is a municipal university founded in 1946.
+  &lt;/view&gt;
+&lt;/view&gt;
+</code></pre>
+<h4 id="2-4-2编写index-wxss文件代码"><a href="#2-4-2编写index-wxss文件代码" class="headerlink" title="2.4.2编写index.wxss文件代码"></a>2.4.2编写index.wxss文件代码</h4><pre><code>.textStyle01&#123;
+  color: red;
+  letter-spacing: 10px;
+  text-align: left;
+  text-indent: 50px;                  /*首行缩进*/
+  text-decoration: underline;         /*文本修饰样式：下划线*/
+  text-decoration-color: #00f;        /*修饰样式颜色：下划线颜色*/
+  line-height: 30px;                  /*行间距*/
+  white-space: normal;
+&#125;
+.textStyle02&#123;
+  text-align: justify;               /*文本对齐：两端对齐*/
+  word-spacing: 20px;                /*字间距：20px*/
+  text-transform: uppercase;         /*文本中的字母转换为其他形式：大写*/
+  white-space: pre-wrap;             /*文档中的空白处保留空白、缩进和正常换行*/
+&#125;
+</code></pre>
+<h2 id="3-图片与声音"><a href="#3-图片与声音" class="headerlink" title="3.图片与声音"></a>3.图片与声音</h2><h3 id="3-1知识点"><a href="#3-1知识点" class="headerlink" title="3.1知识点"></a>3.1知识点</h3><p>​        本案例主要涉及image图片组建的使用方法，音频的创建和使用方法，以及数据和事件绑定的实现方法。</p>
+<h4 id="3-1-1image组件"><a href="#3-1-1image组件" class="headerlink" title="3.1.1image组件"></a>3.1.1image组件</h4><p>​        支持JPG，PNG，SVG格式，用src属性指定图片的路径。</p>
+<h4 id="3-1-2使用音频"><a href="#3-1-2使用音频" class="headerlink" title="3.1.2使用音频"></a>3.1.2使用音频</h4><p>​        首先要利用API函数wx.createInnerAudioContext()创建音频上下文，然后设置该上下文的源文件src，并利用play()函数播放音频。</p>
+<h4 id="3-1-3数据绑定"><a href="#3-1-3数据绑定" class="headerlink" title="3.1.3数据绑定"></a>3.1.3数据绑定</h4><p>​        WXML文件中动态函数通过与JS文件中的数据进行绑定，这样JS中的数据就可以传给WXML文件。这种传递是单向的。</p>
+<h4 id="3-1-4事件绑定"><a href="#3-1-4事件绑定" class="headerlink" title="3.1.4事件绑定"></a>3.1.4事件绑定</h4><p>​        在WXML文件组件标签内利用“bind…=函数名”绑定组件事件与函数，并在JS文件中定义该事件函数。</p>
+<h3 id="3-2案例描述"><a href="#3-2案例描述" class="headerlink" title="3.2案例描述"></a>3.2案例描述</h3><p>​        设计一个小程序，小程序运行后显示一张猫图，点击图片后会发出猫叫的声音。</p>
+<h3 id="3-3实现效果"><a href="#3-3实现效果" class="headerlink" title="3.3实现效果"></a>3.3实现效果</h3><p><img src="https://img-blog.csdnimg.cn/5c305c3d6054458f9a41310478d74f80.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_8,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="03"></p>
+<h3 id="3-4案例实现"><a href="#3-4案例实现" class="headerlink" title="3.4案例实现"></a>3.4案例实现</h3><h4 id="3-4-1准备图片和音频文件"><a href="#3-4-1准备图片和音频文件" class="headerlink" title="3.4.1准备图片和音频文件"></a>3.4.1准备图片和音频文件</h4><p>​        在项目根目录中创建images和audios文件夹，并把kitty.ipg图片文件和meow.mp3音频文件分别复制到images和audios文件夹中(注：audios文件夹必须在根目录下)。</p>
+<h4 id="3-4-2编写index-wxml文件代码。"><a href="#3-4-2编写index-wxml文件代码。" class="headerlink" title="3.4.2编写index.wxml文件代码。"></a>3.4.2编写index.wxml文件代码。</h4><p>​        代码中主要使用了image组件，并在组件中进行了数据绑定和事件绑定。image组件用来设置图片，其中src属性用来指定图片的路径，本案例绑定了属性值imgSrc，该值在index.js文件中的data中进行了初始化；bindtap属性绑定了点击图片函数tapCat，该函数在index.js文件中进行了定义。</p>
+<pre><code>&lt;view class=&quot;box&quot;&gt;
+  &lt;view class=&quot;title&quot;&gt;图片和声音&lt;/view&gt;
+  &lt;view style=&quot;text-align:center;&quot;&gt;
+    &lt;image src=&#39;&#123;&#123;imgSrc&#125;&#125;&#39; bindtap=&#39;tapCat&#39;&gt;&lt;/image&gt;
+  &lt;/view&gt;
+&lt;/view&gt;
+</code></pre>
+<h4 id="3-4-3编写index-js文件代码。"><a href="#3-4-3编写index-js文件代码。" class="headerlink" title="3.4.3编写index.js文件代码。"></a>3.4.3编写index.js文件代码。</h4><p>​        代码在data中给出了图片路径，并定义了点击图片事件处理函数tapCat。</p>
+<pre><code>// index.js
+Page(&#123;
+  data:&#123;
+    imgSrc:&#39;/images/kitty.jpg&#39;                //图片源文件
+  &#125;,
+  tapCat:function()&#123;
+    let audio=wx.createInnerAudioContext()    //创建音频上下文
+    audio.src=&#39;/audios/meow.mp3&#39;              //设置音频源文件，需要放在根目录下
+    audio.play()                              //播放音频
+  &#125;
+&#125;)
+</code></pre>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">桑落</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://Sang63.github.io/2022/01/04/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89/">http://Sang63.github.io/2022/01/04/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">桑落</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                                    <span class="chip bg-color">微信小程序</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2022/01/09/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="小程序编程基础（二）">
+                        
+                        <span class="card-title">小程序编程基础（二）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-09
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            桑落
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                        <span class="chip bg-color">微信小程序</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/11/25/%E5%8F%8C%E6%A0%B8%E5%BF%83%E5%87%BA%E5%8F%A3%E4%B8%89%E5%B1%82%E7%BB%93%E6%9E%84%E5%9B%AD%E5%8C%BA%E7%BD%91%E9%85%8D%E7%BD%AE%EF%BC%88%E5%AE%8C%E6%95%B4%E7%89%88%EF%BC%89/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="双核心出口三层结构园区网配置（完整版）">
+                        
+                        <span class="card-title">双核心出口三层结构园区网配置（完整版）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            桑落
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E9%9B%86%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/">
+                        <span class="chip bg-color">网络集成与设计</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <a href="/about" target="_blank">桑落</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
