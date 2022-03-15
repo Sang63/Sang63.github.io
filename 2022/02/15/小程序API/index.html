@@ -4,10 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Babel对JS-Vue的处理（1）, 桑桑和阿战">
-    <meta name="description" content="为什么需要babel？事实上，在开发中我们很少直接去接触babel，但是babel对于前端开发来说，目前是不可缺少的一部分：
-
-开发中，我们想要使用ES6+的语法，想要使用TypeScript，开发React项目，它们都是离不开Babel的">
+    <meta name="keywords" content="小程序API, 桑桑和阿战">
+    <meta name="description" content="小程序API
+1.监听加速度变化时间的API函数wx.onAccelerometerChange(function callback)
+（1）该函数用于监听加速度变化时间，其参数function callback为加速度变化时间的回调函数，">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Babel对JS-Vue的处理（1） | 桑桑和阿战</title>
+    <title>小程序API | 桑桑和阿战</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Babel对JS-Vue的处理（1）</h1>
+                    <h1 class="description center-align post-title">小程序API</h1>
                 </div>
             </div>
         </div>
@@ -433,8 +433,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                                <span class="chip bg-color">学习笔记</span>
+                            <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                                <span class="chip bg-color">微信小程序</span>
                             </a>
                         
                     </div>
@@ -449,7 +449,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-11-05
+                    2022-02-15
                 </div>
                 
 
@@ -470,70 +470,220 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="为什么需要babel？"><a href="#为什么需要babel？" class="headerlink" title="为什么需要babel？"></a>为什么需要babel？</h3><p>事实上，在开发中我们很少直接去接触babel，但是babel对于前端开发来说，目前是不可缺少的一部分：</p>
-<ul>
-<li>开发中，我们想要使用ES6+的语法，想要使用TypeScript，开发React项目，它们都是离不开Babel的；</li>
-<li>所以，学习Babel对于我们理解代码从编写到线上的转变过程至关重要。</li>
-</ul>
-<blockquote>
-<p><strong>Babel是什么？</strong></p>
-<p>官方给出的解释是，Babel是一个工具链，主要用于旧浏览器或者环境中将ECMAScript 2015+代码转换为向后兼容版本的JavaScript。</p>
-<p>主要包括：语法转换、源代码转换等；</p>
-</blockquote>
-<p>例如：现在有一个数组，数组里有一些数字，将它进行转化，每个元素+1，开发中常用ES6的写法，使用箭头函数，看起来很直观，提高开发效率，但这种代码有些浏览器无法识别，不能解析，会报错。但下面的ES5是比较老的，JS引擎都可以识别，我们不会手动转化，这个时候就用到babel了</p>
-<p><img src="https://img-blog.csdnimg.cn/fedfea83bf66475e8ac667a583f0248d.png#pic_center" alt="01"></p>
-<h3 id="Babel命令行使用"><a href="#Babel命令行使用" class="headerlink" title="Babel命令行使用"></a>Babel命令行使用</h3><p>babel本身可以作为一个独立的工具（和postcss一样），不和webpack等构建工具配置来单独使用。</p>
-<ul>
-<li><p>如果我们希望在命令行尝试使用babel，需要安装如下库：</p>
-<p>@babel/core：babel的核心代码，必须安装；<br>@babel/cli：可以让我们在命令行使用babel；</p>
-<p><code>npm install @babel/cli @babel/core-D</code></p>
-</li>
-<li><p>使用babel来处理我们的源代码：</p>
-<p>src：是源文件的目录；</p>
-<p>–out-dir：指定要输出的文件夹名；</p>
-<p>–out-file:  指定要输出的文件名。</p>
-</li>
-</ul>
-<p>​       <code>npxbabel src--out-dirdist</code></p>
-<h3 id="插件的使用"><a href="#插件的使用" class="headerlink" title="插件的使用"></a>插件的使用</h3><p>比如我们需要转换箭头函数，那么我们就可以使用箭头函数转换相关的插件：</p>
-<p><code>npm install @babel/plugin-transform-arrow-functions -D</code></p>
-<p><code>npxbabel src--out-dirdist--plugins=@babel/plugin-transform-arrow-functions</code></p>
-<p>查看转换后的结果：我们会发现const 并没有转成var</p>
-<ul>
-<li>这是因为plugin-transform-arrow-functions，并没有提供这样的功能；</li>
-<li>我们需要使用plugin-transform-block-scoping 来完成这样的功能。</li>
-</ul>
-<p><code>npm install @babel/plugin-transform-block-scoping -D </code></p>
-<p><code>npxbabel src--out-dirdist--plugins=@babel/plugin-transform-block-scoping,@babel/plugin-transform-arrow-functions</code></p>
-<h3 id="Babel的预设preset"><a href="#Babel的预设preset" class="headerlink" title="Babel的预设preset"></a>Babel的预设preset</h3><p>但是如果要转换的内容过多，一个个设置是比较麻烦的，我们可以使用预设（preset）：</p>
-<ul>
-<li><p>后面我们再具体来讲预设代表的含义；</p>
-<p>安装@babel/preset-env预设：</p>
-<p><code>npm install @babel/preset-env -D</code></p>
-</li>
-</ul>
-<ul>
-<li><p>执行如下命令：</p>
-<p><code>npxbabel src--out-dirdist--presets=@babel/preset-env</code></p>
-</li>
-</ul>
-<h3 id="Babel的底层原理"><a href="#Babel的底层原理" class="headerlink" title="Babel的底层原理"></a>Babel的底层原理</h3><p>babel是如何做到将我们的一段代码（ES6、TypeScript、React）转成另外一段代码（ES5）的呢？</p>
-<ul>
-<li>从一种源代码（原生语言）转换成另一种源代码（目标语言），这是什么的工作呢？</li>
-<li>就是编译器，事实上我们可以将babel看成就是一个编译器。</li>
-<li>Babel编译器的作用就是将我们的源代码，转换成浏览器可以直接识别的另外一段源代码。</li>
-</ul>
-<p>Babel也拥有编译器的工作流程：</p>
-<ul>
-<li><p>解析阶段（Parsing）</p>
-</li>
-<li><p>转换阶段（Transformation）</p>
-</li>
-<li><p>生成阶段（Code Generation）</p>
-</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://github.com/jamiebuilds/the-super-tiny-compiler">https://github.com/jamiebuilds/the-super-tiny-compiler
-</a></p>
+                <p>小程序API</p>
+<p>1.监听加速度变化时间的API函数wx.onAccelerometerChange(function callback)</p>
+<p>（1）该函数用于监听加速度变化时间，其参数function callback为加速度变化时间的回调函数，该回调参数Object res的属性如表1-1所示。监听频率根据函数wx.onAccelerometerChange(Object object)的参数object.intreval来决定。</p>
+<center>表1-1 函数wx.onAccelerometerChange(function callback)的回调函数的参数属性说明</center>
+
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">类型</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">x</td>
+<td align="center">number</td>
+<td align="center">X轴</td>
+</tr>
+<tr>
+<td align="center">y</td>
+<td align="center">number</td>
+<td align="center">Y轴</td>
+</tr>
+<tr>
+<td align="center">z</td>
+<td align="center">number</td>
+<td align="center">Z轴</td>
+</tr>
+</tbody></table>
+<p>（2）函数wx.startAccelerometerChange(Object object)用于开始监听加速度数据，参数Object object的属性如表1-2所示。</p>
+<center>表1-2 函数wx.startAccelerometerChange(Object object)的参数属性说明</center>
+
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th align="center">必填</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">interval</td>
+<td align="center">string</td>
+<td align="center">normal</td>
+<td align="center">否</td>
+<td align="center">监听加速度数据的频率</td>
+</tr>
+<tr>
+<td align="center">success</td>
+<td align="center">function</td>
+<td align="center"></td>
+<td align="center">否</td>
+<td align="center">接口调用成功的回调函数</td>
+</tr>
+<tr>
+<td align="center">fail</td>
+<td align="center">function</td>
+<td align="center"></td>
+<td align="center">否</td>
+<td align="center">接口调用失败的回调函数</td>
+</tr>
+<tr>
+<td align="center">complete</td>
+<td align="center">function</td>
+<td align="center"></td>
+<td align="center">否</td>
+<td align="center">接口调用结束的回调函数（调用成功失败都会执行）</td>
+</tr>
+</tbody></table>
+<p>（3）object.interval的合法值如表1-3所示。</p>
+<center>表1-3 object.interval的合法值</center>
+
+<table>
+<thead>
+<tr>
+<th align="center">值</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">game</td>
+<td align="center">适用于更新游戏的回调频率，在20ms/次左右</td>
+</tr>
+<tr>
+<td align="center">ui</td>
+<td align="center">适用于更新ui的回调频率，在60ms/次左右</td>
+</tr>
+<tr>
+<td align="center">normal</td>
+<td align="center">普通的回调频率，在200ms/次左右</td>
+</tr>
+</tbody></table>
+<p>（4）函数wx.stopAccelerometerChange(Object object)用于停止监听加速度数据，参数Object object的属性只包括success，fail和complete三个回调函数。</p>
+<p>2.API函数CanvasContext wx.createCanvasContext(string canvasId,Object this)。</p>
+<p>用于创建canvas的绘图上下文CanvasContext对象，参数string canvasId是指要获取上下文的canvas组件，Object this是指在自定义组件下，当前组件的实例的this，表示在这个自定义组件下查找拥有canvas-id的canvas，如果省略则不在任何自定义组件中查找，返回值为CanvasContext的对象。</p>
+<p>3.CanvasContext 对象用于绘图和设置图形样式</p>
+<p>其常用属性如表3-1所示</p>
+<center>表3-1 CanvasContext 对象常用属性</center>
+
+<table>
+<thead>
+<tr>
+<th align="center">属性类型</th>
+<th align="center">属性</th>
+<th align="center">属性说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">string</td>
+<td align="center">fillStyle</td>
+<td align="center">填充颜色。用法同CanvasContext.setFillStyle（）</td>
+</tr>
+<tr>
+<td align="center">string</td>
+<td align="center">strokeStyle</td>
+<td align="center">边框颜色。用法同CanvasContext.setFillStyle（）</td>
+</tr>
+<tr>
+<td align="center">number</td>
+<td align="center">shadowOffsetX</td>
+<td align="center">阴影相对于形状在水平方向上的偏移</td>
+</tr>
+<tr>
+<td align="center">number</td>
+<td align="center">shadowOffsetY</td>
+<td align="center">阴影相对于形状在垂直方向上的偏移</td>
+</tr>
+<tr>
+<td align="center">number</td>
+<td align="center">shadowColor</td>
+<td align="center">阴影的颜色</td>
+</tr>
+<tr>
+<td align="center">number</td>
+<td align="center">shadowBlur</td>
+<td align="center">阴影的模糊级别</td>
+</tr>
+<tr>
+<td align="center">number</td>
+<td align="center">lineWidth</td>
+<td align="center">线条的宽度。用法同CanvasContext.LineWidth（）</td>
+</tr>
+<tr>
+<td align="center">number</td>
+<td align="center">lineCap</td>
+<td align="center">线条的端点样式。用法同CanvasContext.LineCap（）</td>
+</tr>
+<tr>
+<td align="center">number</td>
+<td align="center">lineJoin</td>
+<td align="center">线条的交点样式。用法同CanvasContext.LineJoin（）</td>
+</tr>
+<tr>
+<td align="center">number</td>
+<td align="center">miterLimit</td>
+<td align="center">最大斜接长度。用法同CanvasContext.setMiterLimit（）</td>
+</tr>
+<tr>
+<td align="center">number</td>
+<td align="center">lneDashOffset</td>
+<td align="center">虚线偏移量，初始值是0</td>
+</tr>
+<tr>
+<td align="center">string</td>
+<td align="center">font</td>
+<td align="center">当前字体样式的属性。符合CSSfont语法的DOMString字符串，至少需要提供字体大小和字体族名。默认值是10px</td>
+</tr>
+<tr>
+<td align="center">number</td>
+<td align="center">globalApha</td>
+<td align="center">全局画笔透明度。范围为0-1，0为完全透明，1为完全不透明</td>
+</tr>
+<tr>
+<td align="center">string</td>
+<td align="center">globalCompositeOperation</td>
+<td align="center">在绘制新图形时应用的合成操作的类型。目前安卓版只适用于fill填充块的合成，用于stroke线段的合成效果都是source-over</td>
+</tr>
+</tbody></table>
+<p>4.CanvasContext 对象常用方法</p>
+<p>(1) CanvasContext.draw(boolean reserve, function callback)。将之前在绘图上下文中的描述（路径、变形、样式）画到 canvas 中。</p>
+<p>(2)CanvasGradient CanvasContext.createLinearGradient(number xo, number yo,number x1,number y1)。创建一个线性的渐变颜色。返回的 CanvasGradient对象需要使用CanvasGradient.addColorStop() 来指定渐变点，至少要两个。</p>
+<p>(3)CanvasGradient CanvasContext.creatcCircularGradient(number x, number y, numberr)。创建一个圆形的渐变颜色。起点在圆心，终点在圆环。返回的 CanvasGradient 对象需要使用 CanvasGradient.addColorStop0 来指定渐变点，室少要两个。</p>
+<p>(4)CanvasContext.createPattern(string image, string tepetition)。对指定的图像创建模式的方法，可在指定的方向上重复源图像。</p>
+<p>(5)Object CanvasContext.measureText(string text)。测量文本尺寸信息，目前仅返回文本宽度，同步接口。</p>
+<p>(6)CanvasContext.save()。保存绘图上下文。</p>
+<p>(7)CanvasContext.restore()。恢复之前保存的绘图上下文。</p>
+<p>(8)CanvasContext.beginPath()。开始创建一个路径。需要调用 fill或者 stroke 才会使用路径进行填充或描边在最开始的时候相当于调用了一次 beginPath。同一个路径内的多次setFillStyle、setStrokeStyle、setLineWidth 等设置，以最后一次设置为准。</p>
+<p>(9)CanvasContext.moveTo(number x, number y)。把路径移动到画布中的指定点，不创建线条，用 stroke 方法来画线条。</p>
+<p>(10)CanvasContext.lineTo(number x, number y)。增加一个新点，然后创建一条从上次指定点到目标点的线，用 stroke 方法来画线条。</p>
+<p>(11)CanvasContext.quadraticCurveTo(number cpx, number cpy, number x, number y)。创建二次贝塞尔曲线路径，曲线的起始点为路径中前一个点。</p>
+<p>(12)CanvasContext.bezierCurveTo()。创建二次贝塞尔曲线路径，曲线的起始点为路径前一个点。</p>
+<p>(13)CanvasContext.arc(number x, number y, number r, number sAngle, number eAngle,plean counterclockwise)。创建一条弧线，创建一个圆可以指定起始弧度为 0，终止弧度为 2*Math.PI,用 stroke 或者 fill 方法来在 canvas 中画弧线。</p>
+<p>(14) CanvasContext.rect(number x, number y, number width, number height)。矩形路径，需要用 fill 或者 stroke 方法将矩形真正画到 canvas 中。</p>
+<p>(15)CanvasContext.arcTo(number x1, number y1, number x2, number y2, number radius)。根据控制点和半径绘制圆弧路径。</p>
+<p>(16)CanvasContext.clip()。从原始画布中剪切任意形状和尺寸。一旦剪切了某个区域。则所有之后的绘图都会被限制在被剪切的区域内（不能访问画布上的其他区域）。可以在使用 clip 方法前通过使用 save 方法对当前画布区域进行保存，并在以后的任意时间通过 restore方法对其进行恢复。</p>
+<p>(17)CanvasContext.fillRect(number x, number y, number width, number height)。填充一个矩形，用 setFillStyle 设置矩形的填充色，如果没设置默认是黑色。</p>
+<p>(18) CanvasContext.strokeRect(number x, number y, number width, number height)。画一个矩形（非填充），用 setStrokeStyle 设置矩形线条的颜色，如果没设置默认是黑色。(19)CanvasContext.clearRect(number x, number y, number width, number height)。清除画布上在该矩形区域内的内容。(20)CanvasContext.fill()。对当前路径中的内容进行填充，默认的填充色为黑色。</p>
+<p>(21)CanvasContext.stroke()。画出当前路径的边框，默认颜色为黑色。</p>
+<p>(22)CanvasContext.closePath()。关闭一个路径，会连接起点和终点。如果关闭路径后没有调用 6ill 或者 stroke 并开启了新的路径，那之前的路径将不会被渲染。</p>
+<p>(23)CanvasContext.scale(number scaleWidth, number scaleHeight)。在调用后，之后创建的路径其横纵坐标会被缩放，多次调用倍数会相乘。</p>
+<p>(24）CanvasContext.rotate(number rotate)。以原点为中心顺时针旋转当前坐标轴，多次调用旋转的角度会叠加，原点可以用 translate 方法修改。</p>
+<p>(25)CanvasContext.translate(number x, number y)。对当前坐标系的原点(0,0)进行变换，默认的坐标系原点为页面左上角。</p>
+<p>(26)CanvasContext.drawImage(string imageResource, number sx, number sy, number sWidth,number sHeight, number dx, number dy, number dWidth, number dHeight)。绘制图像到画布。</p>
+<p>(27)CanvasContext.strokeText(string text, number x, number y, number maxWidth)。给定的(x,y)位置绘制文本描边的方法。</p>
+<p>(28)CanvasContext.transform(number scaleX, number scaleY, number skewX, number skewY, number translateX, number translateY)。使用矩阵多次叠加当前变换的方法。</p>
+<p>(29) CanvasContext.setTransform(number scaleX, number scaleY, number skewX, numberskewY, number translateX, number translateY)。使用矩阵重新设置（覆盖）当前变换的方法。</p>
+<p>(30)CanvasContext.setFillStyle(Color color)。设置填充色。</p>
+<p>(31)CanvasContext.setStrokeStyle(Color color)。设置描边颜色。</p>
+<p>(32)CanvasContext.setShadow(number offetX, number offetY, number blur, stringcolor)。设置阴影样式。</p>
+<p>(33)CanvasContext.setGlobalAlpha(number alpha)。设置全局画笔透明度。</p>
+<p>(34)CanvasContext,setLineWidth(number lineWidth)。设置线条的宽度。</p>
+<p>(35)CanvasContext.setLineJoin(string lineJoin)。设置线条的交点样式。</p>
 
                 
             </div>
@@ -560,7 +710,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Sang63.github.io/2021/11/05/Babel%E5%AF%B9JS-Vue%E7%9A%84%E5%A4%84%E7%90%86%EF%BC%881%EF%BC%89/">http://Sang63.github.io/2021/11/05/Babel%E5%AF%B9JS-Vue%E7%9A%84%E5%A4%84%E7%90%86%EF%BC%881%EF%BC%89/</a>
+                    <a href="http://Sang63.github.io/2022/02/15/%E5%B0%8F%E7%A8%8B%E5%BA%8FAPI/">http://Sang63.github.io/2022/02/15/%E5%B0%8F%E7%A8%8B%E5%BA%8FAPI/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -598,8 +748,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                                    <span class="chip bg-color">学习笔记</span>
+                                <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                                    <span class="chip bg-color">微信小程序</span>
                                 </a>
                             
                         </div>
@@ -1039,17 +1189,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/11/11/smarty%E6%A8%A1%E6%9D%BF%E7%9A%84%E4%BD%BF%E7%94%A8%EF%BC%881%EF%BC%89/">
+                <a href="/2022/02/15/%E5%B0%8F%E7%A8%8B%E5%BA%8FAPI/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="smarty模板的使用（1）">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="小程序API">
                         
-                        <span class="card-title">smarty模板的使用（1）</span>
+                        <span class="card-title">小程序API</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1059,9 +1210,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1070,11 +1221,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/smarty/">
-                        <span class="chip bg-color">smarty</span>
+                    <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                        <span class="chip bg-color">微信小程序</span>
                     </a>
                     
                 </div>
@@ -1088,13 +1240,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/10/28/PHP%E5%AE%9E%E7%8E%B0%E9%9A%8F%E6%9C%BA%E5%8F%91%E7%89%8C%E5%8A%9F%E8%83%BD/">
+                <a href="/2022/01/29/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%BB%84%E4%BB%B6%EF%BC%88%E4%B8%80%EF%BC%89/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="PHP实现随机发牌功能">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="小程序组件（一）">
                         
-                        <span class="card-title">PHP实现随机发牌功能</span>
+                        <span class="card-title">小程序组件（一）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1105,7 +1257,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-29
                             </span>
                         <span class="publish-author">
                             
@@ -1118,8 +1270,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/PHP/">
-                        <span class="chip bg-color">PHP</span>
+                    <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                        <span class="chip bg-color">微信小程序</span>
                     </a>
                     
                 </div>
