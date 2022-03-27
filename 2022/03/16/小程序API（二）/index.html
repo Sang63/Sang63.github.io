@@ -4,16 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="双核心出口三层结构园区网配置（完整版）, 桑桑和阿战">
-    <meta name="description" content="配置双核心三层结构双路由双出口园区网：环境要求：1、安装win7、win10或winsrv的pc机一台
-2、cisco Packet Tracer7.3以上模拟器
-任务一:在模拟器上配置网络拓扑，分配IP地址
-
-
-
-设备名
-端口/接口
-IP">
+    <meta name="keywords" content="小程序API（二）, 桑桑和阿战">
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -25,7 +17,7 @@ IP">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>双核心出口三层结构园区网配置（完整版） | 桑桑和阿战</title>
+    <title>小程序API（二） | 桑桑和阿战</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -318,12 +310,12 @@ IP">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">双核心出口三层结构园区网配置（完整版）</h1>
+                    <h1 class="description center-align post-title">小程序API（二）</h1>
                 </div>
             </div>
         </div>
@@ -437,13 +429,9 @@ IP">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E7%BD%91%E7%BB%9C%E9%9B%86%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/">
-                                <span class="chip bg-color">网络集成与设计</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -455,7 +443,7 @@ IP">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-11-25
+                    2022-03-16
                 </div>
                 
 
@@ -476,658 +464,7 @@ IP">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="配置双核心三层结构双路由双出口园区网："><a href="#配置双核心三层结构双路由双出口园区网：" class="headerlink" title="配置双核心三层结构双路由双出口园区网："></a><strong>配置双核心三层结构双路由双出口园区网</strong>：</h3><h4 id="环境要求："><a href="#环境要求：" class="headerlink" title="环境要求："></a><strong>环境要求：</strong></h4><p>1、安装win7、win10或winsrv的pc机一台</p>
-<p>2、cisco Packet Tracer7.3以上模拟器</p>
-<h4 id="任务一-在模拟器上配置网络拓扑，分配IP地址"><a href="#任务一-在模拟器上配置网络拓扑，分配IP地址" class="headerlink" title="任务一:在模拟器上配置网络拓扑，分配IP地址"></a><strong>任务一:在模拟器上配置网络拓扑，分配IP地址</strong></h4><p><img src="https://img-blog.csdnimg.cn/bcc47a7826ef4b368cc17248a6145e4c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="01"></p>
-<table>
-<thead>
-<tr>
-<th><strong>设备名</strong></th>
-<th><strong>端口/接口</strong></th>
-<th><strong>IP地址</strong></th>
-<th><strong>掩码长度</strong></th>
-<th><strong>网关</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>PC11.2</td>
-<td>Fa0</td>
-<td>172.16.11.2</td>
-<td>24</td>
-<td>172.16.11.1</td>
-</tr>
-<tr>
-<td>PC12.2</td>
-<td>Fa0</td>
-<td>172.16.12.2</td>
-<td>24</td>
-<td>172.16.12.1</td>
-</tr>
-<tr>
-<td>PC21.2</td>
-<td>Fa0</td>
-<td>172.16.21.2</td>
-<td>24</td>
-<td>172.16.21.1</td>
-</tr>
-<tr>
-<td>PC22.2</td>
-<td>Fa0</td>
-<td>172.16.22.2</td>
-<td>24</td>
-<td>172.16.22.1</td>
-</tr>
-<tr>
-<td>HTTP</td>
-<td>Fa0</td>
-<td>172.16.100.2</td>
-<td>24</td>
-<td>172.16.100.1</td>
-</tr>
-<tr>
-<td>DNS</td>
-<td>Fa0</td>
-<td>172.16.100.3</td>
-<td>24</td>
-<td>172.16.100.1</td>
-</tr>
-<tr>
-<td>InterSrv</td>
-<td>Fa0</td>
-<td>7.1.1.2</td>
-<td>24</td>
-<td>7.1.1.1</td>
-</tr>
-<tr>
-<td>InterDNS</td>
-<td>Fa0</td>
-<td>8.8.8.8</td>
-<td>24</td>
-<td>8.8.8.1</td>
-</tr>
-<tr>
-<td>PC192</td>
-<td>Fa0</td>
-<td>192.168.1.2</td>
-<td>24</td>
-<td>192.168.1.1</td>
-</tr>
-<tr>
-<td>B1DS1</td>
-<td>vlan11</td>
-<td>172.16.11.253</td>
-<td>24</td>
-<td>-</td>
-</tr>
-<tr>
-<td>B1DS1</td>
-<td>vlan12</td>
-<td>172.16.12.253</td>
-<td>24</td>
-<td>-</td>
-</tr>
-<tr>
-<td>B1DS2</td>
-<td>vlan11</td>
-<td>172.16.11.254</td>
-<td>24</td>
-<td>-</td>
-</tr>
-<tr>
-<td>B1DS2</td>
-<td>vlan12</td>
-<td>172.16.12.254</td>
-<td>24</td>
-<td>-</td>
-</tr>
-<tr>
-<td>B2DS1</td>
-<td>vlan21</td>
-<td>172.16.21.253</td>
-<td>24</td>
-<td>-</td>
-</tr>
-<tr>
-<td>B2DS1</td>
-<td>vlan22</td>
-<td>172.16.22.253</td>
-<td>24</td>
-<td>-</td>
-</tr>
-<tr>
-<td>B2DS2</td>
-<td>vlan21</td>
-<td>172.16.21.253</td>
-<td>24</td>
-<td>-</td>
-</tr>
-<tr>
-<td>B2DS2</td>
-<td>vlan22</td>
-<td>172.16.22.253</td>
-<td>24</td>
-<td>-</td>
-</tr>
-<tr>
-<td>S1AS1</td>
-<td>vlan100</td>
-<td>172.16.100.1</td>
-<td>24</td>
-<td>-</td>
-</tr>
-<tr>
-<td>到CS1的接口</td>
-<td>路由接口</td>
-<td>172.16.1.0</td>
-<td>24</td>
-<td></td>
-</tr>
-<tr>
-<td>到CS2的接口</td>
-<td>路由接口</td>
-<td>172.16.2.0</td>
-<td>24</td>
-<td></td>
-</tr>
-<tr>
-<td>R1</td>
-<td>F0/1</td>
-<td>1.1.1.1</td>
-<td>29</td>
-<td>-</td>
-</tr>
-<tr>
-<td>R2</td>
-<td>F0/2</td>
-<td>2.1.1.1</td>
-<td>30</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP1-1</td>
-<td>F0/0</td>
-<td>1.1.1.2</td>
-<td>29</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP1-1</td>
-<td>F0/1</td>
-<td>3.0.0.1</td>
-<td>8</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP2-1</td>
-<td>F0/0</td>
-<td>2.1.1.2</td>
-<td>30</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP2-1</td>
-<td>F0/1</td>
-<td>4..0.0.1</td>
-<td>8</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP1-2</td>
-<td>F0/0</td>
-<td>3.0.0.2</td>
-<td>8</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP1-2</td>
-<td>F0/1</td>
-<td>5.0.0.1</td>
-<td>8</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP2-2</td>
-<td>F0/0</td>
-<td>4.0.0.2</td>
-<td>8</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP2-2</td>
-<td>F0/1</td>
-<td>6.0.0.1</td>
-<td>8</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP2-2</td>
-<td>F1/0</td>
-<td>9.1.1.1</td>
-<td>30</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP3</td>
-<td>F0/0</td>
-<td>5.0.0.2</td>
-<td>8</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP3</td>
-<td>F0/1</td>
-<td>6.0.0.2</td>
-<td>8</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP3</td>
-<td>F1/1</td>
-<td>7.1.1.1</td>
-<td>24</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP3</td>
-<td>F1/2</td>
-<td>8.8.8.1</td>
-<td>24</td>
-<td>-</td>
-</tr>
-<tr>
-<td>R3</td>
-<td>F0/1</td>
-<td>9.1.1.2</td>
-<td>30</td>
-<td>-</td>
-</tr>
-<tr>
-<td>R3</td>
-<td>F0/0</td>
-<td>192.168.1.1</td>
-<td>24</td>
-<td>-</td>
-</tr>
-</tbody></table>
-<h4 id="任务二-配置双核心三层结构双路由双出口园区网"><a href="#任务二-配置双核心三层结构双路由双出口园区网" class="headerlink" title="任务二:配置双核心三层结构双路由双出口园区网"></a><strong>任务二:配置双核心三层结构双路由双出口园区网</strong></h4><ol>
-<li><p>配置B2F1AS1、B2F1AS2两台接入层交换机</p>
-<p>a) 创建vlan</p>
-<p>b) 把接口加入vlan</p>
-<p>B2F1AS1:</p>
-<pre><code>Switch(config)#vlan 21
-Switch(config-vlan)#int f0/1
-Switch(config-if)#switchport access vlan 21
-</code></pre>
-<p>B2F1AS2:</p>
-<pre><code>Switch(config)#vlan 22
-Switch(config-vlan)#int f0/1    
-Switch(config-if)#switchport access vlan 22
-</code></pre>
-</li>
-<li><p>配置B2DS1、B2DS2汇聚层交换机二层特性</p>
-<p>a) 配置汇聚层交换机之间双链路etherchannel</p>
-<p> i. 设置etherchannel协议为LACP</p>
-<p>ii. 设置etherchannel模式为active</p>
-<p>B2DS1,B2DS2:</p>
-<pre><code>Switch(config)#int range f0/23-24
-Switch(config-if-range)#channel-protocol lacp
-Switch(config-if-range)#channel-group 1 mode active
-</code></pre>
-<p>b) 配置汇聚层交换机之间双链路为trunk</p>
-<p> i. 进入port-channel接口<br>ii. 配置封装格式dot1q，设置为trunk</p>
-</li>
-</ol>
-<p>B2DS1,B2DS2:</p>
-<pre><code>   Switch(config)#int port-channel 1
-   Switch(config-if)#switchport trunk encapsulation dot1q 
-   Switch(config-if)#switchport mode trunk 
-</code></pre>
-<p>c) show etherchannel summary检查etherchannel状态</p>
-<p><img src="https://img-blog.csdnimg.cn/e642bab5da5742f88be51a0defda84f6.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_15,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="02"></p>
-<p>   d) 配置汇聚层交换机到接入层交换机的链路为trunk</p>
-<p>   B2DS1,B2DS2:</p>
-<pre><code>Switch(config)#int range f0/1-2
-Switch(config-if-range)#switchport trunk encapsulation dot1q 
-Switch(config-if-range)#switchport mode trunk 
-</code></pre>
-<p>   e) 配置汇聚层交换机STP生成树，根据vlan设定生成树的主根和次主根</p>
-<p>   B2DS1:</p>
-<pre><code>Switch(config)#vlan 21
-Switch(config-vlan)#vlan 22
-Switch(config-vlan)#exit
-Switch(config)#spanning-tree vlan 21 root primary 
-Switch(config)#spanning-tree vlan 22 root secondary 
-</code></pre>
-<p>   B2DS2:</p>
-<pre><code>Switch(config)#vlan 21
-Switch(config-vlan)#vlan 22
-Switch(config-vlan)#exit
-Switch(config)#spanning-tree vlan 22 root primary 
-Switch(config)#spanning-tree vlan 21 root secondary 
-</code></pre>
-<p>   f) show spanning-tree检查生成树状态</p>
-<p>   <img src="https://img-blog.csdnimg.cn/img_convert/9e5e4d169bf799815488d8b3d6a36a57.png" alt="03"></p>
-<p>   <img src="https://img-blog.csdnimg.cn/img_convert/a3aaec6d91b56a72a25357317448f4aa.png" alt="04"></p>
-<ol start="3">
-<li><p>配置B2DS1、B2DS2汇聚层交换机三层特性</p>
-<p>a) 在汇聚层交换机启用三层交换功能</p>
-<p>b) 根据地址列表的要求设定vlan接口的地址</p>
-<p>B2DS1:</p>
-<pre><code>Switch(config)#ip routing
-Switch(config)#int vlan 21
-Switch(config-if)#ip addr 172.16.21.253 255.255.255.0
-Switch(config-if)#int vlan 22
-Switch(config-if)#ip addr 172.16.22.253 255.255.255.0
-</code></pre>
-<p>B2DS2:</p>
-<pre><code>Switch(config)#ip routing
-Switch(config)#int vlan 21
-Switch(config-if)#ip addr 172.16.21.254 255.255.255.0
-Switch(config-if)#int vlan 22
-Switch(config-if)#ip addr 172.16.22.254 255.255.255.0
-</code></pre>
-<p>c) 配置两个交换块的热备份路由</p>
-<p> i. 进入vlan接口<br>ii. 配置备份组的虚拟IP地址</p>
-<p>iii. 配置路由器的优先级和占先权</p>
-</li>
-</ol>
-<p>B2DS1:</p>
-<pre><code>   Switch(config-if)#int vlan 21
-   Switch(config-if)#standby 21 ip 172.16.21.1
-   Switch(config-if)#standby 21 preempt 
-   Switch(config-if)#standby 21 priority 200
-   Switch(config-if)#int vlan 22
-   Switch(config-if)#standby 22 ip 172.16.22.1
-</code></pre>
-<p>B2DS2:</p>
-<pre><code>   Switch(config-if)#int vlan 21
-   Switch(config-if)#standby 21 ip 172.16.21.1
-   Switch(config-if)#int vlan 22
-   Switch(config-if)#standby 22 ip 172.16.22.1
-   Switch(config-if)#standby 22 preempt 
-   Switch(config-if)#standby 22 priority 200
-</code></pre>
-<p>d) show standby检查HSRP状态</p>
-<p><img src="https://img-blog.csdnimg.cn/4b64b06fac0b4dde80050e93af19fd58.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_15,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="05"></p>
-<p><img src="https://img-blog.csdnimg.cn/48f4789489264328b57d1b4daccde9b0.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_14,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="06"></p>
-<p>   e)检查连通情况</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/5df4f69d3d79b6080d61ce0a6856a843.png" alt="07"></p>
-<ol start="4">
-<li><p>配置S1AS1和B2DS1、B2DS2上连核心接口地址</p>
-<p>a) 在S1AS1创建vlan100，加入连接服务器的接口</p>
-<pre><code>Switch(config)#vlan 100
-Switch(config-vlan)#int range f0/3-4
-Switch(config-if-range)#switchport access vlan 100
-</code></pre>
-<p>b) 在S1AS1启用三层功能，设置vlan100的接口地址</p>
-<pre><code>Switch(config)#ip routing
-Switch(config)#int vlan 100
-Switch(config-if)#ip addr 172.16.100.1 255.255.255.0
-</code></pre>
-<p>c) 配置与核心层交换机相连接口的IP地址</p>
-<p>i. 把所有接口设为路由接口</p>
-<p>ii. 设置所有与CS1相连接口的地址为172.16.1.0/24</p>
-<p>iii. 设置所有与CS2相连接口的地址为172.16.2.0/24</p>
-<p>B1DS1:</p>
-<pre><code>Switch(config)#int f0/3
-Switch(config-if)#ip addr 172.16.1.1 255.255.255.0
-Switch(config-if)#int f0/4
-Switch(config-if)#ip addr 172.16.2.1 255.255.255.0
-</code></pre>
-<p>B1DS2:</p>
-<pre><code>Switch(config)#int f0/3
-Switch(config-if)#ip addr 172.16.1.2 255.255.255.0
-Switch(config-if)#int f0/4
-Switch(config-if)#ip addr 172.16.2.2 255.255.255.0
-</code></pre>
-<p>B2DS1:</p>
-<pre><code>Switch(config)#int f0/4
-Switch(config-if)#no switchport 
-Switch(config-if)#ip addr 172.16.1.3 255.255.255.0
-Switch(config-if)#int f0/3
-Switch(config-if)#no switchport 
-Switch(config-if)#ip addr 172.16.2.3 255.255.255.0
-</code></pre>
-<p>B2DS2:</p>
-<pre><code>Switch(config)#int f0/3
-Switch(config-if)#no switch
-Switch(config-if)#ip addr 172.16.1.4 255.255.255.0
-Switch(config-if)#int f0/4
-Switch(config-if)#no switch
-Switch(config-if)#ip addr 172.16.2.4 255.255.255.0
-</code></pre>
-<p>S1AS1:</p>
-<pre><code>Switch(config)#int f0/1
-Switch(config-if)#no switchport
-Switch(config-if)#ip addr 172.16.1.5 255.255.255.0
-Switch(config-if)#int f0/2
-Switch(config-if)#no switchport
-Switch(config-if)#ip addr 172.16.2.5 255.255.255.0
-</code></pre>
-<p>R1:</p>
-<pre><code>Router(config)#int f0/0
-Router(config-if)#ip addr 172.16.1.6 255.255.255.0
-Router(config-if)#int f0/1
-Router(config-if)#ip addr 172.16.2.6 255.255.255.0
-</code></pre>
-<p>R2:</p>
-<pre><code>Router(config)#int f0/0
-Router(config-if)#ip addr 172.16.1.7 255.255.255.0
-Router(config-if)#int f0/1
-Router(config-if)#ip addr 172.16.2.7 255.255.255.0
-</code></pre>
-</li>
-<li><p>配置园区网OSPF动态路由协议</p>
-<p>a) 在与核心直接相连的三层交换机和路由器上启用OSPF协议</p>
-<p>b) 宣告自己的直连网络，设定区域为area0</p>
-<p>B1DS1:</p>
-<pre><code>Switch(config)#route ospf 1
-Switch(config-router)#network 172.16.11.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.12.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.1.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.2.0 0.0.0.255 area 0
-</code></pre>
-<p>B1DS2:</p>
-<pre><code>Switch(config)#route ospf 1
-Switch(config-router)#network 172.16.11.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.12.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.1.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.2.0 0.0.0.255 area 0
-</code></pre>
-<p>B2DS1:</p>
-<pre><code>Switch(config)#route ospf 1
-Switch(config-router)#network 172.16.21.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.22.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.1.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.2.0 0.0.0.255 area 0
-</code></pre>
-<p>B2DS2:</p>
-<pre><code>Switch(config)#route ospf 1
-Switch(config-router)#network 172.16.21.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.22.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.1.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.2.0 0.0.0.255 area 0
-</code></pre>
-<p>S1AS1:</p>
-<pre><code>Switch(config)#route ospf 1
-Switch(config-router)#network 172.16.100.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.1.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.2.0 0.0.0.255 area 0
-</code></pre>
-<p>R1:</p>
-<pre><code>Router(config)#route ospf 1
-Router(config-router)#network 172.16.1.0 0.0.0.255 area 0
-Router(config-router)#network 172.16.2.0 0.0.0.255 area 0
-Router(config-router)#default-information originate
-</code></pre>
-<p>R2:</p>
-<pre><code>Router(config)#route ospf 1
-Router(config-router)#network 172.16.1.0 0.0.0.255 area 0
-Router(config-router)#network 172.16.2.0 0.0.0.255 area 0
-Router(config-router)#default-information originate
-</code></pre>
-<p>c) 在出口路由器检查路由表</p>
-<p>R1,R2:</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/f2d7ff8c22b3a5a5e0e8e8f86a66ae11.png" alt="08"></p>
-<p>d) 在园区网内检查连通性–pc22.1ping http服务器</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/f358e01b052f6c266c93941dee4223e0.png" alt="09"></p>
-</li>
-<li><p>配置互联网ISP动态路由协议</p>
-<p>配置方案：自治系统内采用OSPF，自治系统间使用BGP</p>
-<p>a) 在自治区域内启用单区域OSPF并宣告网络</p>
-<p>ISP1-1:</p>
-<pre><code>Router(config)#route ospf 1
-Router(config-router)#network 1.1.1.0 0.0.0.7 area 0
-Router(config-router)#network 3.0.0.0 0.255.255.255 area 0
-</code></pre>
-<p>ISP1-2:</p>
-<pre><code>Router(config)#route ospf 1
-Router(config-router)#network 3.0.0.0 0.255.255.255 area 0
-Router(config-router)#network 5.0.0.0 0.255.255.255 area 0
-</code></pre>
-<p>ISP2-1:</p>
-<pre><code>Router(config)#route ospf 1
-Router(config-router)#network 2.1.1.0 0.0.0.3 area 0
-Router(config-router)#network 4.0.0.0 0.255.255.255 area 0
-</code></pre>
-<p>ISP2-2:</p>
-<pre><code>Router(config)#route ospf 1
-Router(config-router)#network 4.0.0.0 0.255.255.255 area 0
-Router(config-router)#network 6.0.0.0 0.255.255.255 area 0
-Router(config-router)#network 9.1.1.0 0.0.0.3 area 0
-</code></pre>
-<p>b)在ISP1-2和ISP2-2上启用BGP，配置邻居为ISP3；</p>
-<p>ISP1-2:</p>
-<pre><code>Router(config)#route bgp 100
-Router(config-router)#neighbor 5.0.0.2 remote-as 300
-</code></pre>
-<p>ISP2-2:</p>
-<pre><code>Router(config)#route bgp 200
-Router(config-router)#neighbor 6.0.0.2 remote-as 300
-</code></pre>
-<p>ISP3:</p>
-<pre><code>Router(config)#route bgp 300
-Router(config-router)#neighbor 5.0.0.1 remote-as 100
-Router(config-router)#neighbor 6.0.0.1 remote-as 200
-</code></pre>
-<p>c) 在ISP1-2和ISP2-2上启用BGP，配置邻居为ISP3；把OSPF路由动态注入到BGP，把BGP路由再分配到OSPF</p>
-<p>ISP1-2:</p>
-<pre><code>Router(config)#route bgp 100
-Router(config-router)#redistribute ospf 1
-</code></pre>
-<p>ISP2-2:</p>
-<pre><code>Router(config)#route bgp 200
-Router(config-router)#redistribute ospf 1
-</code></pre>
-<p>ISP3:</p>
-<pre><code>Router(config)#route bgp 300
-Router(config-router)#network 7.1.1.0 mask 255.255.255.0
-Router(config-router)#network 8.8.8.0 mask 255.255.255.0
-</code></pre>
-<p>注入BGP之后再分配到OSPF(顺序不能和上面的颠倒)</p>
-<p>ISP1-2:</p>
-<pre><code>Router(config)#route ospf 1
-Router(config-router)#redistribute bgp 100 subnets 
-</code></pre>
-<p>ISP2-2:</p>
-<pre><code>Router(config)#route ospf 1
-Router(config-router)#redistribute bgp 200 subnets 
-</code></pre>
-<p>e) 在ISP1-1和ISP2-1上查看路由表</p>
-</li>
-</ol>
-<p>  <img src="https://img-blog.csdnimg.cn/e2e18d21d50a4044893e0e22d1d73748.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_14,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="10"><br><img src="https://img-blog.csdnimg.cn/ad509ccf2b7b49388ada1a82874d68be.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_15,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="11"></p>
-<ol start="7">
-<li><p>配置园区网出口路由器R1、R2的缺省路由与地址转换</p>
-<p>a) 在路由器R1、R2配置缺省路由指向ISP</p>
-<p>R1:</p>
-<pre><code>Router(config)#ip route 0.0.0.0 0.0.0.0 1.1.1.2
-</code></pre>
-<p>R2:</p>
-<pre><code>Router(config)#ip route 0.0.0.0 0.0.0.0 2.1.1.2
-</code></pre>
-<p>b) 把缺省路由再分配到路由器R1、R2的OSPF协议中</p>
-<pre><code>Router(config-router)#default-information originate //宣告ospf时已执行，可略过
-</code></pre>
-<p>c) 在路由器R1、R2配置地址转换，使得内网能够访问互联网</p>
-<p>R1：</p>
-<pre><code>Router(config)#access-list 1 permit 172.16.0.0 0.0.255.255
-Router(config)#ip nat inside source list 1 interface f1/0 overload 
-Router(config)#int f1/0
-Router(config-if)#ip nat outside
-Router(config-if)#int f0/0
-Router(config-if)#ip nat inside
-Router(config-if)#int f0/1
-Router(config-if)#ip nat inside
-</code></pre>
-<p>R2：</p>
-<pre><code>Router(config)#access-list 1 permit 172.16.0.0 0.0.255.255
-Router(config)#ip nat inside source list 1 interface f1/0 overload 
-Router(config)#int f1/0
-Router(config-if)#ip nat outside
-Router(config-if)#int f0/0
-Router(config-if)#ip nat inside
-Router(config-if)#int f0/1
-Router(config-if)#ip nat inside
-</code></pre>
-<p>d) 在路由器R1、R2配置端口映射，使得外网能够访问内网http服务</p>
-<p>R1：</p>
-<pre><code>Router(config)#ip nat inside source static tcp 172.16.100.2 80 1.1.1.1 80
-</code></pre>
-<p>R2：</p>
-<pre><code>Router(config)#ip nat inside source static tcp 172.16.100.2 80 2.1.1.1 80
-</code></pre>
-<p>e)检测pc21.2能否访问InterSrv7.1.1.2，</p>
-<p><img src="https://img-blog.csdnimg.cn/a6d9ec16d0ab454d9be8ffba084fed7e.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_18,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="12"></p>
-</li>
-</ol>
-<pre><code>dwon掉R2的f1/0口检验，外网访问内网http服务
-</code></pre>
-<p>   <img src="https://img-blog.csdnimg.cn/10ba412a0e8347fcb8aedec5d638c441.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_18,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="13"></p>
-<ol start="8">
-<li><p>配置R3分公司路由器</p>
-<p>a) 配置缺省路由指向ISP2</p>
-<pre><code>Router(config)#ip route 0.0.0.0 0.0.0.0 9.1.1.1
-</code></pre>
-<p>b) 配置NAT网络地址转换</p>
-<pre><code>Router(config)#access-list 1 permit 192.168.1.0 0.0.0.255
-Router(config)#ip nat inside source list 1 interface f1/0 overload 
-Router(config)#int f1/0
-Router(config-if)#ip nat outside
-Router(config-if)#int f0/0
-Router(config-if)#ip nat inside
-</code></pre>
-<p>c) 检查PC192能够访问互联网</p>
-<p><img src="https://img-blog.csdnimg.cn/a4ea8f02f5a641b39578e0518a0b596a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_13,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="14"></p>
-</li>
-</ol>
-<ol start="9">
-<li><p>配置园区网DNS和互联网InterDNS服务器</p>
-<p>a) 在DNS设定<a target="_blank" rel="noopener" href="http://www.mydomain.com解析为内网地址/">www.mydomain.com解析为内网地址</a></p>
-<p><img src="https://img-blog.csdnimg.cn/cfa447d5781d43d7a095c5b0a06a2d4d.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="15"></p>
-</li>
-</ol>
-<p>   b) 在InterDNS设定<a target="_blank" rel="noopener" href="http://www.mydomain.com解析为园区网出口地址/">www.mydomain.com解析为园区网出口地址</a></p>
-<p>   <img src="https://img-blog.csdnimg.cn/08e351233b7448d3a8cd95ad6b94fc72.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_18,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="16"></p>
-<p>   c) 在PC192配置dns服务器，使用浏览器访问<a target="_blank" rel="noopener" href="http://www.mydomain.com/">www.mydomain.com</a></p>
-<p>   <img src="https://img-blog.csdnimg.cn/0f9abcf2d4004a328a64a422b809aa71.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_18,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="17"></p>
-<p>   d) 在PC11.2配置dns服务器，使用浏览器访问<a target="_blank" rel="noopener" href="http://www.mydomain.com/">www.mydomain.com</a></p>
-<p>   <img src="https://img-blog.csdnimg.cn/4bdfc70579a34478a69c50ee2fe8d31c.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_17,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="18"></p>
-<h4 id="任务三：检查网络连通性和可靠性"><a href="#任务三：检查网络连通性和可靠性" class="headerlink" title="任务三：检查网络连通性和可靠性"></a><strong>任务三：检查网络连通性和可靠性</strong></h4><ol>
-<li><p>从pc21.2  ping到 inter_srv</p>
-<p><img src="https://img-blog.csdnimg.cn/1ed20ed5c33d44058533d46ff71bba18.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_12,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="19"></p>
-</li>
-</ol>
-<ol start="2">
-<li><p>从pc22.2  ping到inter_srv</p>
-<p><img src="https://img-blog.csdnimg.cn/171b3e9cf97a464faa7c18d14371b8bd.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_12,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="20"></p>
-</li>
-</ol>
-<ol start="3">
-<li>依次当掉B2DS1、CS1、R1，再检查连通性</li>
-</ol>
-<p>  <strong>依旧能连通</strong></p>
-
+                
                 
             </div>
             <hr/>
@@ -1153,7 +490,7 @@ Router(config-if)#ip nat inside
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Sang63.github.io/2021/11/25/%E5%8F%8C%E6%A0%B8%E5%BF%83%E5%87%BA%E5%8F%A3%E4%B8%89%E5%B1%82%E7%BB%93%E6%9E%84%E5%9B%AD%E5%8C%BA%E7%BD%91%E9%85%8D%E7%BD%AE%EF%BC%88%E5%AE%8C%E6%95%B4%E7%89%88%EF%BC%89/">http://Sang63.github.io/2021/11/25/%E5%8F%8C%E6%A0%B8%E5%BF%83%E5%87%BA%E5%8F%A3%E4%B8%89%E5%B1%82%E7%BB%93%E6%9E%84%E5%9B%AD%E5%8C%BA%E7%BD%91%E9%85%8D%E7%BD%AE%EF%BC%88%E5%AE%8C%E6%95%B4%E7%89%88%EF%BC%89/</a>
+                    <a href="http://Sang63.github.io/2022/03/16/%E5%B0%8F%E7%A8%8B%E5%BA%8FAPI%EF%BC%88%E4%BA%8C%EF%BC%89/">http://Sang63.github.io/2022/03/16/%E5%B0%8F%E7%A8%8B%E5%BA%8FAPI%EF%BC%88%E4%BA%8C%EF%BC%89/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1190,11 +527,7 @@ Router(config-if)#ip nat inside
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E7%BD%91%E7%BB%9C%E9%9B%86%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/">
-                                    <span class="chip bg-color">网络集成与设计</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -1636,13 +969,13 @@ Router(config-if)#ip nat inside
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/01/04/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89/">
+                <a href="/2022/03/17/Vue3%E7%9A%84Options-API/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="小程序编程基础（一）">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Vue3的Options-API">
                         
-                        <span class="card-title">小程序编程基础（一）</span>
+                        <span class="card-title">Vue3的Options-API</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1653,7 +986,7 @@ Router(config-if)#ip nat inside
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-04
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-17
                         </span>
                         <span class="publish-author">
                             
@@ -1666,8 +999,8 @@ Router(config-if)#ip nat inside
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
-                        <span class="chip bg-color">微信小程序</span>
+                    <a href="/tags/Vue3/">
+                        <span class="chip bg-color">Vue3</span>
                     </a>
                     
                 </div>
@@ -1681,13 +1014,13 @@ Router(config-if)#ip nat inside
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/11/18/smarty%E6%A8%A1%E6%9D%BF%E7%9A%84%E4%BD%BF%E7%94%A8%EF%BC%882%EF%BC%89/">
+                <a href="/2022/02/15/%E5%B0%8F%E7%A8%8B%E5%BA%8FAPI/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="smarty模板的使用（2）">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="小程序API">
                         
-                        <span class="card-title">smarty模板的使用（2）</span>
+                        <span class="card-title">小程序API</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1698,7 +1031,7 @@ Router(config-if)#ip nat inside
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-15
                             </span>
                         <span class="publish-author">
                             
@@ -1711,8 +1044,8 @@ Router(config-if)#ip nat inside
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/smarty/">
-                        <span class="chip bg-color">smarty</span>
+                    <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                        <span class="chip bg-color">微信小程序</span>
                     </a>
                     
                 </div>

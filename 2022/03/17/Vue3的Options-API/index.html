@@ -4,16 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="双核心出口三层结构园区网配置（完整版）, 桑桑和阿战">
-    <meta name="description" content="配置双核心三层结构双路由双出口园区网：环境要求：1、安装win7、win10或winsrv的pc机一台
-2、cisco Packet Tracer7.3以上模拟器
-任务一:在模拟器上配置网络拓扑，分配IP地址
+    <meta name="keywords" content="Vue3的Options-API, 桑桑和阿战">
+    <meta name="description" content="1. 复杂data的处理方式我们知道，在模板中可以直接通过插值语法显示一些data中的数据。但是在某些情况，我们可能需要对数据进行一些转化后再显示，或者需要将多个数据结合起来进行显示；  
 
-
-
-设备名
-端口/接口
-IP">
+比如我们需要对多个data数据进行运算、三元运算">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -25,7 +19,7 @@ IP">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>双核心出口三层结构园区网配置（完整版） | 桑桑和阿战</title>
+    <title>Vue3的Options-API | 桑桑和阿战</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -318,12 +312,12 @@ IP">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">双核心出口三层结构园区网配置（完整版）</h1>
+                    <h1 class="description center-align post-title">Vue3的Options-API</h1>
                 </div>
             </div>
         </div>
@@ -439,8 +433,8 @@ IP">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%BD%91%E7%BB%9C%E9%9B%86%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/">
-                                <span class="chip bg-color">网络集成与设计</span>
+                            <a href="/tags/Vue3/">
+                                <span class="chip bg-color">Vue3</span>
                             </a>
                         
                     </div>
@@ -455,7 +449,7 @@ IP">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-11-25
+                    2022-03-17
                 </div>
                 
 
@@ -476,657 +470,194 @@ IP">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="配置双核心三层结构双路由双出口园区网："><a href="#配置双核心三层结构双路由双出口园区网：" class="headerlink" title="配置双核心三层结构双路由双出口园区网："></a><strong>配置双核心三层结构双路由双出口园区网</strong>：</h3><h4 id="环境要求："><a href="#环境要求：" class="headerlink" title="环境要求："></a><strong>环境要求：</strong></h4><p>1、安装win7、win10或winsrv的pc机一台</p>
-<p>2、cisco Packet Tracer7.3以上模拟器</p>
-<h4 id="任务一-在模拟器上配置网络拓扑，分配IP地址"><a href="#任务一-在模拟器上配置网络拓扑，分配IP地址" class="headerlink" title="任务一:在模拟器上配置网络拓扑，分配IP地址"></a><strong>任务一:在模拟器上配置网络拓扑，分配IP地址</strong></h4><p><img src="https://img-blog.csdnimg.cn/bcc47a7826ef4b368cc17248a6145e4c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="01"></p>
-<table>
-<thead>
-<tr>
-<th><strong>设备名</strong></th>
-<th><strong>端口/接口</strong></th>
-<th><strong>IP地址</strong></th>
-<th><strong>掩码长度</strong></th>
-<th><strong>网关</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>PC11.2</td>
-<td>Fa0</td>
-<td>172.16.11.2</td>
-<td>24</td>
-<td>172.16.11.1</td>
-</tr>
-<tr>
-<td>PC12.2</td>
-<td>Fa0</td>
-<td>172.16.12.2</td>
-<td>24</td>
-<td>172.16.12.1</td>
-</tr>
-<tr>
-<td>PC21.2</td>
-<td>Fa0</td>
-<td>172.16.21.2</td>
-<td>24</td>
-<td>172.16.21.1</td>
-</tr>
-<tr>
-<td>PC22.2</td>
-<td>Fa0</td>
-<td>172.16.22.2</td>
-<td>24</td>
-<td>172.16.22.1</td>
-</tr>
-<tr>
-<td>HTTP</td>
-<td>Fa0</td>
-<td>172.16.100.2</td>
-<td>24</td>
-<td>172.16.100.1</td>
-</tr>
-<tr>
-<td>DNS</td>
-<td>Fa0</td>
-<td>172.16.100.3</td>
-<td>24</td>
-<td>172.16.100.1</td>
-</tr>
-<tr>
-<td>InterSrv</td>
-<td>Fa0</td>
-<td>7.1.1.2</td>
-<td>24</td>
-<td>7.1.1.1</td>
-</tr>
-<tr>
-<td>InterDNS</td>
-<td>Fa0</td>
-<td>8.8.8.8</td>
-<td>24</td>
-<td>8.8.8.1</td>
-</tr>
-<tr>
-<td>PC192</td>
-<td>Fa0</td>
-<td>192.168.1.2</td>
-<td>24</td>
-<td>192.168.1.1</td>
-</tr>
-<tr>
-<td>B1DS1</td>
-<td>vlan11</td>
-<td>172.16.11.253</td>
-<td>24</td>
-<td>-</td>
-</tr>
-<tr>
-<td>B1DS1</td>
-<td>vlan12</td>
-<td>172.16.12.253</td>
-<td>24</td>
-<td>-</td>
-</tr>
-<tr>
-<td>B1DS2</td>
-<td>vlan11</td>
-<td>172.16.11.254</td>
-<td>24</td>
-<td>-</td>
-</tr>
-<tr>
-<td>B1DS2</td>
-<td>vlan12</td>
-<td>172.16.12.254</td>
-<td>24</td>
-<td>-</td>
-</tr>
-<tr>
-<td>B2DS1</td>
-<td>vlan21</td>
-<td>172.16.21.253</td>
-<td>24</td>
-<td>-</td>
-</tr>
-<tr>
-<td>B2DS1</td>
-<td>vlan22</td>
-<td>172.16.22.253</td>
-<td>24</td>
-<td>-</td>
-</tr>
-<tr>
-<td>B2DS2</td>
-<td>vlan21</td>
-<td>172.16.21.253</td>
-<td>24</td>
-<td>-</td>
-</tr>
-<tr>
-<td>B2DS2</td>
-<td>vlan22</td>
-<td>172.16.22.253</td>
-<td>24</td>
-<td>-</td>
-</tr>
-<tr>
-<td>S1AS1</td>
-<td>vlan100</td>
-<td>172.16.100.1</td>
-<td>24</td>
-<td>-</td>
-</tr>
-<tr>
-<td>到CS1的接口</td>
-<td>路由接口</td>
-<td>172.16.1.0</td>
-<td>24</td>
-<td></td>
-</tr>
-<tr>
-<td>到CS2的接口</td>
-<td>路由接口</td>
-<td>172.16.2.0</td>
-<td>24</td>
-<td></td>
-</tr>
-<tr>
-<td>R1</td>
-<td>F0/1</td>
-<td>1.1.1.1</td>
-<td>29</td>
-<td>-</td>
-</tr>
-<tr>
-<td>R2</td>
-<td>F0/2</td>
-<td>2.1.1.1</td>
-<td>30</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP1-1</td>
-<td>F0/0</td>
-<td>1.1.1.2</td>
-<td>29</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP1-1</td>
-<td>F0/1</td>
-<td>3.0.0.1</td>
-<td>8</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP2-1</td>
-<td>F0/0</td>
-<td>2.1.1.2</td>
-<td>30</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP2-1</td>
-<td>F0/1</td>
-<td>4..0.0.1</td>
-<td>8</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP1-2</td>
-<td>F0/0</td>
-<td>3.0.0.2</td>
-<td>8</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP1-2</td>
-<td>F0/1</td>
-<td>5.0.0.1</td>
-<td>8</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP2-2</td>
-<td>F0/0</td>
-<td>4.0.0.2</td>
-<td>8</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP2-2</td>
-<td>F0/1</td>
-<td>6.0.0.1</td>
-<td>8</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP2-2</td>
-<td>F1/0</td>
-<td>9.1.1.1</td>
-<td>30</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP3</td>
-<td>F0/0</td>
-<td>5.0.0.2</td>
-<td>8</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP3</td>
-<td>F0/1</td>
-<td>6.0.0.2</td>
-<td>8</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP3</td>
-<td>F1/1</td>
-<td>7.1.1.1</td>
-<td>24</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ISP3</td>
-<td>F1/2</td>
-<td>8.8.8.1</td>
-<td>24</td>
-<td>-</td>
-</tr>
-<tr>
-<td>R3</td>
-<td>F0/1</td>
-<td>9.1.1.2</td>
-<td>30</td>
-<td>-</td>
-</tr>
-<tr>
-<td>R3</td>
-<td>F0/0</td>
-<td>192.168.1.1</td>
-<td>24</td>
-<td>-</td>
-</tr>
-</tbody></table>
-<h4 id="任务二-配置双核心三层结构双路由双出口园区网"><a href="#任务二-配置双核心三层结构双路由双出口园区网" class="headerlink" title="任务二:配置双核心三层结构双路由双出口园区网"></a><strong>任务二:配置双核心三层结构双路由双出口园区网</strong></h4><ol>
-<li><p>配置B2F1AS1、B2F1AS2两台接入层交换机</p>
-<p>a) 创建vlan</p>
-<p>b) 把接口加入vlan</p>
-<p>B2F1AS1:</p>
-<pre><code>Switch(config)#vlan 21
-Switch(config-vlan)#int f0/1
-Switch(config-if)#switchport access vlan 21
-</code></pre>
-<p>B2F1AS2:</p>
-<pre><code>Switch(config)#vlan 22
-Switch(config-vlan)#int f0/1    
-Switch(config-if)#switchport access vlan 22
-</code></pre>
+                <h2 id="1-复杂data的处理方式"><a href="#1-复杂data的处理方式" class="headerlink" title="1. 复杂data的处理方式"></a>1. 复杂data的处理方式</h2><p>我们知道，在模板中可以直接通过<strong>插值语法</strong>显示一些<strong>data中的数据</strong>。但是在某些情况，我们可能需要对<strong>数据进行一些转化后</strong>再显示，或者需要<strong>将多个数据结合起来</strong>进行显示；  </p>
+<ul>
+<li>比如我们需要对多个data数据进行运算、三元运算符来决定结果、数据进行某种转化后显示； </li>
+<li>在模板中使用表达式，可以非常方便的实现，但是设计它们的初衷是用于简单的运算； </li>
+<li>在模板中放入太多的逻辑会让模板过重和难以维护； </li>
+</ul>
+<p>并且如果多个地方都使用到，那么会有大量重复的代码； 我们有没有什么方法可以将逻辑抽离出去呢？ </p>
+<ul>
+<li>可以，其中一种方式就是将逻辑抽取到一个method中，放到methods的options中； </li>
+<li>但是，这种做法有一个直观的弊端，就是所有的data使用过程都会变成了一个方法的调用； </li>
+<li>另外一种方式就是使用计算属性computed；</li>
+</ul>
+<h2 id="2-认识计算属性computed"><a href="#2-认识计算属性computed" class="headerlink" title="2.认识计算属性computed"></a>2.认识计算属性computed</h2><h3 id="2-1-什么是计算属性呢？"><a href="#2-1-什么是计算属性呢？" class="headerlink" title="2.1 什么是计算属性呢？"></a><strong>2.1 什么是计算属性呢？</strong></h3><p> 官方并没有给出直接的概念解释；而是说：对于任何包含响应式数据的复杂逻辑，你都应该使用<strong>计算属性</strong>； </p>
+<p>计算属性将被混入到组件实例中。所有 getter 和 setter 的 this 上下文自动地绑定为组件实例； </p>
+<p>计算属性的用法： </p>
+<ul>
+<li><p><strong>选项：</strong>computed </p>
 </li>
-<li><p>配置B2DS1、B2DS2汇聚层交换机二层特性</p>
-<p>a) 配置汇聚层交换机之间双链路etherchannel</p>
-<p> i. 设置etherchannel协议为LACP</p>
-<p>ii. 设置etherchannel模式为active</p>
-<p>B2DS1,B2DS2:</p>
-<pre><code>Switch(config)#int range f0/23-24
-Switch(config-if-range)#channel-protocol lacp
-Switch(config-if-range)#channel-group 1 mode active
-</code></pre>
-<p>b) 配置汇聚层交换机之间双链路为trunk</p>
-<p> i. 进入port-channel接口<br>ii. 配置封装格式dot1q，设置为trunk</p>
+<li><p><strong>类型：</strong>{ [key: string]: Function | { get: Function, set: Function } } </p>
+<p> 那接下来我们通过案例来理解一下这个计算属性。</p>
 </li>
-</ol>
-<p>B2DS1,B2DS2:</p>
-<pre><code>   Switch(config)#int port-channel 1
-   Switch(config-if)#switchport trunk encapsulation dot1q 
-   Switch(config-if)#switchport mode trunk 
+</ul>
+<h3 id="2-2案例实现思路"><a href="#2-2案例实现思路" class="headerlink" title="2.2案例实现思路"></a>2.2案例实现思路</h3><p><strong>我们来看三个案例：</strong> </p>
+<ul>
+<li>案例一：我们有两个变量：firstName和lastName，希望它们拼接之后在界面上显示； </li>
+<li>案例二：我们有一个分数：score ，当score大于60的时候，在界面上显示及格； 当score小于60的时候，在界面上显示不及格； </li>
+<li>案例三：我们有一个变量message，记录一段文字：比如Hello World 某些情况下我们是直接显示这段文字；某些情况下我们需要对这段文字进行反转； </li>
+</ul>
+<p><strong>我们可以有三种实现思路：</strong> </p>
+<ul>
+<li>思路一：在模板语法中直接使用表达式； </li>
+<li>思路二：使用method对逻辑进行抽取； </li>
+<li>思路三：使用计算属性computed；</li>
+</ul>
+<p><strong>2.2.1实现思路一：模板语法</strong></p>
+<ul>
+<li>缺点一：模板中存在大量的复杂逻辑，不便于维护（模板中表达式的初衷是用于简单的计算）； </li>
+<li>缺点二：当有多次一样的逻辑时，存在重复的代码； </li>
+<li>缺点三：多次使用的时候，很多运算也需要多次执行，没有缓存；</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/e9e0360ea5ff41598c948151641dcb49.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="01" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> 2.2.2<strong>思路二的实现：method实现</strong></p>
+<ul>
+<li>缺点一：我们事实上先显示的是一个结果，但是都变成了一种方法的调用；</li>
+<li>缺点二：多次使用方法的时候，没有缓存，也需要多次计算；</li>
+</ul>
+<p> <img src="https://img-blog.csdnimg.cn/4a9f42726844473fa726a9671367009d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="02" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"><img src="https://img-blog.csdnimg.cn/436667bc05964b5792628e3a6a06d56e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="03" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><strong>2.2.3思路三的实现：computed实现</strong></p>
+<ul>
+<li>注意：计算属性看起来像是一个函数，但是我们在使用的时候不需要加()，这个后面讲setter和getter时会说到；</li>
+<li>我们会发现无论是直观上，还是效果上计算属性都是更好的选择； </li>
+<li>并且计算属性是有缓存的；</li>
+</ul>
+<p> <img src="https://img-blog.csdnimg.cn/a3c50eaa80b74985ab72ef4e0eb75986.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="04" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"><img src="https://img-blog.csdnimg.cn/1897912da47440f28d8191a15d75ff8b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="05" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h2 id="3-计算属性-vs-methods"><a href="#3-计算属性-vs-methods" class="headerlink" title="3.计算属性 vs methods"></a>3.计算属性 vs methods</h2><p>在上面的实现思路中，我们会发现计算属性和methods的实现看起来是差别是不大的，而且我们多次提到计算属性有缓存的。</p>
+<p>接下来我们来看一下同一个计算多次使用，计算属性和methods的差异：</p>
+<p> <img src="https://img-blog.csdnimg.cn/c5217f50b8914f16a87122414e1490b7.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="06"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="3-1计算属性的缓存"><a href="#3-1计算属性的缓存" class="headerlink" title="3.1计算属性的缓存"></a>3.1<strong>计算属性的缓存</strong></h3><p>这是什么原因呢？ </p>
+<ul>
+<li>这是因为计算属性会基于它们的依赖关系进行缓存； </li>
+<li>在数据不发生变化时，计算属性是不需要重新计算的； </li>
+<li>但是如果依赖的数据发生变化，在使用时，计算属性依然会重新进行计算；</li>
+</ul>
+<p> <img src="https://img-blog.csdnimg.cn/24104796be8b42afbaac29055a311f1c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="07" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="3-2计算属性的setter和getter"><a href="#3-2计算属性的setter和getter" class="headerlink" title="3.2计算属性的setter和getter"></a><strong>3.2计算属性的setter和getter</strong></h3><p>​    计算属性在大多数情况下，只需要一个<strong>getter方法</strong>即可，所以我们会将计算属性直接<strong>写成一个函数</strong>。</p>
+<p>​    但是，如果我们确实想<strong>设置计算属性的值</strong>呢？ </p>
+<p>​    这个时候我们也可以给计算属性设置一个setter的方法；</p>
+<p><img src="https://img-blog.csdnimg.cn/95aaf2c8f0da40cb8a6ad284006df106.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="08" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="3-3源码如何对setter和getter处理呢？"><a href="#3-3源码如何对setter和getter处理呢？" class="headerlink" title="3.3源码如何对setter和getter处理呢？"></a>3.3<strong>源码如何对setter和getter处理呢？</strong></h3><p>你可能觉得很奇怪，Vue内部是如何对我们传入的是一个getter，还是说是一个包含setter和getter的对象进行处理的呢？  </p>
+<p>事实上非常的简单，Vue源码内部只是做了一个逻辑判断而已；</p>
+<p><img src="https://img-blog.csdnimg.cn/7bacbdb715ec4facb24e0db11270bcc2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="09" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="3-4认识侦听器watch"><a href="#3-4认识侦听器watch" class="headerlink" title="3.4认识侦听器watch"></a>3.4<strong>认识侦听器watch</strong></h3><p><strong>3.4.1什么是侦听器呢？</strong></p>
+<ul>
+<li>开发中我们在data返回的对象中定义了数据，这个数据通过插值语法等方式绑定到template中； </li>
+<li>当数据变化时，template会自动进行更新来显示最新的数据； </li>
+<li>但是在某些情况下，我们希望在代码逻辑中监听某个数据的变化，这个时候就需要用侦听器watch来完成了； </li>
+</ul>
+<p><strong>3.4.2侦听器的用法如下：</strong> </p>
+<ul>
+<li><strong>选项：</strong>watch </li>
+<li><strong>类型：</strong>{ [key: string]: string | Function | Object | Array}</li>
+</ul>
+<p><strong>3.4.3侦听器案例</strong></p>
+<p><strong>举个栗子（例子）：</strong></p>
+<p> 比如现在我们希望用户在input中输入一个问题；每当用户输入了最新的内容，我们就获取到最新的内容，并且使用该问题去服务器查询答案；那么，我们就需要实时的去获取最新的数据变化；</p>
+<p> <img src="https://img-blog.csdnimg.cn/1598e06873584d2bbc49a48870ff24d6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="10"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><strong>3.4.4侦听器watch的配置选项</strong></p>
+<p>我们先来看一个例子： </p>
+<p> 当我们点击按钮的时候会修改info.name的值； </p>
+<p> 这个时候我们使用watch来侦听info，可以侦听到吗？答案是不可以。 </p>
+<p> 这是因为默认情况下，<strong>watch只是在侦听info的引用变化</strong>，对于<strong>内部属性的变化是不会做出响应</strong>的： </p>
+<p> 这个时候我们可以使用一个选项deep进行更深层的侦听； </p>
+<p> 注意前面我们说过watch里面侦听的属性对应的也可以是一个Object； </p>
+<p> 还有<strong>另外一个属性</strong>，是<strong>希望一开始的就会立即执行一次</strong>： </p>
+<p> 这个时候我们使用immediate选项； </p>
+<p> 这个时候无论后面数据是否有变化，侦听的函数都会有限执行一次；</p>
+<p><img src="https://img-blog.csdnimg.cn/4fd3fe1d53ad48eab9fdf2e59e01223a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="11" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><strong>3.4.5侦听器watch的其他方式（一）</strong></p>
+<p> <img src="https://img-blog.csdnimg.cn/4dbc6123aabb45fc9d4129db21749565.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_10,color_FFFFFF,t_70,g_se,x_16" alt="12" style="zoom:80%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"><img src="https://img-blog.csdnimg.cn/b6288992aa9746fd9cf50564fe0b4b4d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="13" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>另外一个是Vue3文档中没有提到的，但是Vue2文档中有提到的是侦听对象的属性：</p>
+<p><img src="https://img-blog.csdnimg.cn/144edf0a63e744589f03d0baba68c3bc.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="14" style="zoom:80%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><strong>还有另外一种方式就是使用 $watch 的API：</strong></p>
+<p>我们可以在created的生命周期（后续会讲到）中，使用 this.$watchs 来侦听； </p>
+<ul>
+<li>第一个参数是要侦听的源； </li>
+<li>第二个参数是侦听的回调函数callback； </li>
+<li>第三个参数是额外的其他选项，比如deep、immediate；</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/d088c38bc1dc4a4bb26ea28552af1ea0.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="15" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h2 id="4-综合案例"><a href="#4-综合案例" class="headerlink" title="4.综合案例"></a>4.综合案例</h2><p>现在我们来做一个相对综合一点的练习：<strong>书籍购物车</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/f5a43e94eb9f4a2daba19b0d28b53529.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="16"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>案例说明： </p>
+<ul>
+<li>在界面上以表格的形式，显示一些书籍的数据； </li>
+<li>在底部显示书籍的总价格； </li>
+<li>点击+或者-可以增加或减少书籍数量（如果为1，那么不能继续-）； </li>
+<li>点击移除按钮，可以将书籍移除（当所有的书籍移除完毕时，显示：购物车为空~）；</li>
+</ul>
+<h2 id="5-v-model"><a href="#5-v-model" class="headerlink" title="5.v-model"></a>5.<strong>v-model</strong></h2><h3 id="5-1v-model的基本使用"><a href="#5-1v-model的基本使用" class="headerlink" title="5.1v-model的基本使用"></a><strong>5.1v-model的基本使用</strong></h3><p><strong>表单提交</strong>是开发中非常常见的功能，也是和用户交互的重要手段： </p>
+<p>比如用户在登录、注册时需要提交账号密码； </p>
+<p>比如用户在检索、创建、更新信息时，需要提交一些数据； </p>
+<p>这些都要求我们可以在<strong>代码逻辑中获取到用户提交的数据</strong>，我们通常会使用<strong>v-model指令</strong>来完成： v-model指令可以在表单 input、textarea以及select元素上创建双向数据绑定； </p>
+<p>它会根据控件类型自动选取正确的方法来更新元素； 尽管有些神奇，但 v-model 本质上不过是语法糖，它负责监听用户的输入事件来更新数据，并在某种极端场景下进行一些特殊处理；</p>
+<p><img src="https://img-blog.csdnimg.cn/af95bd6e85ff45b49437c7659303afe1.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="17"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="5-2v-model的原理"><a href="#5-2v-model的原理" class="headerlink" title="5.2v-model的原理"></a>5.2<strong>v-model的原理</strong></h3><p>官方有说到，<strong>v-model的原理</strong>其实是背后有两个操作： </p>
+<ul>
+<li>v-bind绑定value属性的值； </li>
+<li>v-on绑定input事件监听到函数中，函数会获取最新的值赋值到绑定的属性中；</li>
+</ul>
+<pre><code>&lt;input v-model=&quot;searchText&quot; /&gt;
+等价于：
+&lt;input :value=&quot;searchText&quot; @input=&quot;searchTect=$event.target.value&quot; /&gt;
 </code></pre>
-<p>c) show etherchannel summary检查etherchannel状态</p>
-<p><img src="https://img-blog.csdnimg.cn/e642bab5da5742f88be51a0defda84f6.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_15,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="02"></p>
-<p>   d) 配置汇聚层交换机到接入层交换机的链路为trunk</p>
-<p>   B2DS1,B2DS2:</p>
-<pre><code>Switch(config)#int range f0/1-2
-Switch(config-if-range)#switchport trunk encapsulation dot1q 
-Switch(config-if-range)#switchport mode trunk 
-</code></pre>
-<p>   e) 配置汇聚层交换机STP生成树，根据vlan设定生成树的主根和次主根</p>
-<p>   B2DS1:</p>
-<pre><code>Switch(config)#vlan 21
-Switch(config-vlan)#vlan 22
-Switch(config-vlan)#exit
-Switch(config)#spanning-tree vlan 21 root primary 
-Switch(config)#spanning-tree vlan 22 root secondary 
-</code></pre>
-<p>   B2DS2:</p>
-<pre><code>Switch(config)#vlan 21
-Switch(config-vlan)#vlan 22
-Switch(config-vlan)#exit
-Switch(config)#spanning-tree vlan 22 root primary 
-Switch(config)#spanning-tree vlan 21 root secondary 
-</code></pre>
-<p>   f) show spanning-tree检查生成树状态</p>
-<p>   <img src="https://img-blog.csdnimg.cn/img_convert/9e5e4d169bf799815488d8b3d6a36a57.png" alt="03"></p>
-<p>   <img src="https://img-blog.csdnimg.cn/img_convert/a3aaec6d91b56a72a25357317448f4aa.png" alt="04"></p>
-<ol start="3">
-<li><p>配置B2DS1、B2DS2汇聚层交换机三层特性</p>
-<p>a) 在汇聚层交换机启用三层交换功能</p>
-<p>b) 根据地址列表的要求设定vlan接口的地址</p>
-<p>B2DS1:</p>
-<pre><code>Switch(config)#ip routing
-Switch(config)#int vlan 21
-Switch(config-if)#ip addr 172.16.21.253 255.255.255.0
-Switch(config-if)#int vlan 22
-Switch(config-if)#ip addr 172.16.22.253 255.255.255.0
-</code></pre>
-<p>B2DS2:</p>
-<pre><code>Switch(config)#ip routing
-Switch(config)#int vlan 21
-Switch(config-if)#ip addr 172.16.21.254 255.255.255.0
-Switch(config-if)#int vlan 22
-Switch(config-if)#ip addr 172.16.22.254 255.255.255.0
-</code></pre>
-<p>c) 配置两个交换块的热备份路由</p>
-<p> i. 进入vlan接口<br>ii. 配置备份组的虚拟IP地址</p>
-<p>iii. 配置路由器的优先级和占先权</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> 事实上，v-model更加复杂：</p>
+<p><img src="https://img-blog.csdnimg.cn/16ffc617841641e8bd026a86a1729c05.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="18"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="5-3v-model绑定textarea"><a href="#5-3v-model绑定textarea" class="headerlink" title="5.3v-model绑定textarea"></a><strong>5.3v-model绑定textarea</strong></h3><p>我们再来绑定一下<strong>其他的表单类型</strong>：textarea、checkbox、radio、select </p>
+<p>我们来看一下绑定textarea：</p>
+<p><img src="https://img-blog.csdnimg.cn/bed70c33a36c4bd8810b0eb2425cfc38.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="19" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="5-4v-model绑定checkbox"><a href="#5-4v-model绑定checkbox" class="headerlink" title="5.4v-model绑定checkbox"></a>5.4<strong>v-model绑定checkbox</strong></h3><p>我们来看一下v-model绑定<strong>checkbox</strong>：单个勾选框和多个勾选框 </p>
+<ul>
+<li><p><strong>单个勾选框：</strong> </p>
+<p>v-model即为布尔值。此时input的value并不影响v-model的值。 </p>
 </li>
-</ol>
-<p>B2DS1:</p>
-<pre><code>   Switch(config-if)#int vlan 21
-   Switch(config-if)#standby 21 ip 172.16.21.1
-   Switch(config-if)#standby 21 preempt 
-   Switch(config-if)#standby 21 priority 200
-   Switch(config-if)#int vlan 22
-   Switch(config-if)#standby 22 ip 172.16.22.1
-</code></pre>
-<p>B2DS2:</p>
-<pre><code>   Switch(config-if)#int vlan 21
-   Switch(config-if)#standby 21 ip 172.16.21.1
-   Switch(config-if)#int vlan 22
-   Switch(config-if)#standby 22 ip 172.16.22.1
-   Switch(config-if)#standby 22 preempt 
-   Switch(config-if)#standby 22 priority 200
-</code></pre>
-<p>d) show standby检查HSRP状态</p>
-<p><img src="https://img-blog.csdnimg.cn/4b64b06fac0b4dde80050e93af19fd58.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_15,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="05"></p>
-<p><img src="https://img-blog.csdnimg.cn/48f4789489264328b57d1b4daccde9b0.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_14,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="06"></p>
-<p>   e)检查连通情况</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/5df4f69d3d79b6080d61ce0a6856a843.png" alt="07"></p>
-<ol start="4">
-<li><p>配置S1AS1和B2DS1、B2DS2上连核心接口地址</p>
-<p>a) 在S1AS1创建vlan100，加入连接服务器的接口</p>
-<pre><code>Switch(config)#vlan 100
-Switch(config-vlan)#int range f0/3-4
-Switch(config-if-range)#switchport access vlan 100
-</code></pre>
-<p>b) 在S1AS1启用三层功能，设置vlan100的接口地址</p>
-<pre><code>Switch(config)#ip routing
-Switch(config)#int vlan 100
-Switch(config-if)#ip addr 172.16.100.1 255.255.255.0
-</code></pre>
-<p>c) 配置与核心层交换机相连接口的IP地址</p>
-<p>i. 把所有接口设为路由接口</p>
-<p>ii. 设置所有与CS1相连接口的地址为172.16.1.0/24</p>
-<p>iii. 设置所有与CS2相连接口的地址为172.16.2.0/24</p>
-<p>B1DS1:</p>
-<pre><code>Switch(config)#int f0/3
-Switch(config-if)#ip addr 172.16.1.1 255.255.255.0
-Switch(config-if)#int f0/4
-Switch(config-if)#ip addr 172.16.2.1 255.255.255.0
-</code></pre>
-<p>B1DS2:</p>
-<pre><code>Switch(config)#int f0/3
-Switch(config-if)#ip addr 172.16.1.2 255.255.255.0
-Switch(config-if)#int f0/4
-Switch(config-if)#ip addr 172.16.2.2 255.255.255.0
-</code></pre>
-<p>B2DS1:</p>
-<pre><code>Switch(config)#int f0/4
-Switch(config-if)#no switchport 
-Switch(config-if)#ip addr 172.16.1.3 255.255.255.0
-Switch(config-if)#int f0/3
-Switch(config-if)#no switchport 
-Switch(config-if)#ip addr 172.16.2.3 255.255.255.0
-</code></pre>
-<p>B2DS2:</p>
-<pre><code>Switch(config)#int f0/3
-Switch(config-if)#no switch
-Switch(config-if)#ip addr 172.16.1.4 255.255.255.0
-Switch(config-if)#int f0/4
-Switch(config-if)#no switch
-Switch(config-if)#ip addr 172.16.2.4 255.255.255.0
-</code></pre>
-<p>S1AS1:</p>
-<pre><code>Switch(config)#int f0/1
-Switch(config-if)#no switchport
-Switch(config-if)#ip addr 172.16.1.5 255.255.255.0
-Switch(config-if)#int f0/2
-Switch(config-if)#no switchport
-Switch(config-if)#ip addr 172.16.2.5 255.255.255.0
-</code></pre>
-<p>R1:</p>
-<pre><code>Router(config)#int f0/0
-Router(config-if)#ip addr 172.16.1.6 255.255.255.0
-Router(config-if)#int f0/1
-Router(config-if)#ip addr 172.16.2.6 255.255.255.0
-</code></pre>
-<p>R2:</p>
-<pre><code>Router(config)#int f0/0
-Router(config-if)#ip addr 172.16.1.7 255.255.255.0
-Router(config-if)#int f0/1
-Router(config-if)#ip addr 172.16.2.7 255.255.255.0
-</code></pre>
+<li><p><strong>多个复选框：</strong> </p>
+<p>当是多个复选框时，因为可以选中多个，所以对应的data中属性是一个数组。当选中某一个时，就会将input的value添加到数组中。</p>
 </li>
-<li><p>配置园区网OSPF动态路由协议</p>
-<p>a) 在与核心直接相连的三层交换机和路由器上启用OSPF协议</p>
-<p>b) 宣告自己的直连网络，设定区域为area0</p>
-<p>B1DS1:</p>
-<pre><code>Switch(config)#route ospf 1
-Switch(config-router)#network 172.16.11.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.12.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.1.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.2.0 0.0.0.255 area 0
-</code></pre>
-<p>B1DS2:</p>
-<pre><code>Switch(config)#route ospf 1
-Switch(config-router)#network 172.16.11.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.12.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.1.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.2.0 0.0.0.255 area 0
-</code></pre>
-<p>B2DS1:</p>
-<pre><code>Switch(config)#route ospf 1
-Switch(config-router)#network 172.16.21.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.22.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.1.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.2.0 0.0.0.255 area 0
-</code></pre>
-<p>B2DS2:</p>
-<pre><code>Switch(config)#route ospf 1
-Switch(config-router)#network 172.16.21.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.22.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.1.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.2.0 0.0.0.255 area 0
-</code></pre>
-<p>S1AS1:</p>
-<pre><code>Switch(config)#route ospf 1
-Switch(config-router)#network 172.16.100.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.1.0 0.0.0.255 area 0
-Switch(config-router)#network 172.16.2.0 0.0.0.255 area 0
-</code></pre>
-<p>R1:</p>
-<pre><code>Router(config)#route ospf 1
-Router(config-router)#network 172.16.1.0 0.0.0.255 area 0
-Router(config-router)#network 172.16.2.0 0.0.0.255 area 0
-Router(config-router)#default-information originate
-</code></pre>
-<p>R2:</p>
-<pre><code>Router(config)#route ospf 1
-Router(config-router)#network 172.16.1.0 0.0.0.255 area 0
-Router(config-router)#network 172.16.2.0 0.0.0.255 area 0
-Router(config-router)#default-information originate
-</code></pre>
-<p>c) 在出口路由器检查路由表</p>
-<p>R1,R2:</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/f2d7ff8c22b3a5a5e0e8e8f86a66ae11.png" alt="08"></p>
-<p>d) 在园区网内检查连通性–pc22.1ping http服务器</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/f358e01b052f6c266c93941dee4223e0.png" alt="09"></p>
-</li>
-<li><p>配置互联网ISP动态路由协议</p>
-<p>配置方案：自治系统内采用OSPF，自治系统间使用BGP</p>
-<p>a) 在自治区域内启用单区域OSPF并宣告网络</p>
-<p>ISP1-1:</p>
-<pre><code>Router(config)#route ospf 1
-Router(config-router)#network 1.1.1.0 0.0.0.7 area 0
-Router(config-router)#network 3.0.0.0 0.255.255.255 area 0
-</code></pre>
-<p>ISP1-2:</p>
-<pre><code>Router(config)#route ospf 1
-Router(config-router)#network 3.0.0.0 0.255.255.255 area 0
-Router(config-router)#network 5.0.0.0 0.255.255.255 area 0
-</code></pre>
-<p>ISP2-1:</p>
-<pre><code>Router(config)#route ospf 1
-Router(config-router)#network 2.1.1.0 0.0.0.3 area 0
-Router(config-router)#network 4.0.0.0 0.255.255.255 area 0
-</code></pre>
-<p>ISP2-2:</p>
-<pre><code>Router(config)#route ospf 1
-Router(config-router)#network 4.0.0.0 0.255.255.255 area 0
-Router(config-router)#network 6.0.0.0 0.255.255.255 area 0
-Router(config-router)#network 9.1.1.0 0.0.0.3 area 0
-</code></pre>
-<p>b)在ISP1-2和ISP2-2上启用BGP，配置邻居为ISP3；</p>
-<p>ISP1-2:</p>
-<pre><code>Router(config)#route bgp 100
-Router(config-router)#neighbor 5.0.0.2 remote-as 300
-</code></pre>
-<p>ISP2-2:</p>
-<pre><code>Router(config)#route bgp 200
-Router(config-router)#neighbor 6.0.0.2 remote-as 300
-</code></pre>
-<p>ISP3:</p>
-<pre><code>Router(config)#route bgp 300
-Router(config-router)#neighbor 5.0.0.1 remote-as 100
-Router(config-router)#neighbor 6.0.0.1 remote-as 200
-</code></pre>
-<p>c) 在ISP1-2和ISP2-2上启用BGP，配置邻居为ISP3；把OSPF路由动态注入到BGP，把BGP路由再分配到OSPF</p>
-<p>ISP1-2:</p>
-<pre><code>Router(config)#route bgp 100
-Router(config-router)#redistribute ospf 1
-</code></pre>
-<p>ISP2-2:</p>
-<pre><code>Router(config)#route bgp 200
-Router(config-router)#redistribute ospf 1
-</code></pre>
-<p>ISP3:</p>
-<pre><code>Router(config)#route bgp 300
-Router(config-router)#network 7.1.1.0 mask 255.255.255.0
-Router(config-router)#network 8.8.8.0 mask 255.255.255.0
-</code></pre>
-<p>注入BGP之后再分配到OSPF(顺序不能和上面的颠倒)</p>
-<p>ISP1-2:</p>
-<pre><code>Router(config)#route ospf 1
-Router(config-router)#redistribute bgp 100 subnets 
-</code></pre>
-<p>ISP2-2:</p>
-<pre><code>Router(config)#route ospf 1
-Router(config-router)#redistribute bgp 200 subnets 
-</code></pre>
-<p>e) 在ISP1-1和ISP2-1上查看路由表</p>
-</li>
-</ol>
-<p>  <img src="https://img-blog.csdnimg.cn/e2e18d21d50a4044893e0e22d1d73748.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_14,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="10"><br><img src="https://img-blog.csdnimg.cn/ad509ccf2b7b49388ada1a82874d68be.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_15,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="11"></p>
-<ol start="7">
-<li><p>配置园区网出口路由器R1、R2的缺省路由与地址转换</p>
-<p>a) 在路由器R1、R2配置缺省路由指向ISP</p>
-<p>R1:</p>
-<pre><code>Router(config)#ip route 0.0.0.0 0.0.0.0 1.1.1.2
-</code></pre>
-<p>R2:</p>
-<pre><code>Router(config)#ip route 0.0.0.0 0.0.0.0 2.1.1.2
-</code></pre>
-<p>b) 把缺省路由再分配到路由器R1、R2的OSPF协议中</p>
-<pre><code>Router(config-router)#default-information originate //宣告ospf时已执行，可略过
-</code></pre>
-<p>c) 在路由器R1、R2配置地址转换，使得内网能够访问互联网</p>
-<p>R1：</p>
-<pre><code>Router(config)#access-list 1 permit 172.16.0.0 0.0.255.255
-Router(config)#ip nat inside source list 1 interface f1/0 overload 
-Router(config)#int f1/0
-Router(config-if)#ip nat outside
-Router(config-if)#int f0/0
-Router(config-if)#ip nat inside
-Router(config-if)#int f0/1
-Router(config-if)#ip nat inside
-</code></pre>
-<p>R2：</p>
-<pre><code>Router(config)#access-list 1 permit 172.16.0.0 0.0.255.255
-Router(config)#ip nat inside source list 1 interface f1/0 overload 
-Router(config)#int f1/0
-Router(config-if)#ip nat outside
-Router(config-if)#int f0/0
-Router(config-if)#ip nat inside
-Router(config-if)#int f0/1
-Router(config-if)#ip nat inside
-</code></pre>
-<p>d) 在路由器R1、R2配置端口映射，使得外网能够访问内网http服务</p>
-<p>R1：</p>
-<pre><code>Router(config)#ip nat inside source static tcp 172.16.100.2 80 1.1.1.1 80
-</code></pre>
-<p>R2：</p>
-<pre><code>Router(config)#ip nat inside source static tcp 172.16.100.2 80 2.1.1.1 80
-</code></pre>
-<p>e)检测pc21.2能否访问InterSrv7.1.1.2，</p>
-<p><img src="https://img-blog.csdnimg.cn/a6d9ec16d0ab454d9be8ffba084fed7e.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_18,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="12"></p>
-</li>
-</ol>
-<pre><code>dwon掉R2的f1/0口检验，外网访问内网http服务
-</code></pre>
-<p>   <img src="https://img-blog.csdnimg.cn/10ba412a0e8347fcb8aedec5d638c441.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_18,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="13"></p>
-<ol start="8">
-<li><p>配置R3分公司路由器</p>
-<p>a) 配置缺省路由指向ISP2</p>
-<pre><code>Router(config)#ip route 0.0.0.0 0.0.0.0 9.1.1.1
-</code></pre>
-<p>b) 配置NAT网络地址转换</p>
-<pre><code>Router(config)#access-list 1 permit 192.168.1.0 0.0.0.255
-Router(config)#ip nat inside source list 1 interface f1/0 overload 
-Router(config)#int f1/0
-Router(config-if)#ip nat outside
-Router(config-if)#int f0/0
-Router(config-if)#ip nat inside
-</code></pre>
-<p>c) 检查PC192能够访问互联网</p>
-<p><img src="https://img-blog.csdnimg.cn/a4ea8f02f5a641b39578e0518a0b596a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_13,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="14"></p>
-</li>
-</ol>
-<ol start="9">
-<li><p>配置园区网DNS和互联网InterDNS服务器</p>
-<p>a) 在DNS设定<a target="_blank" rel="noopener" href="http://www.mydomain.com解析为内网地址/">www.mydomain.com解析为内网地址</a></p>
-<p><img src="https://img-blog.csdnimg.cn/cfa447d5781d43d7a095c5b0a06a2d4d.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="15"></p>
-</li>
-</ol>
-<p>   b) 在InterDNS设定<a target="_blank" rel="noopener" href="http://www.mydomain.com解析为园区网出口地址/">www.mydomain.com解析为园区网出口地址</a></p>
-<p>   <img src="https://img-blog.csdnimg.cn/08e351233b7448d3a8cd95ad6b94fc72.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_18,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="16"></p>
-<p>   c) 在PC192配置dns服务器，使用浏览器访问<a target="_blank" rel="noopener" href="http://www.mydomain.com/">www.mydomain.com</a></p>
-<p>   <img src="https://img-blog.csdnimg.cn/0f9abcf2d4004a328a64a422b809aa71.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_18,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="17"></p>
-<p>   d) 在PC11.2配置dns服务器，使用浏览器访问<a target="_blank" rel="noopener" href="http://www.mydomain.com/">www.mydomain.com</a></p>
-<p>   <img src="https://img-blog.csdnimg.cn/4bdfc70579a34478a69c50ee2fe8d31c.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_17,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="18"></p>
-<h4 id="任务三：检查网络连通性和可靠性"><a href="#任务三：检查网络连通性和可靠性" class="headerlink" title="任务三：检查网络连通性和可靠性"></a><strong>任务三：检查网络连通性和可靠性</strong></h4><ol>
-<li><p>从pc21.2  ping到 inter_srv</p>
-<p><img src="https://img-blog.csdnimg.cn/1ed20ed5c33d44058533d46ff71bba18.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_12,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="19"></p>
-</li>
-</ol>
-<ol start="2">
-<li><p>从pc22.2  ping到inter_srv</p>
-<p><img src="https://img-blog.csdnimg.cn/171b3e9cf97a464faa7c18d14371b8bd.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_12,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="20"></p>
-</li>
-</ol>
-<ol start="3">
-<li>依次当掉B2DS1、CS1、R1，再检查连通性</li>
-</ol>
-<p>  <strong>依旧能连通</strong></p>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/d5133e723942429e822a4e02cbcaaa42.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="20" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"><img src="https://img-blog.csdnimg.cn/7e199cd2b42c47a4bd7754ba44e2bc31.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="21" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="5-5v-model绑定radio"><a href="#5-5v-model绑定radio" class="headerlink" title="5.5v-model绑定radio"></a>5.5<strong>v-model绑定radio</strong></h3><p>v-model绑定<strong>radio</strong>，用于选择其中一项；</p>
+<p><img src="https://img-blog.csdnimg.cn/7968b15cacda4989953afa7c3bd1123d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="22" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="5-6v-model绑定select"><a href="#5-6v-model绑定select" class="headerlink" title="5.6v-model绑定select"></a><strong>5.6v-model绑定select</strong></h3><p><strong>和checkbox一样，select也分单选和多选两种情况。</strong> </p>
+<p><strong>单选：只能选中一个值</strong> </p>
+<p>  v-model绑定的是一个值； </p>
+<p> 当我们选中option中的一个时，会将它对应的value赋值到fruit中； </p>
+<p><strong>多选：可以选中多个值</strong> </p>
+<p>  v-model绑定的是一个数组； </p>
+<p> 当选中多个值时，就会将选中的option对应的value添加到数组fruit中；</p>
+<p><img src="https://img-blog.csdnimg.cn/c7dfccaa41e04e17bb811a338262fa1b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="23"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="5-7v-model的值绑定"><a href="#5-7v-model的值绑定" class="headerlink" title="5.7v-model的值绑定"></a><strong>5.7v-model的值绑定</strong></h3><p>目前我们在前面的案例中大部分的值都是在template中固定好的： </p>
+<ul>
+<li>比如gender的两个输入框值male、female； </li>
+<li>比如hobbies的三个输入框值basketball、football、tennis； </li>
+</ul>
+<p>在真实开发中，我们的数据可能是来自服务器的，那么我们就可以先将值请求下来，绑定到data返回的对象中，再通过v-bind来进行值的绑定，这个过程就是<strong>值绑定</strong>。 </p>
+<p>这里不再给出具体的做法，因为还是v-bind的使用过程。</p>
+<h3 id="5-8v-model修饰符-lazy"><a href="#5-8v-model修饰符-lazy" class="headerlink" title="5.8v-model修饰符 - lazy"></a>5.8<strong>v-model修饰符 - lazy</strong></h3><p><strong>问题：lazy修饰符是什么作用呢？</strong> </p>
+<ul>
+<li>默认情况下，v-model在进行双向绑定时，绑定的是input事件，那么会在每次内容输入后就将最新的值和绑定的属性进行同步；</li>
+<li>如果我们在v-model后跟上lazy修饰符，那么会将绑定的事件切换为 change 事件，只有在提交时（比如回车）才会触发；</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/d54c822f7731432bb5ad3d6e06f9019d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="24" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="5-9v-model修饰符-number"><a href="#5-9v-model修饰符-number" class="headerlink" title="5.9v-model修饰符 - number"></a>5.9<strong>v-model修饰符 - number</strong></h3><p>我们先来看一下v-model绑定后的值是什么类型的： </p>
+<ul>
+<li>message总是string类型，即使在我们设置type为number也是string类型； </li>
+</ul>
+<p> <img src="https://img-blog.csdnimg.cn/e26049742df2457da55084bec81606be.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="25" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li>如果我们希望转换为数字类型，那么可以使用 .number 修饰符：</li>
+</ul>
+<p> <img src="https://img-blog.csdnimg.cn/3128b87037654328895d5e29946c804d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="26" style="zoom:67%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li>另外，在我们进行逻辑判断时，如果是一个string类型，在可以转化的情况下会进行隐式转换的： </li>
+</ul>
+<p> 下面的score在进行判断的过程中会进行隐式转化的；</p>
+<p> <img src="https://img-blog.csdnimg.cn/5513599e07fa432696ca6387c9483c5a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="27" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="5-10-v-model修饰符-trim"><a href="#5-10-v-model修饰符-trim" class="headerlink" title="5.10 v-model修饰符 - trim"></a><strong>5.10 v-model修饰符 - trim</strong></h3><p>如果要自动过滤用户输入的守卫空白字符，可以给v-model添加 trim 修饰符：</p>
+<p><img src="https://img-blog.csdnimg.cn/1c3a19c7ac8440568f075bb3756c0623.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="28" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 
                 
             </div>
@@ -1153,7 +684,7 @@ Router(config-if)#ip nat inside
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Sang63.github.io/2021/11/25/%E5%8F%8C%E6%A0%B8%E5%BF%83%E5%87%BA%E5%8F%A3%E4%B8%89%E5%B1%82%E7%BB%93%E6%9E%84%E5%9B%AD%E5%8C%BA%E7%BD%91%E9%85%8D%E7%BD%AE%EF%BC%88%E5%AE%8C%E6%95%B4%E7%89%88%EF%BC%89/">http://Sang63.github.io/2021/11/25/%E5%8F%8C%E6%A0%B8%E5%BF%83%E5%87%BA%E5%8F%A3%E4%B8%89%E5%B1%82%E7%BB%93%E6%9E%84%E5%9B%AD%E5%8C%BA%E7%BD%91%E9%85%8D%E7%BD%AE%EF%BC%88%E5%AE%8C%E6%95%B4%E7%89%88%EF%BC%89/</a>
+                    <a href="http://Sang63.github.io/2022/03/17/Vue3%E7%9A%84Options-API/">http://Sang63.github.io/2022/03/17/Vue3%E7%9A%84Options-API/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1191,8 +722,8 @@ Router(config-if)#ip nat inside
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%BD%91%E7%BB%9C%E9%9B%86%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/">
-                                    <span class="chip bg-color">网络集成与设计</span>
+                                <a href="/tags/Vue3/">
+                                    <span class="chip bg-color">Vue3</span>
                                 </a>
                             
                         </div>
@@ -1632,17 +1163,18 @@ Router(config-if)#ip nat inside
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/01/04/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89/">
+                <a href="/2022/03/17/Vue3%E7%9A%84Options-API/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="小程序编程基础（一）">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Vue3的Options-API">
                         
-                        <span class="card-title">小程序编程基础（一）</span>
+                        <span class="card-title">Vue3的Options-API</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1652,9 +1184,9 @@ Router(config-if)#ip nat inside
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1663,11 +1195,12 @@ Router(config-if)#ip nat inside
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
-                        <span class="chip bg-color">微信小程序</span>
+                    <a href="/tags/Vue3/">
+                        <span class="chip bg-color">Vue3</span>
                     </a>
                     
                 </div>
@@ -1681,13 +1214,13 @@ Router(config-if)#ip nat inside
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/11/18/smarty%E6%A8%A1%E6%9D%BF%E7%9A%84%E4%BD%BF%E7%94%A8%EF%BC%882%EF%BC%89/">
+                <a href="/2022/03/16/%E5%B0%8F%E7%A8%8B%E5%BA%8FAPI%EF%BC%88%E4%BA%8C%EF%BC%89/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="smarty模板的使用（2）">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="小程序API（二）">
                         
-                        <span class="card-title">smarty模板的使用（2）</span>
+                        <span class="card-title">小程序API（二）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1698,7 +1231,7 @@ Router(config-if)#ip nat inside
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-16
                             </span>
                         <span class="publish-author">
                             
@@ -1707,14 +1240,6 @@ Router(config-if)#ip nat inside
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/smarty/">
-                        <span class="chip bg-color">smarty</span>
-                    </a>
-                    
                 </div>
                 
             </div>
