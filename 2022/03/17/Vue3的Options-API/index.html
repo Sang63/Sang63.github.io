@@ -517,7 +517,7 @@
 <li>缺点一：我们事实上先显示的是一个结果，但是都变成了一种方法的调用；</li>
 <li>缺点二：多次使用方法的时候，没有缓存，也需要多次计算；</li>
 </ul>
-<p> <img src="https://img-blog.csdnimg.cn/4a9f42726844473fa726a9671367009d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="02" style="zoom:50%;" /><img src="https://img-blog.csdnimg.cn/436667bc05964b5792628e3a6a06d56e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="03" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> <img src="https://img-blog.csdnimg.cn/4a9f42726844473fa726a9671367009d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="02" style="zoom:50%;" /><img src="https://img-blog.csdnimg.cn/436667bc05964b5792628e3a6a06d56e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="03" style="zoom:50%;" /></p>
 <p><strong>2.2.3思路三的实现：computed实现</strong></p>
 <ul>
 <li>注意：计算属性看起来像是一个函数，但是我们在使用的时候不需要加()，这个后面讲setter和getter时会说到；</li>
@@ -534,7 +534,8 @@
 <li>在数据不发生变化时，计算属性是不需要重新计算的； </li>
 <li>但是如果依赖的数据发生变化，在使用时，计算属性依然会重新进行计算；</li>
 </ul>
-<p> <img src="https://img-blog.csdnimg.cn/24104796be8b42afbaac29055a311f1c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="07" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+ <img src="https://img-blog.csdnimg.cn/24104796be8b42afbaac29055a311f1c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="07" style="zoom:50%;" />
+
 <h3 id="3-2计算属性的setter和getter"><a href="#3-2计算属性的setter和getter" class="headerlink" title="3.2计算属性的setter和getter"></a><strong>3.2计算属性的setter和getter</strong></h3><p>​    计算属性在大多数情况下，只需要一个<strong>getter方法</strong>即可，所以我们会将计算属性直接<strong>写成一个函数</strong>。</p>
 <p>​    但是，如果我们确实想<strong>设置计算属性的值</strong>呢？ </p>
 <p>​    这个时候我们也可以给计算属性设置一个setter的方法；</p>
@@ -572,7 +573,7 @@
 <img src="https://img-blog.csdnimg.cn/4fd3fe1d53ad48eab9fdf2e59e01223a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="11" style="zoom:50%;" />
 
 <p><strong>3.4.5侦听器watch的其他方式（一）</strong></p>
-<p> <img src="https://img-blog.csdnimg.cn/4dbc6123aabb45fc9d4129db21749565.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_10,color_FFFFFF,t_70,g_se,x_16" alt="12" style="zoom:80%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"><img src="https://img-blog.csdnimg.cn/b6288992aa9746fd9cf50564fe0b4b4d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="13" style="zoom:50%;" /></p>
+<p> <img src="https://img-blog.csdnimg.cn/4dbc6123aabb45fc9d4129db21749565.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_10,color_FFFFFF,t_70,g_se,x_16" alt="12" style="zoom:80%;" /><img src="https://img-blog.csdnimg.cn/b6288992aa9746fd9cf50564fe0b4b4d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="13" style="zoom:50%;" /></p>
 <p>另外一个是Vue3文档中没有提到的，但是Vue2文档中有提到的是侦听对象的属性：</p>
 <img src="https://img-blog.csdnimg.cn/144edf0a63e744589f03d0baba68c3bc.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="14" style="zoom:80%;" />
 
@@ -1207,8 +1208,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Vue/">
-                        <span class="chip bg-color">Vue</span>
+                    <a href="/tags/Vue3/">
+                        <span class="chip bg-color">Vue3</span>
                     </a>
                     
                 </div>
