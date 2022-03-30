@@ -510,23 +510,24 @@
 <li>缺点二：当有多次一样的逻辑时，存在重复的代码； </li>
 <li>缺点三：多次使用的时候，很多运算也需要多次执行，没有缓存；</li>
 </ul>
-<p><img src="https://img-blog.csdnimg.cn/e9e0360ea5ff41598c948151641dcb49.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="01" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<img src="https://img-blog.csdnimg.cn/e9e0360ea5ff41598c948151641dcb49.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="01" style="zoom:50%;" />
+
 <p> 2.2.2<strong>思路二的实现：method实现</strong></p>
 <ul>
 <li>缺点一：我们事实上先显示的是一个结果，但是都变成了一种方法的调用；</li>
 <li>缺点二：多次使用方法的时候，没有缓存，也需要多次计算；</li>
 </ul>
-<p> <img src="https://img-blog.csdnimg.cn/4a9f42726844473fa726a9671367009d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="02" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"><img src="https://img-blog.csdnimg.cn/436667bc05964b5792628e3a6a06d56e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="03" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> <img src="https://img-blog.csdnimg.cn/4a9f42726844473fa726a9671367009d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="02" style="zoom:50%;" /><img src="https://img-blog.csdnimg.cn/436667bc05964b5792628e3a6a06d56e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="03" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 <p><strong>2.2.3思路三的实现：computed实现</strong></p>
 <ul>
 <li>注意：计算属性看起来像是一个函数，但是我们在使用的时候不需要加()，这个后面讲setter和getter时会说到；</li>
 <li>我们会发现无论是直观上，还是效果上计算属性都是更好的选择； </li>
 <li>并且计算属性是有缓存的；</li>
 </ul>
-<p> <img src="https://img-blog.csdnimg.cn/a3c50eaa80b74985ab72ef4e0eb75986.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="04" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"><img src="https://img-blog.csdnimg.cn/1897912da47440f28d8191a15d75ff8b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="05" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> <img src="https://img-blog.csdnimg.cn/a3c50eaa80b74985ab72ef4e0eb75986.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="04" style="zoom:50%;" /><img src="https://img-blog.csdnimg.cn/1897912da47440f28d8191a15d75ff8b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="05" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 <h2 id="3-计算属性-vs-methods"><a href="#3-计算属性-vs-methods" class="headerlink" title="3.计算属性 vs methods"></a>3.计算属性 vs methods</h2><p>在上面的实现思路中，我们会发现计算属性和methods的实现看起来是差别是不大的，而且我们多次提到计算属性有缓存的。</p>
 <p>接下来我们来看一下同一个计算多次使用，计算属性和methods的差异：</p>
-<p> <img src="https://img-blog.csdnimg.cn/c5217f50b8914f16a87122414e1490b7.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="06"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> <img src="https://img-blog.csdnimg.cn/c5217f50b8914f16a87122414e1490b7.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="06"></p>
 <h3 id="3-1计算属性的缓存"><a href="#3-1计算属性的缓存" class="headerlink" title="3.1计算属性的缓存"></a>3.1<strong>计算属性的缓存</strong></h3><p>这是什么原因呢？ </p>
 <ul>
 <li>这是因为计算属性会基于它们的依赖关系进行缓存； </li>
@@ -537,10 +538,12 @@
 <h3 id="3-2计算属性的setter和getter"><a href="#3-2计算属性的setter和getter" class="headerlink" title="3.2计算属性的setter和getter"></a><strong>3.2计算属性的setter和getter</strong></h3><p>​    计算属性在大多数情况下，只需要一个<strong>getter方法</strong>即可，所以我们会将计算属性直接<strong>写成一个函数</strong>。</p>
 <p>​    但是，如果我们确实想<strong>设置计算属性的值</strong>呢？ </p>
 <p>​    这个时候我们也可以给计算属性设置一个setter的方法；</p>
-<p><img src="https://img-blog.csdnimg.cn/95aaf2c8f0da40cb8a6ad284006df106.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="08" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<img src="https://img-blog.csdnimg.cn/95aaf2c8f0da40cb8a6ad284006df106.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="08" style="zoom:50%;" />
+
 <h3 id="3-3源码如何对setter和getter处理呢？"><a href="#3-3源码如何对setter和getter处理呢？" class="headerlink" title="3.3源码如何对setter和getter处理呢？"></a>3.3<strong>源码如何对setter和getter处理呢？</strong></h3><p>你可能觉得很奇怪，Vue内部是如何对我们传入的是一个getter，还是说是一个包含setter和getter的对象进行处理的呢？  </p>
 <p>事实上非常的简单，Vue源码内部只是做了一个逻辑判断而已；</p>
-<p><img src="https://img-blog.csdnimg.cn/7bacbdb715ec4facb24e0db11270bcc2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="09" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<img src="https://img-blog.csdnimg.cn/7bacbdb715ec4facb24e0db11270bcc2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="09" style="zoom:50%;" />
+
 <h3 id="3-4认识侦听器watch"><a href="#3-4认识侦听器watch" class="headerlink" title="3.4认识侦听器watch"></a>3.4<strong>认识侦听器watch</strong></h3><p><strong>3.4.1什么是侦听器呢？</strong></p>
 <ul>
 <li>开发中我们在data返回的对象中定义了数据，这个数据通过插值语法等方式绑定到template中； </li>
@@ -555,7 +558,7 @@
 <p><strong>3.4.3侦听器案例</strong></p>
 <p><strong>举个栗子（例子）：</strong></p>
 <p> 比如现在我们希望用户在input中输入一个问题；每当用户输入了最新的内容，我们就获取到最新的内容，并且使用该问题去服务器查询答案；那么，我们就需要实时的去获取最新的数据变化；</p>
-<p> <img src="https://img-blog.csdnimg.cn/1598e06873584d2bbc49a48870ff24d6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="10"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> <img src="https://img-blog.csdnimg.cn/1598e06873584d2bbc49a48870ff24d6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="10"></p>
 <p><strong>3.4.4侦听器watch的配置选项</strong></p>
 <p>我们先来看一个例子： </p>
 <p> 当我们点击按钮的时候会修改info.name的值； </p>
@@ -566,11 +569,13 @@
 <p> 还有<strong>另外一个属性</strong>，是<strong>希望一开始的就会立即执行一次</strong>： </p>
 <p> 这个时候我们使用immediate选项； </p>
 <p> 这个时候无论后面数据是否有变化，侦听的函数都会有限执行一次；</p>
-<p><img src="https://img-blog.csdnimg.cn/4fd3fe1d53ad48eab9fdf2e59e01223a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="11" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<img src="https://img-blog.csdnimg.cn/4fd3fe1d53ad48eab9fdf2e59e01223a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="11" style="zoom:50%;" />
+
 <p><strong>3.4.5侦听器watch的其他方式（一）</strong></p>
-<p> <img src="https://img-blog.csdnimg.cn/4dbc6123aabb45fc9d4129db21749565.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_10,color_FFFFFF,t_70,g_se,x_16" alt="12" style="zoom:80%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"><img src="https://img-blog.csdnimg.cn/b6288992aa9746fd9cf50564fe0b4b4d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="13" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> <img src="https://img-blog.csdnimg.cn/4dbc6123aabb45fc9d4129db21749565.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_10,color_FFFFFF,t_70,g_se,x_16" alt="12" style="zoom:80%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"><img src="https://img-blog.csdnimg.cn/b6288992aa9746fd9cf50564fe0b4b4d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="13" style="zoom:50%;" /></p>
 <p>另外一个是Vue3文档中没有提到的，但是Vue2文档中有提到的是侦听对象的属性：</p>
-<p><img src="https://img-blog.csdnimg.cn/144edf0a63e744589f03d0baba68c3bc.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="14" style="zoom:80%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<img src="https://img-blog.csdnimg.cn/144edf0a63e744589f03d0baba68c3bc.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="14" style="zoom:80%;" />
+
 <p><strong>还有另外一种方式就是使用 $watch 的API：</strong></p>
 <p>我们可以在created的生命周期（后续会讲到）中，使用 this.$watchs 来侦听； </p>
 <ul>
@@ -578,9 +583,10 @@
 <li>第二个参数是侦听的回调函数callback； </li>
 <li>第三个参数是额外的其他选项，比如deep、immediate；</li>
 </ul>
-<p><img src="https://img-blog.csdnimg.cn/d088c38bc1dc4a4bb26ea28552af1ea0.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="15" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<img src="https://img-blog.csdnimg.cn/d088c38bc1dc4a4bb26ea28552af1ea0.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="15" style="zoom:50%;" />
+
 <h2 id="4-综合案例"><a href="#4-综合案例" class="headerlink" title="4.综合案例"></a>4.综合案例</h2><p>现在我们来做一个相对综合一点的练习：<strong>书籍购物车</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/f5a43e94eb9f4a2daba19b0d28b53529.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="16"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdnimg.cn/f5a43e94eb9f4a2daba19b0d28b53529.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="16"></p>
 <p>案例说明： </p>
 <ul>
 <li>在界面上以表格的形式，显示一些书籍的数据； </li>
@@ -593,7 +599,7 @@
 <p>比如用户在检索、创建、更新信息时，需要提交一些数据； </p>
 <p>这些都要求我们可以在<strong>代码逻辑中获取到用户提交的数据</strong>，我们通常会使用<strong>v-model指令</strong>来完成： v-model指令可以在表单 input、textarea以及select元素上创建双向数据绑定； </p>
 <p>它会根据控件类型自动选取正确的方法来更新元素； 尽管有些神奇，但 v-model 本质上不过是语法糖，它负责监听用户的输入事件来更新数据，并在某种极端场景下进行一些特殊处理；</p>
-<p><img src="https://img-blog.csdnimg.cn/af95bd6e85ff45b49437c7659303afe1.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="17"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdnimg.cn/af95bd6e85ff45b49437c7659303afe1.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="17"></p>
 <h3 id="5-2v-model的原理"><a href="#5-2v-model的原理" class="headerlink" title="5.2v-model的原理"></a>5.2<strong>v-model的原理</strong></h3><p>官方有说到，<strong>v-model的原理</strong>其实是背后有两个操作： </p>
 <ul>
 <li>v-bind绑定value属性的值； </li>
@@ -603,12 +609,12 @@
 等价于：
 &lt;input :value=&quot;searchText&quot; @input=&quot;searchTect=$event.target.value&quot; /&gt;
 </code></pre>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 <p> 事实上，v-model更加复杂：</p>
-<p><img src="https://img-blog.csdnimg.cn/16ffc617841641e8bd026a86a1729c05.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="18"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<h3 id="5-3v-model绑定textarea"><a href="#5-3v-model绑定textarea" class="headerlink" title="5.3v-model绑定textarea"></a><strong>5.3v-model绑定textarea</strong></h3><p>我们再来绑定一下<strong>其他的表单类型</strong>：textarea、checkbox、radio、select </p>
+<p><img src="https://img-blog.csdnimg.cn/16ffc617841641e8bd026a86a1729c05.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="18"><strong>5.3v-model绑定textarea</strong></p>
+<p>我们再来绑定一下<strong>其他的表单类型</strong>：textarea、checkbox、radio、select </p>
 <p>我们来看一下绑定textarea：</p>
-<p><img src="https://img-blog.csdnimg.cn/bed70c33a36c4bd8810b0eb2425cfc38.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="19" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<img src="https://img-blog.csdnimg.cn/bed70c33a36c4bd8810b0eb2425cfc38.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="19" style="zoom:50%;" />
+
 <h3 id="5-4v-model绑定checkbox"><a href="#5-4v-model绑定checkbox" class="headerlink" title="5.4v-model绑定checkbox"></a>5.4<strong>v-model绑定checkbox</strong></h3><p>我们来看一下v-model绑定<strong>checkbox</strong>：单个勾选框和多个勾选框 </p>
 <ul>
 <li><p><strong>单个勾选框：</strong> </p>
@@ -618,9 +624,11 @@
 <p>当是多个复选框时，因为可以选中多个，所以对应的data中属性是一个数组。当选中某一个时，就会将input的value添加到数组中。</p>
 </li>
 </ul>
-<p><img src="https://img-blog.csdnimg.cn/d5133e723942429e822a4e02cbcaaa42.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="20" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"><img src="https://img-blog.csdnimg.cn/7e199cd2b42c47a4bd7754ba44e2bc31.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="21" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<h3 id="5-5v-model绑定radio"><a href="#5-5v-model绑定radio" class="headerlink" title="5.5v-model绑定radio"></a>5.5<strong>v-model绑定radio</strong></h3><p>v-model绑定<strong>radio</strong>，用于选择其中一项；</p>
-<p><img src="https://img-blog.csdnimg.cn/7968b15cacda4989953afa7c3bd1123d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="22" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdnimg.cn/d5133e723942429e822a4e02cbcaaa42.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="20" style="zoom:50%;" /><img src="https://img-blog.csdnimg.cn/7e199cd2b42c47a4bd7754ba44e2bc31.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="21" style="zoom:50%;" /></p>
+<p>5.5<strong>v-model绑定radio</strong></p>
+<p>v-model绑定<strong>radio</strong>，用于选择其中一项；</p>
+<img src="https://img-blog.csdnimg.cn/7968b15cacda4989953afa7c3bd1123d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="22" style="zoom:50%;" />
+
 <h3 id="5-6v-model绑定select"><a href="#5-6v-model绑定select" class="headerlink" title="5.6v-model绑定select"></a><strong>5.6v-model绑定select</strong></h3><p><strong>和checkbox一样，select也分单选和多选两种情况。</strong> </p>
 <p><strong>单选：只能选中一个值</strong> </p>
 <p>  v-model绑定的是一个值； </p>
@@ -628,7 +636,7 @@
 <p><strong>多选：可以选中多个值</strong> </p>
 <p>  v-model绑定的是一个数组； </p>
 <p> 当选中多个值时，就会将选中的option对应的value添加到数组fruit中；</p>
-<p><img src="https://img-blog.csdnimg.cn/c7dfccaa41e04e17bb811a338262fa1b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="23"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdnimg.cn/c7dfccaa41e04e17bb811a338262fa1b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="23"></p>
 <h3 id="5-7v-model的值绑定"><a href="#5-7v-model的值绑定" class="headerlink" title="5.7v-model的值绑定"></a><strong>5.7v-model的值绑定</strong></h3><p>目前我们在前面的案例中大部分的值都是在template中固定好的： </p>
 <ul>
 <li>比如gender的两个输入框值male、female； </li>
@@ -641,23 +649,25 @@
 <li>默认情况下，v-model在进行双向绑定时，绑定的是input事件，那么会在每次内容输入后就将最新的值和绑定的属性进行同步；</li>
 <li>如果我们在v-model后跟上lazy修饰符，那么会将绑定的事件切换为 change 事件，只有在提交时（比如回车）才会触发；</li>
 </ul>
-<p><img src="https://img-blog.csdnimg.cn/d54c822f7731432bb5ad3d6e06f9019d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="24" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<img src="https://img-blog.csdnimg.cn/d54c822f7731432bb5ad3d6e06f9019d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="24" style="zoom:50%;" />
+
 <h3 id="5-9v-model修饰符-number"><a href="#5-9v-model修饰符-number" class="headerlink" title="5.9v-model修饰符 - number"></a>5.9<strong>v-model修饰符 - number</strong></h3><p>我们先来看一下v-model绑定后的值是什么类型的： </p>
 <ul>
 <li>message总是string类型，即使在我们设置type为number也是string类型； </li>
 </ul>
-<p> <img src="https://img-blog.csdnimg.cn/e26049742df2457da55084bec81606be.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="25" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+ <img src="https://img-blog.csdnimg.cn/e26049742df2457da55084bec81606be.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="25" style="zoom:50%;" />
+
 <ul>
 <li>如果我们希望转换为数字类型，那么可以使用 .number 修饰符：</li>
 </ul>
-<p> <img src="https://img-blog.csdnimg.cn/3128b87037654328895d5e29946c804d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="26" style="zoom:67%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<ul>
-<li>另外，在我们进行逻辑判断时，如果是一个string类型，在可以转化的情况下会进行隐式转换的： </li>
-</ul>
+ <img src="https://img-blog.csdnimg.cn/3128b87037654328895d5e29946c804d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="26" style="zoom:67%;" />
+
+<p>另外，在我们进行逻辑判断时，如果是一个string类型，在可以转化的情况下会进行隐式转换的： </p>
 <p> 下面的score在进行判断的过程中会进行隐式转化的；</p>
-<p> <img src="https://img-blog.csdnimg.cn/5513599e07fa432696ca6387c9483c5a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="27" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+ <img src="https://img-blog.csdnimg.cn/5513599e07fa432696ca6387c9483c5a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="27" style="zoom:50%;" />
+
 <h3 id="5-10-v-model修饰符-trim"><a href="#5-10-v-model修饰符-trim" class="headerlink" title="5.10 v-model修饰符 - trim"></a><strong>5.10 v-model修饰符 - trim</strong></h3><p>如果要自动过滤用户输入的守卫空白字符，可以给v-model添加 trim 修饰符：</p>
-<p><img src="https://img-blog.csdnimg.cn/1c3a19c7ac8440568f075bb3756c0623.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="28" style="zoom:50%;" /><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<img src="https://img-blog.csdnimg.cn/1c3a19c7ac8440568f075bb3756c0623.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="28" style="zoom:50%;" />
 
                 
             </div>
@@ -1163,18 +1173,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/03/17/Vue3%E7%9A%84Options-API/">
+                <a href="/2022/03/30/VueCLI%E5%92%8CVite/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Vue3的Options-API">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="VueCLI和Vite">
                         
-                        <span class="card-title">Vue3的Options-API</span>
+                        <span class="card-title">VueCLI和Vite</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1184,9 +1193,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-17
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-30
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1195,12 +1204,11 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Vue3/">
-                        <span class="chip bg-color">Vue3</span>
+                    <a href="/tags/Vue/">
+                        <span class="chip bg-color">Vue</span>
                     </a>
                     
                 </div>
@@ -1441,7 +1449,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">31.5k</span>
+                        class="white-color">33.3k</span>
             
             
             
