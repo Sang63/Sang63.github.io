@@ -6,7 +6,7 @@
   <link href="http://sang63.github.io/atom.xml" rel="self"/>
   
   <link href="http://sang63.github.io/"/>
-  <updated>2022-04-12T02:06:32.441Z</updated>
+  <updated>2022-04-21T12:25:47.160Z</updated>
   <id>http://sang63.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue脚手架报错 Component name “Student“ should always be multi-word vue/multi-word-component-names</title>
+    <link href="http://sang63.github.io/2022/04/21/Vue%E8%84%9A%E6%89%8B%E6%9E%B6%E6%8A%A5%E9%94%99-Component-name-%E2%80%9CStudent%E2%80%9C-should-always-be-multi-word-vue-multi-word-component-names/"/>
+    <id>http://sang63.github.io/2022/04/21/Vue%E8%84%9A%E6%89%8B%E6%9E%B6%E6%8A%A5%E9%94%99-Component-name-%E2%80%9CStudent%E2%80%9C-should-always-be-multi-word-vue-multi-word-component-names/</id>
+    <published>2022-04-21T12:22:05.000Z</published>
+    <updated>2022-04-21T12:25:47.160Z</updated>
+    
+    <content type="html"><![CDATA[<img src="https://img-blog.csdnimg.cn/6838240875bf4df1a12f8c3c230ed3ef.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="01" style="zoom:50%;" /><h3 id="报错分析："><a href="#报错分析：" class="headerlink" title="报错分析："></a>报错分析：</h3><p>根据提示信息可知是组件名出了问题，报错信息翻译过来大概就是组件名”Student”应该总是使用 多个单词拼接横线组成的。</p><p>但是组件名也是可以使用单个单词的,只是官方文档上面的风格建议我们使用大驼峰或使用“-”衔接的方式而已。</p><p>通过后续学习了解到,这其实是<strong>语法检查的时候把不规范的代码(即命名不规范)当成了错误。</strong></p><h3 id="修改方案："><a href="#修改方案：" class="headerlink" title="修改方案："></a><strong>修改方案：</strong></h3><ul><li><strong>修改组件名，使其符合命名规范。例如：StudentName或者student-name。</strong></li><li><strong>修改配置项，关闭语法检查：</strong></li></ul><p> （1）在项目的<strong>根目录</strong>找到(没有就自行创建)<code>vue.config.js</code>文件</p><img src="https://img-blog.csdnimg.cn/5d35b9d16f91466f9f356ac1b5035a7b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_8,color_FFFFFF,t_70,g_se,x_16" alt="02" style="zoom:50%;" /><p> （2）在文件中添加如下内容</p><pre><code>const &#123; defineConfig &#125; = require(&#39;@vue/cli-service&#39;)module.exports = defineConfig(&#123;  transpileDependencies: true,  lintOnSave:false /*关闭语法检查*/&#125;)</code></pre><p> （3）随后保存文件重新编译即可</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;img src=&quot;https://img-blog.csdnimg.cn/6838240875bf4df1a12f8c3c230ed3ef.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_</summary>
+      
+    
+    
+    
+    
+    <category term="问题解决" scheme="http://sang63.github.io/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue3组件化开发(下)</title>
@@ -424,28 +446,6 @@
       
     <summary type="html">&lt;h3 id=&quot;一-实训目的&quot;&gt;&lt;a href=&quot;#一-实训目的&quot; class=&quot;headerlink&quot; title=&quot;一.实训目的&quot;&gt;&lt;/a&gt;一.实训目的&lt;/h3&gt;&lt;p&gt;1、掌握mysqli扩展连接和选择数据库的使用&lt;/p&gt;
 &lt;p&gt;2、学会mysqli扩展执行SQL语句和处理结</summary>
-      
-    
-    
-    
-    
-    <category term="PHP" scheme="http://sang63.github.io/tags/PHP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PHP与Web表单交互</title>
-    <link href="http://sang63.github.io/2021/09/16/PHP%E4%B8%8EWeb%E8%A1%A8%E5%8D%95%E4%BA%A4%E4%BA%92/"/>
-    <id>http://sang63.github.io/2021/09/16/PHP%E4%B8%8EWeb%E8%A1%A8%E5%8D%95%E4%BA%A4%E4%BA%92/</id>
-    <published>2021-09-16T13:15:50.000Z</published>
-    <updated>2021-09-16T13:23:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="实训练习：PHP与Web表单交互"><a href="#实训练习：PHP与Web表单交互" class="headerlink" title="实训练习：PHP与Web表单交互"></a>实训练习：PHP与Web表单交互</h2><h3 id="一、实训目的"><a href="#一、实训目的" class="headerlink" title="一、实训目的"></a>一、实训目的</h3><p>1、掌握表单创建的语法格式。</p><p>2、灵活应用PHP与表单数据的交互与处理。</p><h3 id="二、实训内容"><a href="#二、实训内容" class="headerlink" title="二、实训内容"></a>二、实训内容</h3><p>1、创建表单,模拟一个简单计算器,并对输入的数据进行合理验证。</p><p>2、代码：</p><pre><code>&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot; &gt;    &lt;meta http_equiv=&quot;Content-Type&quot; content=&quot;text/html&quot;&gt;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;    &lt;title&gt;简易计算器&lt;/title&gt;&lt;/head&gt;&lt;?php //设置初始值 $number2=false; $number1=false; $result=0; //判断所输入的内容 if(isset($_GET[&quot;submit&quot;]))&#123;    if(is_numeric($_GET[&quot;number1&quot;]))&#123;        $number1=true;    &#125;    else&#123;        // echo &quot;错误！！！请重新输入数字number1！&quot;;        echo &quot;&lt;script&gt;alert(&#39;请输入数字number1!&#39;);&lt;/script&gt;&quot;; //弹窗提示     &#125;    if(is_numeric($_GET[&quot;number2&quot;]))&#123;       $number2=true;   &#125;   else&#123;    //    echo &quot;错误！！！请重新输入数字number2！&quot;;        echo &quot;&lt;script&gt;alert(&#39;请输入数字number2!&#39;);&lt;/script&gt;&quot;;  //弹窗提示   &#125;   if($number1 == false || $number2 == false)&#123;       exit();   &#125;&#125; //判断运算符号 if($number1 &amp;&amp; $number2)&#123;     switch($_GET[&quot;fuhao&quot;])&#123;         case &quot;+&quot;;         $result=$_GET[&quot;number1&quot;]+$_GET[&quot;number2&quot;];  //加法运算         break;         case &quot;-&quot;;         $result=$_GET[&quot;number1&quot;]-$_GET[&quot;number2&quot;];  //减法运算         break;         case &quot;×&quot;;         $result=$_GET[&quot;number1&quot;]*$_GET[&quot;number2&quot;];  //乘法运算         break;         case &quot;÷&quot;;         $result=$_GET[&quot;number1&quot;]/$_GET[&quot;number2&quot;];  //除法运算         break;     &#125; &#125; ?&gt;&lt;body&gt;    &lt;h2 align=&quot;center&quot;&gt;PHP实现计算器功能&lt;/h2&gt;    &lt;table border=&quot;1&quot; width=&quot;350px&quot; align=&quot;center&quot;&gt;        &lt;form action=&quot;916.php&quot;&gt;        &lt;tr&gt;            &lt;td&gt;                &lt;!-- 输入number1 --&gt;                number1:&lt;input type=&quot;text&quot; name=&quot;number1&quot; value=&quot;&lt;?php echo $_GET[&quot;number1&quot;] ?&gt;&quot;&gt;                &lt;/td&gt;            &lt;td&gt;                &lt;!-- 选择运算符 --&gt;                &lt;select name=&quot;fuhao&quot;&gt;                    &lt;option value=&quot;+&quot; &lt;?php if($_GET[&quot;fuhao&quot;]==&quot;+&quot;) echo &quot;select&quot; ?&gt;&gt;+&lt;/option&gt;                    &lt;option value=&quot;-&quot; &lt;?php if($_GET[&quot;fuhao&quot;]==&quot;-&quot;) echo &quot;select&quot; ?&gt;&gt;-&lt;/option&gt;                    &lt;option value=&quot;×&quot; &lt;?php if($_GET[&quot;fuhao&quot;]==&quot;×&quot;) echo &quot;select&quot; ?&gt;&gt;×&lt;/option&gt;                    &lt;option value=&quot;÷&quot; &lt;?php if($_GET[&quot;fuhao&quot;]==&quot;÷&quot;) echo &quot;select&quot; ?&gt;&gt;÷&lt;/option&gt;                &lt;/select&gt;            &lt;/td&gt;            &lt;td&gt;                &lt;!-- 输入number2 --&gt;                number2:&lt;input type=&quot;text&quot; name=&quot;number2&quot; value=&quot;&lt;?php echo $_GET[&quot;number2&quot;] ?&gt;&quot;&gt;            &lt;/td&gt;            &lt;td&gt;                &lt;!-- 点击按钮，实现运算功能 --&gt;                &lt;input type=&quot;submit&quot; value=&quot;计算&quot; name=&quot;submit&quot;&gt;            &lt;/td&gt;        &lt;/tr&gt;        &lt;?php        //运算实现          if(isset($_GET[&quot;submit&quot;]))&#123;              if($number1 &amp;&amp; $number2)&#123;                  echo &quot;&lt;tr&gt;&lt;td colspan=&#39;4&#39;&gt;&quot;;                  echo &quot;计算结果是：&quot;.$_GET[&quot;number1&quot;].&quot; &quot;.$_GET[&quot;fuhao&quot;].&quot; &quot;.$_GET[&quot;number2&quot;].&quot; = &quot;.$result;                  echo &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;              &#125;          &#125;        ?&gt;    &lt;/form&gt;    &lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><p>2、运行效果图</p><p><img src="https://img-blog.csdnimg.cn/8168c759a9844c2f8648bd11483aa3c4.png" alt="01"></p><p><img src="https://img-blog.csdnimg.cn/6a3b9b36d08a4ddeb823e66beee799ba.png" alt="02"></p><p><img src="https://img-blog.csdnimg.cn/ac1780f14eb24239b935073529a0be6a.png" alt="03"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;实训练习：PHP与Web表单交互&quot;&gt;&lt;a href=&quot;#实训练习：PHP与Web表单交互&quot; class=&quot;headerlink&quot; title=&quot;实训练习：PHP与Web表单交互&quot;&gt;&lt;/a&gt;实训练习：PHP与Web表单交互&lt;/h2&gt;&lt;h3 id=&quot;一、实训目的&quot;&gt;&lt;</summary>
       
     
     

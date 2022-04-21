@@ -4,10 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="小程序编程基础（四）, 桑桑和阿战">
-    <meta name="description" content="小程序编程基础（四）一、随机数求和1.知识点（1）JavaScript中Array对象函数的使用方法。
-（2）JavaScript中Number对象函数的使用方法。
-2.实现方法JavaScript中的对象包括：字符串、数字、数组、日期等等">
+    <meta name="keywords" content="Vue脚手架报错 Component name “Student“ should always be multi-word vue/multi-word-component-names, 桑桑和阿战">
+    <meta name="description" content="
+
+报错分析：根据提示信息可知是组件名出了问题，报错信息翻译过来大概就是组件名”Student”应该总是使用 多个单词拼接横线组成的。
+但是组件名也是可以使用单个单词的,只是官方文档上面的风格建议我们使用大驼峰或使用“-”衔接的方式而已。
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +21,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>小程序编程基础（四） | 桑桑和阿战</title>
+    <title>Vue脚手架报错 Component name “Student“ should always be multi-word vue/multi-word-component-names | 桑桑和阿战</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -312,12 +314,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">小程序编程基础（四）</h1>
+                    <h1 class="description center-align post-title">Vue脚手架报错 Component name “Student“ should always be multi-word vue/multi-word-component-names</h1>
                 </div>
             </div>
         </div>
@@ -433,8 +435,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
-                                <span class="chip bg-color">微信小程序</span>
+                            <a href="/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">
+                                <span class="chip bg-color">问题解决</span>
                             </a>
                         
                     </div>
@@ -449,7 +451,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-01-18
+                    2022-04-21
                 </div>
                 
 
@@ -470,272 +472,26 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="小程序编程基础（四）"><a href="#小程序编程基础（四）" class="headerlink" title="小程序编程基础（四）"></a>小程序编程基础（四）</h2><h2 id="一、随机数求和"><a href="#一、随机数求和" class="headerlink" title="一、随机数求和"></a>一、随机数求和</h2><h3 id="1-知识点"><a href="#1-知识点" class="headerlink" title="1.知识点"></a>1.知识点</h3><p>（1）JavaScript中Array对象函数的使用方法。</p>
-<p>（2）JavaScript中Number对象函数的使用方法。</p>
-<h3 id="2-实现方法"><a href="#2-实现方法" class="headerlink" title="2.实现方法"></a>2.实现方法</h3><p>JavaScript中的对象包括：字符串、数字、数组、日期等等。对象是拥有属性和方法的数据，属性是静态数据，方法是能够在对象上执行的动作，即动态数据。</p>
-<h4 id="2-1-JavaScript中的Array对象"><a href="#2-1-JavaScript中的Array对象" class="headerlink" title="2.1 JavaScript中的Array对象"></a>2.1 JavaScript中的Array对象</h4><p>用于在单个的变量中存储多个值，其常用属性和方法如下表所示。</p>
-<table>
-<thead>
-<tr>
-<th align="center">属性和方法</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">length</td>
-<td align="center">设置或返回数组中元素的数目</td>
-</tr>
-<tr>
-<td align="center">concat()</td>
-<td align="center">连接两个或更多的数组，并返回结果</td>
-</tr>
-<tr>
-<td align="center">join()</td>
-<td align="center">把数组的所有元素放入一个字符串。元素通过指定的分隔字符进行分隔</td>
-</tr>
-<tr>
-<td align="center">pop()</td>
-<td align="center">删除并返回数组的最后一个元素</td>
-</tr>
-<tr>
-<td align="center">push()</td>
-<td align="center">向数组的末尾添加一个或更多元素，并返回新的长度</td>
-</tr>
-<tr>
-<td align="center">reverse()</td>
-<td align="center">颠倒数组中的元素顺序</td>
-</tr>
-<tr>
-<td align="center">shift()</td>
-<td align="center">删除并返回数组的第一个元素</td>
-</tr>
-<tr>
-<td align="center">slice()</td>
-<td align="center">从某个已有的数组返回选定的元素</td>
-</tr>
-<tr>
-<td align="center">sort()</td>
-<td align="center">对数组的元素进行排序</td>
-</tr>
-<tr>
-<td align="center">spice()</td>
-<td align="center">删除元素，并向数组添加新元素</td>
-</tr>
-<tr>
-<td align="center">toSource()</td>
-<td align="center">返回对象的源代码</td>
-</tr>
-<tr>
-<td align="center">toString()</td>
-<td align="center">把数组转化为字符串，并返回结果</td>
-</tr>
-<tr>
-<td align="center">toLocalString()</td>
-<td align="center">把数组转换为本地数组，并返回结果</td>
-</tr>
-<tr>
-<td align="center">unshift()</td>
-<td align="center">把数组的开头添加一个或更多元素，并返回新的元素</td>
-</tr>
-<tr>
-<td align="center">valueOf()</td>
-<td align="center">返回数组对象的原始值</td>
-</tr>
-</tbody></table>
-<h4 id="2-2-JavaScript中的Number对象"><a href="#2-2-JavaScript中的Number对象" class="headerlink" title="2.2 JavaScript中的Number对象"></a>2.2 JavaScript中的Number对象</h4><table>
-<thead>
-<tr>
-<th align="center">属性和方法</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">MAX_VALUE</td>
-<td align="center">可表示的最大的数</td>
-</tr>
-<tr>
-<td align="center">MIN_VALUE</td>
-<td align="center">可表示的最小的数</td>
-</tr>
-<tr>
-<td align="center">NaN</td>
-<td align="center">非数字值</td>
-</tr>
-<tr>
-<td align="center">NEGATIVE_INFINITY</td>
-<td align="center">负无穷大，溢出时返回该值</td>
-</tr>
-<tr>
-<td align="center">POSITIVE_INFINITY</td>
-<td align="center">正无穷大，溢出时返回该值</td>
-</tr>
-<tr>
-<td align="center">toString（）</td>
-<td align="center">把数字转换为字符串，使用指定的基数</td>
-</tr>
-<tr>
-<td align="center">toLocaleString（）</td>
-<td align="center">把数字转换为字符串，使用本地数字格式顺序</td>
-</tr>
-<tr>
-<td align="center">toFixed（）</td>
-<td align="center">把数字转换为字符串，结果的小数点后有指定位数的数字</td>
-</tr>
-<tr>
-<td align="center">toExponential（）</td>
-<td align="center">把对象的值转换为指数计数法</td>
-</tr>
-<tr>
-<td align="center">toPrecision（）</td>
-<td align="center">把数字格式化为指定的长度</td>
-</tr>
-<tr>
-<td align="center">valueOf（）</td>
-<td align="center">返回一个Number对象的基本数字值</td>
-</tr>
-</tbody></table>
-<h3 id="3-案例分析"><a href="#3-案例分析" class="headerlink" title="3.案例分析"></a>3.案例分析</h3><h4 id="3-1案例描述"><a href="#3-1案例描述" class="headerlink" title="3.1案例描述"></a>3.1案例描述</h4><p>设计一个小程序，运行后产生一列100以内的随机数（保留小数点后2位），并显示这些随机数的和；当点击“产生新的随机数”按钮时，产生一列新的随机数，并显示这些随机数的和。</p>
-<h4 id="3-2实现效果"><a href="#3-2实现效果" class="headerlink" title="3.2实现效果"></a>3.2实现效果</h4><p><img src="https://img-blog.csdnimg.cn/50882680e61b4f36b66086b609898e97.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_8,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="01 随机数求和"></p>
-<h4 id="3-3案例实现"><a href="#3-3案例实现" class="headerlink" title="3.3案例实现"></a>3.3案例实现</h4><h5 id="3-3-1编写index-wxml文件代码"><a href="#3-3-1编写index-wxml文件代码" class="headerlink" title="3.3.1编写index.wxml文件代码"></a>3.3.1编写index.wxml文件代码</h5><p>代码主要通过列表渲染的方法将逻辑层产生的随机数列表显示在屏幕，并显示随机数列的和，最下面添加一个按钮，用于绑定产生新的随机数的时间函数。</p>
-<pre><code>&lt;view class=&quot;box&quot;&gt;
-  &lt;view class=&quot;title&quot;&gt;随机数求和&lt;/view&gt;
-  &lt;view&gt;产生的随机数列为：&lt;/view&gt;
-  &lt;view wx:for=&quot;&#123;&#123;rand&#125;&#125;&quot;&gt;&#123;&#123;item&#125;&#125;&lt;/view&gt;
-  &lt;view&gt;随机数列的和为：&#123;&#123;sum1&#125;&#125;&lt;/view&gt;
-  &lt;button type=&quot;primary&quot; bindtap=&quot;newRand&quot;&gt;产生新的随机数&lt;/button&gt;
-&lt;/view&gt;
-</code></pre>
-<h5 id="3-3-2编写index-js文件代码"><a href="#3-3-2编写index-js文件代码" class="headerlink" title="3.3.2编写index.js文件代码"></a>3.3.2编写index.js文件代码</h5><p>代码中主要包含了全局变量和全局函数的定义，并在Page函数中定义了onLoad函数和newRand函数。</p>
-<p>（1）全局变量的定义。首先定义一个全局数组变量rand和一个全局普通变量sum1，rand用来存储产生的随机数列，sum1用来存储随机数列的和。</p>
-<p>（2）全局函数的定义。定义creatRand（）函数用于生产随机数列并求和，该函数首先利用for循环产生6个随机数并将这些数据添加到数组中。Math.random()函数用于生产0<del>1之间的随机数，Math.random()*100能够产生0</del>100之间的随机数，toFixed（2）函数用于实现将产生的随机数保留小数点后2位，乘1的目的是将产生的随机数字符串转换为数值类型。</p>
-<p>（3）rand.push（r）用于将产生的随机数r添加到rand数组中。</p>
-<p>（4）console.log(sum)函数用于在控制台显示sum数据，这种方法对程序调试很有帮助。</p>
-<p>（5）在onLoad（）和newRand（）方法中调用createRand（）方法产生随机数列并求和，然后通过this.setData（）方法将结果渲染到视图层。</p>
-<pre><code>var rand,sum1;                              //定义全局变量
-function createRand()&#123;
-  rand=[];                                  //初始化数组变量
-  sum1=0;                                   //初始化sum变量
-  for(var i=0;i&lt;6;i++)&#123;
-    var r=(Math.random()*100).toFixed(2)*1; //产生100以内的保留小数点后2位的随机数并转换为数值类型
-    rand.push(r);                           //将产生的随机数添加到数组中
-    sum1+=rand[i];                          //随机数列求和
-    console.log(rand[i]);                   //在控制台显示数组元素
-  &#125;
-  console.log(sum1);
-&#125;;
-Page(&#123;
-  onLoad:function()&#123;
-    createRand（）;                         //调用产生随机数的全局函数
-    this.setData(&#123;
-      sum1:sum1
-    &#125;)
-  &#125;,
-  newRand:function()&#123;  
-    createRand();                          //调用产生随机数的全局函数
-    this.setData(&#123;
-      rand:rand,
-      sum1:sum1
-    &#125;)
-  &#125;
+                <img src="https://img-blog.csdnimg.cn/6838240875bf4df1a12f8c3c230ed3ef.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="01" style="zoom:50%;" />
+
+<h3 id="报错分析："><a href="#报错分析：" class="headerlink" title="报错分析："></a>报错分析：</h3><p>根据提示信息可知是组件名出了问题，报错信息翻译过来大概就是组件名”Student”应该总是使用 多个单词拼接横线组成的。</p>
+<p>但是组件名也是可以使用单个单词的,只是官方文档上面的风格建议我们使用大驼峰或使用“-”衔接的方式而已。</p>
+<p>通过后续学习了解到,这其实是<strong>语法检查的时候把不规范的代码(即命名不规范)当成了错误。</strong></p>
+<h3 id="修改方案："><a href="#修改方案：" class="headerlink" title="修改方案："></a><strong>修改方案：</strong></h3><ul>
+<li><strong>修改组件名，使其符合命名规范。例如：StudentName或者student-name。</strong></li>
+<li><strong>修改配置项，关闭语法检查：</strong></li>
+</ul>
+<p> （1）在项目的<strong>根目录</strong>找到(没有就自行创建)<code>vue.config.js</code>文件</p>
+<img src="https://img-blog.csdnimg.cn/5d35b9d16f91466f9f356ac1b5035a7b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_8,color_FFFFFF,t_70,g_se,x_16" alt="02" style="zoom:50%;" />
+
+<p> （2）在文件中添加如下内容</p>
+<pre><code>const &#123; defineConfig &#125; = require(&#39;@vue/cli-service&#39;)
+module.exports = defineConfig(&#123;
+  transpileDependencies: true,
+  lintOnSave:false /*关闭语法检查*/
 &#125;)
 </code></pre>
-<h2 id="二、计时器"><a href="#二、计时器" class="headerlink" title="二、计时器"></a>二、计时器</h2><h3 id="1-知识点-1"><a href="#1-知识点-1" class="headerlink" title="1.知识点"></a>1.知识点</h3><p>（1）函数number setTimeout(function callback,number delay,any rest)的使用方法</p>
-<p>（2）函数number setInterval(function callback,number delay,any rest)的使用方法</p>
-<h3 id="2-实现方法-1"><a href="#2-实现方法-1" class="headerlink" title="2.实现方法"></a>2.实现方法</h3><p>（1）函数number setTimeout(function callback,number delay,any rest)。设定一个定时器，在定时到期以后执行注册的回调函数。参数callback为回调函数，参数delay为延迟的时间，函数的调用会在该延迟之后发生，单位为ms。参数rest，param1，param2，…，paramN等为附加参数，他们会作为参数传递给回调函数。返回值number为定时器的编号。这个值可以传递给clearTimeout来取消该定时。</p>
-<p>（2）函数函数number setInterval(function callback,number delay,any rest)。设定一个定时器，按照指定的周期（以ms计）来执行注册的回调函数。参数callback为回调函数，参数delay为执行回调函数之间的时间间隔，单位为ms。参数rest，param1，param2，…，paramN等为附加参数，他们会作为参数传递给回调函数。返回值number为定时器的编号。这个值可以传递给clearInterval来取消该定时。</p>
-<p>（3）函数clealInterval(number intervalID)。取消由setInterval设置的定时器。参数intervalID为要取消的定时器的ID。</p>
-<h3 id="3-案例分析-1"><a href="#3-案例分析-1" class="headerlink" title="3.案例分析"></a>3.案例分析</h3><h4 id="3-1案例描述-1"><a href="#3-1案例描述-1" class="headerlink" title="3.1案例描述"></a>3.1案例描述</h4><p>设计一个实现倒计时功能的小程序，小程序运行后，首先显示空白页面，过2s后才显示计时界面，点击“开始计时”按钮后开始倒计时，此时“开始计时”按钮变为失效状态。点击“停止计时”按钮后停止计时，此时“开始计时”按钮变为可用状态。</p>
-<h4 id="3-2实现效果-1"><a href="#3-2实现效果-1" class="headerlink" title="3.2实现效果"></a>3.2实现效果</h4><p><img src="https://img-blog.csdnimg.cn/fa0f1952b7ca407a84f682262eb1d994.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_9,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="02 初始界面"></p>
-<p><img src="https://img-blog.csdnimg.cn/ae450ec3bfb64d158256bd5f3a5936b5.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_9,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="03 计时界面"></p>
-<h3 id="3-3案例实现-1"><a href="#3-3案例实现-1" class="headerlink" title="3.3案例实现"></a>3.3案例实现</h3><h4 id="3-3-1编写index-wxml文件代码-1"><a href="#3-3-1编写index-wxml文件代码-1" class="headerlink" title="3.3.1编写index.wxml文件代码"></a>3.3.1编写index.wxml文件代码</h4><p>文件主要由计时器时数字系那是界面和2个按钮组成，计时数字显示界面布局和样式有.time样式来设置，2个按钮的布局由.btnLayout样式来设置，按钮的宽度由button样式设置。2个按钮分别绑定了start和stop函数来实现开始计时和停止计时。</p>
-<pre><code>&lt;view class=&quot;box&quot;&gt;
-  &lt;view class=&quot;title&quot;&gt;计时器&lt;/view&gt;
-  &lt;view class=&quot;time&quot;&gt;&#123;&#123;num&#125;&#125;&lt;/view&gt;
-  &lt;view class=&quot;btnLayout&quot;&gt;
-    &lt;button bindtap=&quot;start&quot; disabled=&quot;&#123;&#123;btnDisable&#125;&#125;&quot;&gt;开始计时&lt;/button&gt;
-    &lt;button bindtap=&quot;stop&quot;&gt;停止计时&lt;/button&gt;
-  &lt;/view&gt;
-&lt;/view&gt;
-</code></pre>
-<h4 id="3-3-2编写index-wxss文件代码"><a href="#3-3-2编写index-wxss文件代码" class="headerlink" title="3.3.2编写index.wxss文件代码"></a>3.3.2编写index.wxss文件代码</h4><pre><code>button&#123;
-  width: 45%;
-&#125;
-.time&#123;
-  width: 90%;
-  line-height: 200rpx;
-  background-color: #eef0dd;
-  color: red;
-  font-size: 100px;
-  text-align: center;
-  border: 1px solid silver;
-  border-radius: 30px;
-  margin: 15px;
-&#125;
-.btnLayout&#123;
-  display: flex;
-  flex-direction: row;
-&#125;
-</code></pre>
-<h4 id="3-3-3编写index-js文件代码"><a href="#3-3-3编写index-js文件代码" class="headerlink" title="3.3.3编写index.js文件代码"></a>3.3.3编写index.js文件代码</h4><p>文件定义了2个全局变量：num和timerID，定义了5个函数：onLoad、show、start、stop和timer。onLoad函数通过调用setTimeout函数，使计时页面在2s后显示；show函数用于显示计时器界面；start函数通过调用setInterval函数实现倒计时；stop函数通过调用clearInterval函数实现停止计时；timer函数用于实现计时过程。</p>
-<pre><code>var num=60;               //计时器显示的数字
-var timerID;              //计时器ID
-Page(&#123;
-  data:&#123;
-    hidden:true,          //小程序运行时不显示计时桌面
-   btnDisabled:false,      //设置“开始计时”按钮一开始是可用的
-   num:num
-  &#125;,
-  onLoad:function(options)&#123;
-    var that=this;
-    setTimeout(()=&gt;&#123;
-      that.show()
-    &#125;,2000)               //2s后显示计时界面
-  &#125;,
-  show:function()&#123;        //显示计时界面函数
-    var that=this;
-    that.setData(&#123;
-      hidden:false
-    &#125;)
-  &#125;,
-  start:function()&#123;       //显示计时界面
-    var that=this;
-    that.setData(&#123;
-      btnDisabled:true     //设置“开始计时”按钮不可用
-    &#125;)
-    timerID=setInterval(()=&gt;&#123;  
-    that.timer()
-    &#125;,1000)                //每隔1s调用一次timer函数
-  &#125;,
-  stop:function()&#123;         //停止计时函数
-    clearInterval(timerID) //清除计时器
-    this.setData(&#123;         
-      btnDisabled:false    //设置“开始计时”按钮可用
-    &#125;)
-  &#125;,
-  timer:function()&#123;        //计时函数
-    var that=this;
-    console.log(num)
-    if(num&gt;0)&#123;
-      that.setData(&#123;
-        num:num--          //每次减1
-      &#125;)
-    &#125;else&#123;
-      that.setData(&#123;
-        num:0
-      &#125;)
-    &#125;
-    console.log(num)
-  &#125;
-&#125;)
-</code></pre>
-<h3 id="4-思考"><a href="#4-思考" class="headerlink" title="4.思考"></a>4.思考</h3><p>（1）setTimeout（）函数和setInterval（）函数有什么区别？</p>
-<p>setTimeout()和setInterval()经常被用来处理延时和定时任务。使用setTimeout（）处理延时任务，而使用setInterval（）方法处理定时任务；</p>
-<p>setTimeout() 方法用于在指定的毫秒数后调用函数或计算表达式,而setInterval()则可以在每隔指定的毫秒数循环调用函数或表达式，直到 clearInterval把它清除。</p>
-<p>我们可以看到两个函数十分类似，只不过前者执行一次，而后者可以执行多次，两个函数的参数也相同，第一个参数是要执行的code或句柄，第二个是延迟的毫秒数。</p>
-<pre><code>语法：
-setTimeout(function ()&#123;&#125;,time);//time 毫秒之后执行
-setInterval(function ()&#123;&#125;,time)；//每隔time 毫秒执行
-</code></pre>
+<p> （3）随后保存文件重新编译即可</p>
 
                 
             </div>
@@ -762,7 +518,7 @@ setInterval(function ()&#123;&#125;,time)；//每隔time 毫秒执行
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Sang63.github.io/2022/01/18/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%9B%EF%BC%89/">http://Sang63.github.io/2022/01/18/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%9B%EF%BC%89/</a>
+                    <a href="http://Sang63.github.io/2022/04/21/Vue%E8%84%9A%E6%89%8B%E6%9E%B6%E6%8A%A5%E9%94%99-Component-name-%E2%80%9CStudent%E2%80%9C-should-always-be-multi-word-vue-multi-word-component-names/">http://Sang63.github.io/2022/04/21/Vue%E8%84%9A%E6%89%8B%E6%9E%B6%E6%8A%A5%E9%94%99-Component-name-%E2%80%9CStudent%E2%80%9C-should-always-be-multi-word-vue-multi-word-component-names/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -800,8 +556,8 @@ setInterval(function ()&#123;&#125;,time)；//每隔time 毫秒执行
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
-                                    <span class="chip bg-color">微信小程序</span>
+                                <a href="/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">
+                                    <span class="chip bg-color">问题解决</span>
                                 </a>
                             
                         </div>
@@ -1241,17 +997,18 @@ setInterval(function ()&#123;&#125;,time)；//每隔time 毫秒执行
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/01/24/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%A1%86%E6%9E%B6/">
+                <a href="/2022/04/21/Vue%E8%84%9A%E6%89%8B%E6%9E%B6%E6%8A%A5%E9%94%99-Component-name-%E2%80%9CStudent%E2%80%9C-should-always-be-multi-word-vue-multi-word-component-names/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="小程序框架">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Vue脚手架报错 Component name “Student“ should always be multi-word vue/multi-word-component-names">
                         
-                        <span class="card-title">小程序框架</span>
+                        <span class="card-title">Vue脚手架报错 Component name “Student“ should always be multi-word vue/multi-word-component-names</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1261,9 +1018,9 @@ setInterval(function ()&#123;&#125;,time)；//每隔time 毫秒执行
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1272,11 +1029,12 @@ setInterval(function ()&#123;&#125;,time)；//每隔time 毫秒执行
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
-                        <span class="chip bg-color">微信小程序</span>
+                    <a href="/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">
+                        <span class="chip bg-color">问题解决</span>
                     </a>
                     
                 </div>
@@ -1290,13 +1048,13 @@ setInterval(function ()&#123;&#125;,time)；//每隔time 毫秒执行
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/01/17/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%89%EF%BC%89/">
+                <a href="/2022/04/12/Vue3%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%8B%EF%BC%89/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="小程序编程基础（三）">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Vue3组件化开发(下)">
                         
-                        <span class="card-title">小程序编程基础（三）</span>
+                        <span class="card-title">Vue3组件化开发(下)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1307,7 +1065,7 @@ setInterval(function ()&#123;&#125;,time)；//每隔time 毫秒执行
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-12
                             </span>
                         <span class="publish-author">
                             
@@ -1320,8 +1078,8 @@ setInterval(function ()&#123;&#125;,time)；//每隔time 毫秒执行
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
-                        <span class="chip bg-color">微信小程序</span>
+                    <a href="/tags/vue3/">
+                        <span class="chip bg-color">vue3</span>
                     </a>
                     
                 </div>
