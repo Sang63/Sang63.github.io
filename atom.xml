@@ -6,7 +6,7 @@
   <link href="http://sang63.github.io/atom.xml" rel="self"/>
   
   <link href="http://sang63.github.io/"/>
-  <updated>2022-04-21T12:25:47.160Z</updated>
+  <updated>2022-04-21T12:29:22.598Z</updated>
   <id>http://sang63.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Vue脚手架报错 Component name “Student“ should always be multi-word vue/multi-word-component-names</title>
+    <title>Vue脚手架报错 Component name “Student“ should always be multi-word...</title>
     <link href="http://sang63.github.io/2022/04/21/Vue%E8%84%9A%E6%89%8B%E6%9E%B6%E6%8A%A5%E9%94%99-Component-name-%E2%80%9CStudent%E2%80%9C-should-always-be-multi-word-vue-multi-word-component-names/"/>
     <id>http://sang63.github.io/2022/04/21/Vue%E8%84%9A%E6%89%8B%E6%9E%B6%E6%8A%A5%E9%94%99-Component-name-%E2%80%9CStudent%E2%80%9C-should-always-be-multi-word-vue-multi-word-component-names/</id>
     <published>2022-04-21T12:22:05.000Z</published>
-    <updated>2022-04-21T12:25:47.160Z</updated>
+    <updated>2022-04-21T12:29:22.598Z</updated>
     
     <content type="html"><![CDATA[<img src="https://img-blog.csdnimg.cn/6838240875bf4df1a12f8c3c230ed3ef.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="01" style="zoom:50%;" /><h3 id="报错分析："><a href="#报错分析：" class="headerlink" title="报错分析："></a>报错分析：</h3><p>根据提示信息可知是组件名出了问题，报错信息翻译过来大概就是组件名”Student”应该总是使用 多个单词拼接横线组成的。</p><p>但是组件名也是可以使用单个单词的,只是官方文档上面的风格建议我们使用大驼峰或使用“-”衔接的方式而已。</p><p>通过后续学习了解到,这其实是<strong>语法检查的时候把不规范的代码(即命名不规范)当成了错误。</strong></p><h3 id="修改方案："><a href="#修改方案：" class="headerlink" title="修改方案："></a><strong>修改方案：</strong></h3><ul><li><strong>修改组件名，使其符合命名规范。例如：StudentName或者student-name。</strong></li><li><strong>修改配置项，关闭语法检查：</strong></li></ul><p> （1）在项目的<strong>根目录</strong>找到(没有就自行创建)<code>vue.config.js</code>文件</p><img src="https://img-blog.csdnimg.cn/5d35b9d16f91466f9f356ac1b5035a7b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_8,color_FFFFFF,t_70,g_se,x_16" alt="02" style="zoom:50%;" /><p> （2）在文件中添加如下内容</p><pre><code>const &#123; defineConfig &#125; = require(&#39;@vue/cli-service&#39;)module.exports = defineConfig(&#123;  transpileDependencies: true,  lintOnSave:false /*关闭语法检查*/&#125;)</code></pre><p> （3）随后保存文件重新编译即可</p>]]></content>
     
