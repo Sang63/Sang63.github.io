@@ -6,7 +6,7 @@
   <link href="http://sang63.github.io/atom.xml" rel="self"/>
   
   <link href="http://sang63.github.io/"/>
-  <updated>2022-04-21T12:29:22.598Z</updated>
+  <updated>2022-04-22T11:49:59.689Z</updated>
   <id>http://sang63.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VueRouter路由使用</title>
+    <link href="http://sang63.github.io/2022/04/22/VueRouter%E8%B7%AF%E7%94%B1%E4%BD%BF%E7%94%A8/"/>
+    <id>http://sang63.github.io/2022/04/22/VueRouter%E8%B7%AF%E7%94%B1%E4%BD%BF%E7%94%A8/</id>
+    <published>2022-04-22T11:39:30.000Z</published>
+    <updated>2022-04-22T11:49:59.689Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-认识前端路由"><a href="#1-认识前端路由" class="headerlink" title="1.认识前端路由"></a>1.认识前端路由</h3><p>  路由器主要维护的是一个映射表，每个ip地址对应一个计算器的mac地址</p><p>  前端映射关系：路径-&gt;组件（例如：/home-&gt;Home.vue）</p><p>  （1）后端路由阶段：服务器直接生产渲染好对应的HTML页面，返回给客户端进行展示；</p><p>  （2）前后端分离阶段：后端提供API，在前端对这些请求回来的资源进行渲染；</p><p>  （3）S（Single）P（Page）A（Application）开发：组件化开发。</p><p>  history六种模式改变URL而不刷新页面：</p><p>​    replaceState：替换原来的路径</p><p>​    pushState：使用新的路径</p><p>​    popState：路径的回退</p><p>​    go：向前或向后改变路径</p><p>​    forward：向前改变路径</p><p>​    back：向后改变路径</p><h3 id="2-认识vue-router"><a href="#2-认识vue-router" class="headerlink" title="2.认识vue-router"></a>2.认识vue-router</h3><p>  目前前端流行的三大框架，都有自己的路由实现：</p><p>​    Angular的ngRouter；</p><p>​    React的ReactRouter；</p><p>  Vue的vue-router。-》官方路由。路由用于设定访问路径，将路径和组件映射起来；在vue-router的单页面中，页面的路径的变化就是组件的切换。      </p><pre><code>安装Vue Router：npm install router</code></pre><h3 id="3-路由的使用步骤"><a href="#3-路由的使用步骤" class="headerlink" title="3.路由的使用步骤"></a>3.路由的使用步骤</h3><p>  (1)创建路由组件的组件；</p><p>  (2)配置路由映射：组件与路径映射的routes关系；</p><p>  (3)通过createRouter创建路由对象，并且传入hash和history模式</p><p>  (4)使用路由：通过<code>&lt;router-link&gt;&lt;/router-link&gt;</code>和<code>&lt;router-view&gt;&lt;/router-view&gt;</code></p><p> 在routes中配置了一个映射：</p><p>   redirect重定向到/home路径下，对默认页面进行渲染，path配置的是根路径：</p><pre><code> / ：  &#123;path:&#39;/&#39;,redirect:&#39;/home&#39;&#125;</code></pre><h3 id="4-路由懒加载-需要时再加载"><a href="#4-路由懒加载-需要时再加载" class="headerlink" title="4.路由懒加载(需要时再加载)"></a>4.路由懒加载(需要时再加载)</h3><p>  这里使用之前提到过的webpack分包知识，而Vue Router默认就支持动态来导入组件：</p><p>​    这是因为component可以传入一个组件，也可以接受一个函数，该函数需要放回一个Promise；</p><p>​    而inport函数就是返回一个Promise。</p><pre><code> 例如：const routes = [​      &#123;path:&#39;/home&#39;,component:()=&gt;import(&#39;../pages/Home.vue)&#125;​      &#123;path:&#39;/abour&#39;,component:()=&gt;import(&#39;../pages/About.vue)&#125;​    ] </code></pre><h3 id="5-路由的其他属性"><a href="#5-路由的其他属性" class="headerlink" title="5.路由的其他属性"></a>5.路由的其他属性</h3><p>  name,meta</p><h3 id="6-路由的嵌套"><a href="#6-路由的嵌套" class="headerlink" title="6.路由的嵌套"></a>6.路由的嵌套</h3><p>  什么是路由的嵌套呢？</p><p>​    目前我们匹配的Home，About，User等都属于底层路由，我们在他们之间可以来回进行切换；但是在Home页面本身，也可能会在多个组件之间来回切换：</p><p>​      比如Home中包括Product，Message，它们可以在Home内部来回切换。</p><p>​    这个时候我们就需要使用嵌套路由，在Home中也使用router-view来占位之后需要渲染的组件。</p><pre><code> &#123;​        path:&#39;/home&#39;,​        component:()=&gt;import(&#39;../pages/Home.vue),​        children:[​          &#123;​            path:&#39;&#39;,​            redirect:&#39;/home/product&#39;      //重定向文件​          &#125;,​          &#123;​            path:&#39;product&#39;,​            component:()=&gt;import(&#39;../pages/HomeProduct.vue)&#39;​          &#125;,​          &#123;​            path:&#39;message&#39;,​            component:()=&gt;import(&#39;../pages/HomeMessage.vue)&#39;​          &#125;​        ]​      &#125; </code></pre><p>7.路由的内置组件</p><p>  （1）router-link</p><p>​    常见属性：to，replace，active-class，tag（4.0以前有，决定渲染元素）</p><p>​    router-link中的v-slot（4.0后，取代tag),可以显示多个元素，更加灵活。</p><p>​      <u><!-- props:href 跳转的链接 --></u></p><p>​      <u><!-- props:route 对象 --></u></p><p>​      <u><!-- props:navigate 导航函数 --></u></p><p>​      <u><!-- props:isActive 是否当前处于活跃状态 --></u></p><p>​      a. to属性：是一个字符串，或者一个对象</p><p>​      b. replace属性：设置该属性，当点击时，会调用route.replace（），而不是route.push（）</p><p>​      c. active-class属性：设置激活a元素后应用的calss，默认是route-link-active</p><p>​      d. exact-active-class属性：链接精准激活时，应用于渲染<a>的class，默认是route-link-exact-active      </p><p>  （2）router-view（占位）</p><p>​    router-view的v-slot：</p><p>​      Component：要渲染的组件</p><p>​      route：解析出的标准化路由对象</p><h3 id="8-动态添加路由"><a href="#8-动态添加路由" class="headerlink" title="8.动态添加路由"></a>8.动态添加路由</h3><pre><code>const routes=[]  const router=createRouter(&#123;routes&#125;)  if（管理员）&#123;    //判断权限或用户添加不同的路由​    router.addRoute(&#123;path:&quot;/order&quot;,component:()=&gt;import()&#125;)  //动态添加  &#125;  if()&#123;&#125;...  app.use(router;)</code></pre><h3 id="9-动态删除路由"><a href="#9-动态删除路由" class="headerlink" title="9.动态删除路由"></a>9.动态删除路由</h3><p>  方式一：添加一个name相同的路由；</p><p>  方式二：通过removeRoute方法，传入路由名称； </p><p>​    <code>router.removeRoute（‘路由名称’）</code></p><p>  方式三：通过addRoute方法的返回值回调。    </p><pre><code>const removeRoute=router.addRouter(routeRecord)removeEoute() //删除路由如果存在的话</code></pre><h3 id="10-路由的其他方法补充："><a href="#10-路由的其他方法补充：" class="headerlink" title="10.路由的其他方法补充："></a>10.路由的其他方法补充：</h3><p>  router.hasRoute（）。检查路由是否存在</p><p>  router.getRoutes（）。获取一个包含所有路由记录的数组</p><h3 id="11-路由导航守卫"><a href="#11-路由导航守卫" class="headerlink" title="11.路由导航守卫"></a>11.路由导航守卫</h3><p>  vue-router提供的导航守卫主要用来通过跳转或取消的方式守卫导航</p><p>  全局的前置守卫beforeEach是在导航出发时会被回调的。有两个参数：to和from</p>  <!-- 导航守卫 --><p>  let counter=0;</p>  <!-- to:Route对象，即将跳转到Route对象 -->  <!-- from:Route对象，从哪一个路由对象导航过来的 -->  <!-- 返回值问题：​    1.false：不进行导航​    2.undefind或者不写返回值：进行默认导航​    3.字符串：路径，跳转到对应的路径中​    4.对象：类似于router.push({path:"",query:....}) --><pre><code>router.beforeEach((to,from)=&gt;&#123;​    console.log(`进行了$&#123;++counter&#125;次路由跳转`);​    return false  &#125;)</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;1-认识前端路由&quot;&gt;&lt;a href=&quot;#1-认识前端路由&quot; class=&quot;headerlink&quot; title=&quot;1.认识前端路由&quot;&gt;&lt;/a&gt;1.认识前端路由&lt;/h3&gt;&lt;p&gt;  路由器主要维护的是一个映射表，每个ip地址对应一个计算器的mac地址&lt;/p&gt;
+&lt;p&gt;  </summary>
+      
+    
+    
+    
+    
+    <category term="Vue3" scheme="http://sang63.github.io/tags/Vue3/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue脚手架报错 Component name “Student“ should always be multi-word...</title>
@@ -429,29 +452,6 @@
     
     
     <category term="错误审查" scheme="http://sang63.github.io/tags/%E9%94%99%E8%AF%AF%E5%AE%A1%E6%9F%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PHP连接数据库（mysqli）</title>
-    <link href="http://sang63.github.io/2021/10/11/PHP%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88mysqli%EF%BC%89-1/"/>
-    <id>http://sang63.github.io/2021/10/11/PHP%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88mysqli%EF%BC%89-1/</id>
-    <published>2021-10-11T08:21:27.000Z</published>
-    <updated>2021-10-11T08:22:18.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="一-实训目的"><a href="#一-实训目的" class="headerlink" title="一.实训目的"></a>一.实训目的</h3><p>1、掌握mysqli扩展连接和选择数据库的使用</p><p>2、学会mysqli扩展执行SQL语句和处理结果集的方法</p><p>3、掌握常用数据库SQL语句</p><h3 id="二-实训内容"><a href="#二-实训内容" class="headerlink" title="二.实训内容"></a>二.实训内容</h3><p>自行创建数据库，完成PHP访问数据库的功能。要求：尝试四种处理结果集的方法。</p><h4 id="1-创建数据库并建表"><a href="#1-创建数据库并建表" class="headerlink" title="1.创建数据库并建表"></a>1.创建数据库并建表</h4><p>我使用的是phpstudy2016版，注意不同的版本创建数据库的方法也稍有不同。</p><p><img src="https://img-blog.csdnimg.cn/6a98566807924008846a072d7caf4cf3.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_17,color_FFFFFF,t_70,g_se,x_16" alt="01"></p><p>这是接下来我要使用的数据库与表：</p><p><img src="https://img-blog.csdnimg.cn/d7198623e24e40faa7541804cdae4e6e.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="02"></p><h4 id="2-处理结果集"><a href="#2-处理结果集" class="headerlink" title="2.处理结果集"></a>2.处理结果集</h4><p>建完数据库和表后，尝试使用如下表格中的方法处理结果集。</p><p><img src="https://img-blog.csdnimg.cn/130b13b78ea54bc08384e27aa9622f01.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_20,color_FFFFFF,t_70,g_se,x_16" alt="03"></p><p>代码如下：</p><pre><code>&lt;!DOCTYPE **html**&gt;&lt;html **lang**=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;  &lt;title&gt;PHP连接mysqli&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;?phpheader(&quot;Connect-Type:text/html; charset=utf-8&quot;);$mysqli = new **mysqli**(&#39;localhost&#39;,&#39;root&#39;,&#39;123456&#39;,&#39;library&#39;); //判断连接是否成功if($mysqli-&gt;connect_errno)&#123;  die(&quot;连接失败:%s\n&quot;.$mysqli-&gt;connect_error);&#125;//查询数据库$sql = &quot;select * from book&quot;;$result = $mysqli-&gt;query($sql);//使用num_rows查看结果集总数echo &#39;结果集总数是:&#39;.$result-&gt;num_rows.&#39;&lt;hr&gt;&#39;;//使用fetch_fields()查看查询结果$finfo = $result-&gt;fetch_fields();echo &#39;book表中有：&#39;;foreach($finfo as $val)&#123;  echo $val-&gt;name.&#39;  &#39;;&#125;echo &#39;&lt;hr&gt;&#39;;// while($row = $result-&gt;fetch_array())&#123;//   echo $row[&#39;id&#39;].&#39; &#39;.$row[&#39;book_name&#39;].&#39;&lt;br&gt;&#39;;// &#125;echo &quot;&lt;table border=&#39;1&#39;&gt;  &lt;tr&gt;  &lt;th&gt;book_number&lt;/th&gt;  &lt;th&gt;book_name&lt;/th&gt;  &lt;th&gt;author&lt;/th&gt;  &lt;th&gt;price&lt;/th&gt;  &lt;th&gt;book_type&lt;/th&gt;  &lt;th&gt;number&lt;/th&gt;  &lt;/tr&gt;&quot;;  //使用fetch_array()查看数据库内容  while($row=mysqli_fetch_array($result))&#123;​    echo &quot;&lt;tr&gt;&quot;;​    echo &quot;&lt;td&gt;&quot;.$row[&#39;book_number&#39;].&quot;&lt;/td&gt;&quot;;​    echo &quot;&lt;td&gt;&quot;.$row[&#39;book_name&#39;].&quot;&lt;/td&gt;&quot;;​    echo &quot;&lt;td&gt;&quot;.$row[&#39;author&#39;].&quot;&lt;/td&gt;&quot;;​    echo &quot;&lt;td&gt;&quot;.$row[&#39;price&#39;].&quot;&lt;/td&gt;&quot;;​    echo &quot;&lt;td&gt;&quot;.$row[&#39;book_type&#39;].&quot;&lt;/td&gt;&quot;;​    echo &quot;&lt;td&gt;&quot;.$row[&#39;number&#39;].&quot;&lt;/td&gt;&quot;;​    echo &quot;&lt;/tr&gt;&quot;;  &#125;  echo &quot;&lt;/table&gt;&quot;;?&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><p><img src="https://img-blog.csdnimg.cn/516fe82608f240fd81f0abac16631261.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_19,color_FFFFFF,t_70,g_se,x_16" alt="04"></p><pre><code>&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;    &lt;title&gt;PHP连接mysqli&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;?phpheader(&quot;Connect-Type:text/html; charset=utf-8&quot;);$mysqli = new mysqli(&#39;localhost&#39;,&#39;root&#39;,&#39;123456&#39;,&#39;library&#39;);$sql = &quot;select * from book&quot;;$result = $mysqli-&gt;query($sql);//使用fetch_all查询结果$row=$result-&gt;fetch_all(MYSQLI_BOTH);$i = 0;while($i&lt;mysqli_num_rows($result))&#123;    echo &quot;编号:&quot;.$row[$i][&quot;book_number&quot;].&quot;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;书名：&quot;    .$row[$i][&quot;book_name&quot;].&quot;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;出版社：&quot;.$row[$i][&quot;publisher&quot;].&quot;&lt;hr&gt;&quot;;    $i++;&#125;//使用fetch_assoc$sql=&quot;select * from borrow&quot;;$result=$mysqli-&gt;query($sql);while($row=$result-&gt;fetch_assoc())&#123;    echo &quot;用户:&quot;.$row[&quot;borrower_name&quot;].&quot;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;操作时间：&quot;.$row[&quot;borrowed_date&quot;].&quot;&lt;hr /&gt;&quot;;&#125;?&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><p><img src="https://img-blog.csdnimg.cn/236582e01b2a4c3290a4f12bbb9de077.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_17,color_FFFFFF,t_70,g_se,x_16" alt="05"><br><img src="https://img-blog.csdnimg.cn/4d5dc9218fac42cd8f09913824e75a9c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qGR5qGR5ZKM6Zi_5oiY,size_15,color_FFFFFF,t_70,g_se,x_16" alt="06"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;一-实训目的&quot;&gt;&lt;a href=&quot;#一-实训目的&quot; class=&quot;headerlink&quot; title=&quot;一.实训目的&quot;&gt;&lt;/a&gt;一.实训目的&lt;/h3&gt;&lt;p&gt;1、掌握mysqli扩展连接和选择数据库的使用&lt;/p&gt;
-&lt;p&gt;2、学会mysqli扩展执行SQL语句和处理结</summary>
-      
-    
-    
-    
-    
-    <category term="PHP" scheme="http://sang63.github.io/tags/PHP/"/>
     
   </entry>
   
