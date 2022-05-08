@@ -1,0 +1,5345 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="微信小程序开发-题库, 桑桑和阿战">
+    <meta name="description" content="第1周 初识微信小程序 第1周 单元测验**
+1、 问题:注册微信小程序账号的网址是（ ）
+选项：
+A: https://www.weixin.qq.com
+B:https://mp.weixin.qq.com
+C:https://ap.w">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>微信小程序开发-题库 | 桑桑和阿战</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.1"><link rel="alternate" href="/atom.xml" title="桑桑和阿战" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">桑桑和阿战</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">桑桑和阿战</div>
+        <div class="logo-desc">
+            
+            热爱可抵岁月漫长，彼此保护不是说说的
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">微信小程序开发-题库</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">学习笔记</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-05-08
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <pre><code>第1周 初识微信小程序 第1周 单元测验**
+1、 问题:注册微信小程序账号的网址是（ ）
+选项：
+A: https://www.weixin.qq.com
+B:https://mp.weixin.qq.com
+C:https://ap.weixin.qq.com
+D:https://xcx.weixin.qq.com
+答案: 【https://mp.weixin.qq.com】
+
+2、 问题:查看AppID的位置是在“开发”项目中的（ ）
+选项:
+A:运维中心
+B:开发设置
+C:开发者工具
+D:接口设置
+答案: 【开发设置】
+
+3、 问题:编写小程序代码是在微信开发者工具的（ ）窗口中进行的？
+选项：
+A:模拟器
+B:编辑器
+C:调试器
+D:都不是
+答案: 【编辑器】
+
+4、 问题:默认情况下，编译小程序既可以通过“编译”按钮来实现，还可以通过（ ）来实现？
+选项：
+A:Ctrl + A
+B:Ctrl + C
+C:Ctrl + S
+D:Ctrl + V
+答案: 【Ctrl + S】
+
+5、 问题:在真机上查看小程序运行结果时，需要点击（ ）按钮显示二维码，通过微信扫描二维码来查看？
+选项：
+A:编译
+B:预览
+C:真机调试
+D:切后台
+答案: 【预览】
+
+6、 问题:一个小程序页面一般包含4个文件，其中逻辑层文件是（ ）
+选项：
+A:WXML
+B:WXSS
+C:JS
+D:JSON
+答案: 【JS】
+
+7、 问题:在WXML文件中，通过（ ）属性直接设置组件的样式。
+选项：
+A:style
+B:class
+C:import
+D:include
+答案: 【style】
+
+8、 问题:在WXML文件中，通过（ ）属性引用在WXSS文件中定义的样式。
+选项：
+A:style
+B:class
+C:import
+D:include
+答案: 【class】
+
+9、 问题:在小程序中，index页面样式在（ ）文件中进行定义？
+选项：
+A:index.wxml
+B:index.wxss
+C:index.js
+D:index.json
+答案: 【index.wxss】
+
+10、 问题:在index.wxml中，除了可以使用在index.wxss中定义的样式外，还可以使用在（ ）文件中定义的全局样式。
+选项：
+A:app.wxml
+B:app.wxss
+C:app.js
+D:app.json
+答案: 【app.wxss】
+
+11、 问题:在微信小程序中，利用（ ）属性设置字体类型。
+选项：
+A:font-family
+B:font-style
+C:font-weight
+D:font-size
+答案: 【font-family】
+
+12、 问题:在微信小程序中，利用（ ）属性设置字体大小?
+选项：
+A:font-family
+B:font-style
+C:font-weight
+D:font-size
+答案: 【font-size】
+
+13、 问题:在微信小程序中，利用（ ）属性设置字体加粗。
+选项：
+A:font-family
+B:font-style
+C:font-weight
+D:font-size
+答案: 【font-weight】
+
+14、 问题:在微信小程序中，利用（ ）属性设置字体倾斜。
+选项：
+A:font-family
+B:font-style
+C:font-weight
+D:font-size
+答案: 【font-style】
+
+15、 问题:在微信小程序中，利用（ ）属性设置文本的首行缩进。
+选项：
+A:color
+B:text-align
+C:text-indent
+D:letter-spacing
+答案: 【text-indent】
+
+16、 问题:在微信小程序中，利用（ ）属性设置字符间距。
+选项：
+A:color
+B:text-align
+C:text-indent
+D:letter-spacing
+答案: 【letter-spacing】
+
+17、 问题:在微信小程序中，利用（ ）属性设置文本颜色。
+选项：
+A:color
+B:text-align
+C:text-indent
+D:letter-spacing
+答案: 【color】
+
+18、 问题:在微信小程序中，利用（ ）属性设置文本水平对齐方式。
+选项：
+A:color
+B:text-align
+C:text-indent
+D:letter-spacing
+答案: 【text-align】
+
+19、 问题:在微信小程序中，利用（ ）属性设置单词间距。
+选项：
+A:word-spacing
+B:white-space
+C:text-decoration
+D:text-decoration-color
+答案: 【word-spacing】
+
+20、 问题:在微信小程序中，利用（ ）属性设置文本下划线。
+选项：
+A:word-spacing
+B:white-space
+C:text-decoration
+D:text-decoration-color
+答案: 【text-decoration】
+
+21、 问题:在微信小程序中，利用（ ）属性设置文本下划线的颜色。
+选项：
+A:word-spacing
+B:white-space
+C:text-decoration
+D:text-decoration-color
+答案: 【text-decoration-color】
+
+22、 问题:以下选项中，（ ）是3位16进制颜色值的表示方法。
+选项：
+A:rgba()
+B:#f9h
+C:#f0a
+D:#fa029e
+答案: 【#f0a】
+
+23、 问题:函数rgb(red, green, blue)的参数green表示（ ）。
+选项：
+A:红色
+B:绿色
+C:蓝色
+D:透明度
+
+
+答案: 【绿色】
+24、 问题:函数rgba(red, green, blue, alpha)的参数alpha表示（ ）
+选项：
+A:红色
+B:绿色
+C:蓝色
+D:透明度
+答案: 【透明度】
+
+25、 问题:（ ）组件用来设置图片
+选项：
+A:video
+B:audio
+C:image
+D:view
+答案: 【image】
+
+26、 问题:image组件用（ ）属性指定图片的路径。
+选项：
+A:source
+B:sorce
+C:src
+D:size
+答案: 【src】
+
+27、 问题:API函数wx.createInnerAudioContext()用于创建（ ）对象
+选项：
+A:视频上下文
+B:音频上下文
+C:动画上下文
+D:图形上下文
+答案: 【音频上下文】
+
+28、 问题:使用音频时，首先要利用API函数wx.createInnerAudioContext()创建音频上下文，然后设置该上下文的源文件src，并利用（ ）函数播放音频。
+选项：
+A:pause()
+B:stop()
+C:play()
+D:seek()
+答案: 【play()】
+
+29、 问题:WXML文件中的动态数据通过（ ）符号与JS文件中的数据进行绑定，这样JS中的数据就可以传给WXML文件。
+选项：
+A:&#123;&#125;
+B:&#123;&#123;&#125;&#125;
+C:”
+D:””
+答案: 【&#123;&#123;&#125;&#125;】
+
+30、 问题:在WXML中绑定的数据，需要通过JS文件中的页面注册函数Page()的对象参数属性（ ）进行初始化。
+选项：
+A:data
+B:date
+C:bindtap
+D:bindchange
+答案: 【data】
+
+31、 问题:对象属性的赋值是通过（ ）符号来实现的。
+选项：
+A:=
+B::
+C:;
+D:==
+答案: 【:】
+
+32、 问题:事件绑定时，在WXML文件组件标签内利用“bind…=函数名”绑定组件事件与函数，并在（ ）文件中定义该事件函数。
+选项：
+A:WXML
+B:WXSS
+C:JS
+D:JSON
+答案: 【JS】
+
+33、 问题:定义事件函数时，使用的关键词是（ ）
+选项：
+A:hanshu
+B:func
+C:function
+D:introduction
+答案: 【function】
+
+34、 问题:image组件支持的图片格式包括（ ）
+选项：
+A:jpg
+B:png
+C:svg
+D:bmp
+答案: 【jpg;
+png;
+svg】
+
+35、 问题:可以使用已有的微信订阅号账号作为微信小程序的账号（ ）
+选项：
+A:正确
+B:错误
+答案: 【错误】
+
+36、 问题:AppID不是开发小程序所必需的（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+37、 问题:发布微信小程序时必须有AppID（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+38、 问题:有了AppID就可以发布微信小程序了（ ）
+选项：
+A:正确
+B:错误
+答案: 【错误】
+
+39、 问题: image组件的src属性值既可以在WXML文件中直接给出，也可以通过数据绑定的方式在JS文件中给出（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+40、 问题:数据绑定后，数据传递方向是双向的（ ）
+选项：
+A:正确
+B:错误
+答案: 【错误】
+
+41、 问题:事件绑定实现了信息由逻辑层到视图层的传递（ ）
+选项：
+A:正确
+B:错误
+答案: 【错误】
+
+**第2周 盒模型与页面布局 第2周 单元测验**
+1、 问题:盒模型本质上是一个盒子，封装周围的WXML元素，包括：边距，边框，填充和实际内容。模型的（ ）属性用来设置边框的样式。
+选项：
+A:border-style
+B:box model
+C:padding
+D:margin
+答案: 【border-style】
+
+2、 问题:边框样式属性（ ）用来设置点线边框。
+选项：
+A:solid
+B:dotted
+C:dashed
+D:double
+答案: 【dotted】
+
+3、 问题:边框样式属性（ ）用来设置虚线边框。
+选项：
+A:solid
+B:dotted
+C:dashed
+D:double
+答案: 【dashed】
+
+4、 问题:边框样式属性（ ）用来设置实线边框。
+选项：
+A:solid
+B:dotted
+C:dashed
+D:double
+答案: 【solid】
+
+5、 问题:边框样式属性（ ）用来设置两个边框。
+选项：
+A:solid
+B:dotted
+C:dashed
+D:double
+答案: 【double】
+
+6、 问题:边框样式属性（ ）用来设置边框宽度。
+选项：
+A:border-color
+B:border-bottom
+C:border-top
+D:border-width
+答案: 【border-width】
+
+7、 问题:边框样式属性（ ）用于设置边框的颜色。
+选项：
+A:border-color
+B:border-bottom
+C:border-top
+D:border-width
+答案: 【border-color】
+
+8、 问题:边框样式属性（ ）可以用于一次性设置边框的宽度、样式和颜色。
+选项：
+A:border-color
+B:border-size
+C:border
+D:border-width
+答案: 【border】
+
+9、 问题:边框样式属性（ ）属性用于设置下边框样式。
+选项：
+A:border-color
+B:border-bottom
+C:border
+D:border-width
+答案: 【border-bottom】
+
+10、 问题:盒模型中（ ）属性用来设置内边距。
+选项：
+A:margin
+B:padding
+C:margin-bottom
+D:padding-left
+答案: 【padding】
+
+11、 问题:盒模型中（ ）属性用来设置外边距。
+选项：
+A:margin
+B:padding
+C:margin-bottom
+D:padding-left
+答案: 【margin】
+
+12、 问题:当上面的模型的下边距为20px，下面模型的上边距为30px，两个模型之间的边距是（ ）
+选项：
+A:50px
+B:20px
+C:30px
+D:不确定
+答案: 【30px】
+
+13、 问题:代码：margin:10px 20px;那么上下外边距是（ ）
+选项：
+A:5px
+B:10px
+C:15px
+D:20px
+答案: 【10px】
+
+14、 问题:代码：margin:10px 20px;那么左右外边距是（ ）
+选项：
+A:5px
+B:10px
+C:15px
+D:20px
+答案: 【20px】
+
+15、 问题:代码：margin:10px 20px 30px 40px;那么左外边距是（ ）
+选项：
+A:10px
+B:20px
+C:30px
+D:40px
+答案: 【40px】
+
+16、 问题:采用Flex布局的元素称为Flex容器，又称（ ），简称“容器”。
+选项：
+A:cross axis
+B:main axis
+C:flex container
+D:flex item
+答案: 【flex container】
+
+17、 问题:Flex容器的所有子元素自动成为容器成员，这些成员又称为（ ），简称“项目”。
+选项：
+A:cross axis
+B:main axis
+C:flex container
+D:flex item
+答案: 【flex item】
+
+18、 问题:Flex容器默认存在两根轴：main axis和（ ）。
+选项：
+A:cross axis
+B:flex axis
+C:flex container
+D:flex item
+答案: 【cross axis】
+
+19、 问题:Flex布局主轴的开始位置（与边框的交叉点）叫做（ ）
+选项：
+A:cross start
+B:main start
+C:cross end
+D:main end
+答案: 【main start】
+
+20、 问题:Flex布局主轴的结束位置叫做（ ）
+选项：
+A:cross start
+B:main start
+C:cross end
+D:main end
+答案: 【main end】
+
+21、 问题:Flex布局交叉轴的开始位置叫做（ ）
+选项：
+A:cross start
+B:main start
+C:cross end
+D:main end
+答案: 【cross start】
+
+22、 问题:Flex布局交叉轴结束位置叫做（ ）。
+选项：
+A:cross start
+B:main start
+C:cross end
+D:main end
+答案: 【cross end】
+
+23、 问题:Flex项目默认沿（ ）轴排列。
+选项：
+A:main axis
+B:cross axis
+C:x
+D:y
+答案: 【main axis】
+
+24、 问题:Flex布局中，单个项目占据的主轴空间叫做（ ）。
+选项：
+A:cross size
+B:cross space
+C:main size
+D:main space
+答案: 【main size】
+
+25、 问题:Flex布局中，单个项目占据的交叉轴空间叫做（ ）。
+选项：
+A:cross size
+B:cross space
+C:main size
+D:main space
+答案: 【cross size】
+
+26、 问题:Flex容器布局中，（ ）属性用于设置主轴的方向（即项目的排列方向）
+选项：
+A:align-items
+B:flex-wrap
+C:justify-content
+D:flex-direction
+答案: 【flex-direction】
+
+27、 问题:Flex容器布局中，（ ）属性用于设置如果一条轴线排不下应如何换行。
+选项：
+A:align-items
+B:flex-wrap
+C:justify-content
+D:flex-direction
+答案: 【flex-wrap】
+
+28、 问题:Flex容器布局中，（ ）属性用于设置项目在主轴上的对齐方式。
+选项：
+A:align-items
+B:flex-wrap
+C:justify-content
+D:flex-direction
+答案: 【justify-content】
+
+29、 问题:Flex容器布局中，（ ）属性用于设置项目在交叉轴上的对齐方式。
+选项：
+A:align-items
+B:flex-wrap
+C:justify-content
+D:flex-direction
+答案: 【align-items】
+
+30、 问题:Flex容器布局中，（ ）属性用于设置项目在交叉轴上有多根轴线时的对齐方式。
+选项：
+A:align-items
+B:justify-content
+C:flex-direction
+D:align-content
+答案: 【align-content】
+
+31、 问题:Flex项目布局属性中，（ ）用于设置项目的前后排列顺序。
+选项：
+A:flex
+B:flex-grow
+C:order
+D:flex-basis
+答案: 【order】
+
+32、 问题:Flex项目布局属性中，（ ）用于设置各项目宽度之和小于容器宽度时，各项目分配容器剩余宽度的放大比例。
+选项：
+A:flex-shrink
+B:flex-grow
+C:order
+D:flex-basis
+答案: 【flex-grow】
+
+33、 问题:Flex项目布局中，（ ）属性用于设置各项目宽度之和大于容器宽度时，各项目缩小自己宽度的比例。
+选项：
+A:order
+B:flex-basis
+C:align-self
+D:flex-shrink
+答案: 【flex-shrink】
+
+34、 问题:Flex项目布局中，（ ）属性用于设置元素宽度。
+选项：
+A:flex
+B:flex-grow
+C:order
+D:flex-basis
+答案: 【flex-basis】
+
+35、 问题:Flex项目布局中，（ ）属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。
+选项：
+A:flex
+B:flex-grow
+C:flex-shrink
+D:flex-basis
+答案: 【flex】
+
+36、 问题:Flex项目布局属性中，（ ）允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。
+选项：
+A:order
+B:flex-basis
+C:align-self
+D:flex-shrink
+答案: 【align-self】
+
+37、 问题:当容器的（ ）属性值大于或等于height的属性值时，容器中的文本将垂直居中对齐。
+选项：
+A:line-height
+B:height-line
+C:size
+D:width
+答案: 【line-height】
+
+38、 问题:（ ）组件能够实现页面导航。
+选项：
+A:navigator
+B:view
+C:button
+D:image
+答案: 【navigator】
+
+39、 问题:如果设置一个容器组件中的两个项目一个在容器最左边，一个在容器最右边，应该设置左边项目的flex-grow属性或（ ）属性大于0。
+选项：
+A:align-self
+B:order
+C:flex
+D:flex-shrink
+答案: 【flex】
+
+40、 问题:navigator组件的（ ）属性表示当前小程序内的跳转链接地址。
+选项：
+A:target
+B:open-type
+C:delta
+D:url
+答案: 【url】
+
+41、 问题:navigator组件属性target的合法值包括（ ）和miniProgram。
+选项：
+A:self
+B:other
+C:redirect
+D:switchTab
+答案: 【self】
+
+42、 问题:navigator组件属性open-type的合法值（ ）表示保留当前页面，跳转到应用内的某个页面。
+选项：
+A:switchTab
+B:navigate
+C:reLaunch
+D:redirect
+答案: 【navigate】
+
+43、 问题:1. navigator组件属性open-type的合法值（ ）表示关闭当前页面，跳转到应用内的某个页面。
+选项：
+A:switchTab
+B:navigate
+C:reLaunch
+D:redirect
+答案: 【redirect】
+
+44、 问题:navigator组件属性open-type的合法值（ ）表示跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面。
+选项：
+A:switchTab
+B:navigate
+C:reLaunch
+D:redirect
+答案: 【switchTab】
+
+45、 问题:navigator组件属性open-type的合法值（ ）表示关闭所有页面，打开应用内的某个页面。
+选项：
+A:switchTab
+B:navigate
+C:reLaunch
+D:redirect
+答案: 【reLaunch】
+
+46、 问题:navigator组件属性open-type的合法值（ ）表示关闭当前页面，返回上一页面或多级页面。
+选项：
+A:switchTab
+B:reLaunch
+C:navigateBack
+D:exit
+答案: 【navigateBack】
+
+47、 问题:navigator组件属性open-type的合法值（ ）表示当target=”miniProgram”时，退出小程序。
+选项：
+A:switchTab
+B:reLaunch
+C:navigateBack
+D:exit
+答案: 【exit】
+
+48、 问题:icon是小程序的图标组件，其类型是由（ ）属性来指定的。
+选项：
+A:type
+B:size
+C:color
+D:class
+答案: 【type】
+
+49、 问题:如果某组件的margin属性设置为margin: 10px 20px 30px 40px，表示该组件的外边距为（ ）
+选项：
+A:上、下、左、右的边距分别为：10px 20px 30px 40px
+B:左、右、上、下的边距分别为：10px 20px 30px 40px
+C:上、左、下、右的边距分别为：10px 20px 30px 40px
+D:左、下、右、上的边距分别为：10px 20px 30px 40px
+答案: 【上、左、下、右的边距分别为：10px 20px 30px 40px】
+
+50、 问题:如果某组件的margin属性设置为margin: 10px 20px，表示该组件的外边距为（ ）
+选项：
+A:上、下、左、右的边距分别为：10px 20px 10px 20px
+B:上、下、左、右的边距分别为：10px 10px 20px 20px
+C:上、下、左、右的边距分别为：10px 20px 20px 10px
+D:上、下、左、右的边距分别为：20px 10px 10px 20px
+答案: 【上、下、左、右的边距分别为：10px 10px 20px 20px】
+
+51、 问题:如果某组件的margin属性设置为margin: 10px，表示该组件的外边距为（ ）
+选项：
+A:上、下、左、右的边距分别为：10px 0px 0px 0px
+B:上、下、左、右的边距分别为：10px 10px 0px 0px
+C:上、下、左、右的边距分别为：10px 10px 10px 0px
+D:上、下、左、右的边距分别为：10px 10px 10px 10px
+答案: 【上、下、左、右的边距分别为：10px 10px 10px 10px】
+
+52、 问题:如果某组件的margin属性设置为margin: 10px auto，表示该组件的外边距为（ ）
+选项：
+A:上、下边距为10px，左右边距任意
+B:上、下边距为10px，左右边距相等
+C:上、下边距为10px，左右边距为0
+D:上、下边距为10px，左右边距等于上、下边距
+答案: 【上、下边距为10px，左右边距相等】
+
+53、 问题:float属性表示组件可以向左或向右移动浮动，直到它的外边缘碰到包含框或另一个浮动框的边框为止，其合法值（ ）表示组件向左浮动。
+选项：
+A:left
+B:right
+C:none
+D:inherit
+答案: 【left】
+
+54、 问题:float属性表示组件可以向左或向右移动浮动，直到它的外边缘碰到包含框或另一个浮动框的边框为止，其默认值为（ ）。
+选项：
+A:left
+B:right
+C:none
+D:inherit
+答案: 【none】
+
+55、 问题:float属性表示组件可以向左或向右移动浮动，直到它的外边缘碰到包含框或另一个浮动框的边框为止，其合法值（ ）表示组件从父元素继承 float 属性的值。
+选项：
+A:left
+B:right
+C:none
+D:inherit
+答案: 【inherit】
+
+56、 问题:clear属性用于清除组件浮动。其合法值（ ）表示清除组件左右两侧的浮动元素。
+选项：
+A:left
+B:right
+C:both
+D:none
+答案: 【both】
+
+57、 问题:clear属性用于清除组件浮动。其默认值为（ ）。
+选项：
+A:left
+B:right
+C:both
+D:none
+答案: 【none】
+
+58、 问题:clear属性用于清除组件浮动，其合法值（ ）表示从父元素继承 clear 属性的值。
+选项：
+A:left
+B:right
+C:both
+D:inherit
+答案: 【inherit】
+
+59、 问题:input输入框组件主要用于输入数据，其属性值（ ）为输入框的初始内容。
+选项：
+A:value
+B:type
+C:password
+D:placeholder
+答案: 【value】
+
+60、 问题:input输入框组件主要用于输入数据，其属性值（ ）为输入框的类型，即输入框获得焦点时弹出的键盘类型。
+选项：
+A:value
+B:type
+C:password
+D:placeholder
+答案: 【type】
+
+61、 问题:input输入框组件主要用于输入数据，其属性值（ ）表示输入框内容是否是密码类型。
+选项：
+A:value
+B:type
+C:password
+D:placeholder
+答案: 【password】
+
+62、 问题:input输入框组件主要用于输入数据，其属性值（ ）为输入框为空时的占位符，即提示内容。
+选项：
+A:value
+B:type
+C:password
+D:placeholder
+答案: 【placeholder】
+
+63、 问题:input输入框组件主要用于输入数据，其属性值（ ）指定 placeholder 的样式。
+选项：
+A:placeholder-style
+B:placeholder-class
+C:bindinput
+D:bindblur
+答案: 【placeholder-style】
+
+64、 问题:input输入框组件主要用于输入数据，其属性值（ ）指定 placeholder 的样式类。
+选项：
+A:placeholder-style
+B:placeholder-class
+C:bindinput
+D:bindblur
+答案: 【placeholder-class】
+
+65、 问题:input输入框组件主要用于输入数据，其属性值（ ）为最大输入长度，设置为 -1时不限制最大长度。
+选项：
+
+A:placeholder-style
+B:maxlength
+C:bindinput
+D:bindblur
+答案: 【maxlength】
+
+66、 问题:input输入框组件主要用于输入数据，其属性值（ ）为键盘输入时触发的事件。
+选项：
+A:placeholder-style
+B:maxlength
+C:bindinput
+D:bindblur
+答案: 【bindinput】
+
+67、 问题:input输入框组件主要用于输入数据，其属性值（ ）为输入框失去焦点时触发的事件。
+选项：
+A:placeholder-style
+B:maxlength
+C:bindinput
+D:bindblur
+答案: 【bindblur】
+
+68、 问题:input输入框组件的type属性是指利用真机运行时，当在输入框中输入数据时，根据type属性指定的类型弹出来的键盘类型，而不是输入内容的类型。其有效值（ ）表示带小数点的数字键盘
+选项：
+A:text
+B:number
+C:idcard
+D:digit
+答案: 【digit】
+
+69、 问题:当失去焦点事件e发生时，获取的input组件的value值为（ ）
+选项：
+A:e.detail.value
+B:e.detail
+C:e.value
+D:detail.value
+答案: 【e.detail.value】
+
+70、 问题:input输入框组件主要用于输入数据，其属性（ ）决定该组件是否自动获得焦点。
+选项：
+A:focus
+B:bindfocus
+C:bindblur
+D:bindinput
+答案: 【focus】
+
+**第3周 流程控制结构和函数 第3周 单元测验**
+1、 问题:在JS中，条件语句包括if和（ ）两种类型。
+选项：
+A:if…else
+B:if…else if…else
+C:switch
+D:if…if
+答案: 【switch】
+
+2、 问题:对象是拥有属性和方法的数据。属性是与对象相关的值，方法是能够在对象上执行的动作。在Math.PI中，PI是Math对象的（ ）
+选项：
+A:属性
+B:方法
+C:可以是属性，也可以是方法
+D:既是属性，也是方法
+答案: 【属性】
+
+3、 问题:对象是拥有属性和方法的数据。属性是与对象相关的值，方法是能够在对象上执行的动作。在Math.abs(x)中，abs(x)是Math对象的（ ）
+选项：
+A:属性
+B:方法
+C:可以是属性，也可以是方法
+D:既是属性，也是方法
+答案: 【方法】
+
+4、 问题:Math对象的（ ）方法是对数值x进行上舍入？
+选项：
+A:abs(x)
+B:ceil(x)
+C:cos(x)
+D:exp(x)
+答案: 【ceil(x)】
+
+5、 问题:Math对象的（ ）方法是返回 e 的x次方？
+选项：
+A:abs(x)
+B:ceil(x)
+C:cos(x)
+D:exp(x)
+答案: 【exp(x)】
+
+6、 问题:Math对象的（ ）方法是返回x的自然对数（底为e）。
+选项：
+A:floor(x)
+B:log(x)
+C:sin(x)
+D:tan(x)
+答案: 【log(x)】
+
+7、 问题:Math对象的（ ）方法返回 x 的 y 次幂。
+选项：
+A:floor(x)
+B:pow(x,y)
+C:max(x,y)
+D:min(x,y)
+答案: 【pow(x,y)】
+
+8、 问题:Math对象的（ ）方法是返回 0 ~ 1 之间的随机数？
+选项：
+A:random()
+B:round()
+C:sin()
+D:sqrt()
+答案: 【random()】
+
+9、 问题:Math对象的（ ）方法是返回x的平方根？
+选项：
+A:cos(x)
+B:round(x)
+C:sin(x)
+D:sqrt(x)
+答案: 【sqrt(x)】
+
+10、 问题:事件绑定实现了信息由视图层向逻辑层的传递，（ ）层负责信息处理，最后将处理的结果（数据）通过数据绑定方式返回到视图层。
+选项：
+A:视图
+B:逻辑
+C:视图和逻辑
+D:视图或逻辑
+答案: 【逻辑】
+
+11、 问题:button组件的type属性的合法值包括primary、default和warn，其中warn表示按钮的颜色为（ ）
+选项：
+A:绿色
+B:白色
+C:红色
+D:蓝色
+答案: 【红色】
+
+12、 问题:如果要在JS文件的Page函数中使用data中初始化的变量x，使用方法为：（ ）
+选项：
+A:x
+B:this.data.x
+C:this.x
+D:data.x
+答案: 【this.data.x】
+
+13、 问题:要隐藏view组件中的内容，应该将view组件的（ ）属性设置为true？
+选项：
+A:hidden
+B:display
+C:height
+D:width
+答案: 【hidden】
+
+14、 问题:this.setData()函数可以修改在（ ）中初始化的绑定数据的值。
+选项：
+A:data
+B:Page
+C:App
+D:this
+答案: 【data】
+
+15、 问题:如果希望一遍又一遍地运行相同的代码，并且每次的值都不同，那么使用（ ）是很方便的。
+选项：
+A:顺序结构
+B:条件结构
+C:循环结构
+D:跳转结构
+答案: 【循环结构】
+
+16、 问题:JavaScript 支持的循环类型包括：for、for/in、while和do/while。其中（ ）用于遍历对象属性。
+选项：
+A:for
+B:for/in
+C:while
+D:do/while
+答案: 【for/in】
+
+17、 问题:在for(var i=0; i&lt;10; i++)中，如果循环完成，语句i=0执行了（ ）次？
+选项：
+A:1
+B:9
+C:10
+D:11
+答案: 【1】
+
+18、 问题:在for(var i=0; i&lt;10; i++)中，如果循环完成，语句i&lt;10执行了（ ）次？
+选项：
+A:1
+B:9
+C:10
+D:11
+答案: 【11】
+
+19、 问题:在for(var i=0; i&lt;10; i++)中，如果循环完成，语句i++执行了（ ）次？
+选项：
+A:1
+B:9
+C:10
+D:11
+答案: 【10】
+
+20、 问题:以下代码片段执行后，text的值为：（ ）var person = &#123;fname:”Bill”, lname:”Gates”, age:62&#125;;var text = “”;for (var x in person) &#123; text += person[x];&#125;
+选项：
+A:BillGates62
+B:fname:”Bill”, lname:”Gates”, age:62
+C:BillGates
+D:62
+答案: 【BillGates62】
+
+21、 问题:以下代码片段执行后，i的值为：（ ）var i=1, sum=0;while (i &lt;= 10) &#123; sum += i; i++;&#125;
+选项：
+A:9
+B:10
+C:11
+D:12
+答案: 【11】
+
+22、 问题:以下代码片段执行后，sum的值为：（ ）var i=1, sum=0;while (i &lt; 5) &#123; sum += i; i++;&#125;
+选项：
+A:15
+B:10
+C:6
+D:5
+答案: 【10】
+
+23、 问题:以下代码片段执行后，text的值为：（ ）var i=1, text=”;do &#123; text += i; i++; &#125;while (i &lt; 5);
+选项：
+A:15
+B:10
+C:6
+D:1234
+答案: 【1234】
+
+24、 问题:以下代码片段执行后，sum的值为：（ ）var i=10, sum=0;while (i &lt; 5) &#123; sum += i; i++;&#125;
+选项：
+A:15
+B:10
+C:6
+D:0
+答案: 【0】
+
+25、 问题:以下代码片段执行后，sum的值为：（ ）var i=10, sum=0;do&#123; sum += i; i++; &#125; while (i &lt; 5);
+选项：
+A:15
+B:10
+C:6
+D:0
+答案: 【10】
+
+26、 问题:JavaScript 全局对象方法（ ）用于解析一个字符串并返回一个浮点数。
+选项：
+A:isNaN()
+B:Number()
+C:parseFloat()
+D:parseInt()
+答案: 【parseFloat()】
+
+27、 问题:JavaScript中的（ ）对象用于在单个的变量中存储多个值。
+选项：
+A:Math
+B:Array
+C:Object
+D:Number
+答案: 【Array】
+
+28、 问题:JavaScript中的（ ）对象是原始数值的包装对象。
+选项：
+A:Math
+B:Array
+C:Object
+D:Number
+答案: 【Number】
+
+29、 问题:Array对象的（ ）属性用于设置或返回数组中元素的数目。
+选项：
+A:length
+B:concat()
+C:join()
+D:pop()
+答案: 【length】
+
+30、 问题:Array对象的（ ）方法用于删除并返回数组的最后一个元素。
+选项：
+A:length
+B:concat()
+C:join()
+D:pop()
+答案: 【pop()】
+
+31、 问题:Array对象的（ ）方法用于从某个已有的数组返回选定的元素。
+选项：
+A:slice()
+B:sort()
+C:splice()
+D:unshift()
+答案: 【slice()】
+
+32、 问题:Array对象的（ ）方法用于对数组的元素进行排序。
+选项：
+A:slice()
+B:sort()
+C:splice()
+D:unshift()
+答案: 【sort()】
+
+33、 问题:Array对象的（ ）方法用于删除元素，并向数组添加新元素。
+选项：
+A:slice()
+B:sort()
+C:splice()
+D:unshift()
+答案: 【splice()】
+
+34、 问题:Number对象的（ ）方法用于把数字转换为字符串，结果的小数点后有指定位数的数字。
+选项：
+A:toLocaleString()
+B:toFixed()
+C:toExponential()
+D:toPrecision()
+答案: 【toFixed()】
+
+35、 问题:函数（ ）用于设定一个定时器，在定时到期以后执行注册的回调函数。
+选项：
+A:number setTimeout(function callback, number delay, any rest)
+B:clearTimeout(number timeoutID)
+C:number setInterval(function callback, number delay, any rest)
+D:clearInterval(number intervalID)
+答案: 【number setTimeout(function callback, number delay, any rest)】
+
+36、 问题:函数（ ）用于取消由 setTimeout 设置的定时器。
+选项：
+A:number setTimeout(function callback, number delay, any rest)
+B:clearTimeout(number timeoutID)
+C:number setInterval(function callback, number delay, any rest)
+D:clearInterval(number intervalID)
+答案: 【clearTimeout(number timeoutID)】
+
+37、 问题:函数（ ）用于设定一个定时器，按照指定的周期（以毫秒计）来执行注册的回调函数。
+选项：
+A:number setTimeout(function callback, number delay, any rest)
+B:clearTimeout(number timeoutID)
+C:number setInterval(function callback, number delay, any rest)
+D:clearInterval(number intervalID)
+答案: 【number setInterval(function callback, number delay, any rest)】
+
+38、 问题:函数（ ）用于取消由 setInterval 设置的定时器。
+选项：
+A:number setTimeout(function callback, number delay, any rest)
+B:clearTimeout(number timeoutID)
+C:number setInterval(function callback, number delay, any rest)
+D:clearInterval(number intervalID)
+答案: 【clearInterval(number intervalID)】
+
+39、 问题:以下代码片段运行后，c的值为：（ ） var letters = ‘0123456789ABCDEF’; for (var j = 0; j &lt; 6; j++) &#123; c += letters[Math.floor(Math.random() * 15)] &#125;
+选项：
+A:由3个0～F之间的字符构成的字符串
+B:由6个0～F之间的字符构成的字符串
+C:由3个0～E之间的字符构成的字符串
+D:由6个0～E之间的字符构成的字符串
+答案: 【由6个0～E之间的字符构成的字符串】
+
+40、 问题:以下代码表示（ ）setInterval(() =&gt; &#123; this.createColor(); &#125;, 1000);
+选项：
+A:1秒钟后调用一次this.createColor()函数
+B:每隔1秒钟调用一次this.createColor()函数
+C:1000秒钟后调用一次this.createColor()函数
+D:每隔1000秒钟调用一次this.createColor()函数
+答案: 【每隔1秒钟调用一次this.createColor()函数】
+
+41、 问题:在JS中，switch语句的case后面必须有break（ ）
+选项：
+A:正确
+B:错误
+答案: 【错误】
+
+42、 问题:假设x=6, y=3，那么(x &lt; 10 &amp;&amp; y &gt; 1)的结果为true（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+43、 问题:假设x=6, y=3，那么(x==5 || y==5)的结果为true（ ）
+选项：
+A:正确
+B:错误
+答案: 【错误】
+
+44、 问题:假设x=6, y=3，那么!(x==y)的结果为true（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+45、 问题:button按钮组件的size属性的合法值包括default和mini，其默认值为mini（ ）
+选项：
+A:正确
+B:错误
+答案: 【错误】
+分析：【button按钮组件的size属性的合法值包括default和mini，其默认值为default】
+
+46、 问题:button组件的form-type属性用于 form 组件，其合法值包括submit和reset，其中reset表示提交表单（ ）
+选项：
+A:正确
+B:错误
+答案: 【错误】
+分析：【button组件的form-type属性用于 form 组件，其合法值包括submit和reset，其中reset表示重置表单】
+
+**第4周 小程序基本架构 第4周 单元测验**
+1、 问题:（ ）文件是用来对微信小程序进行全局配置的？
+选项：
+A:index.json
+B:app.json
+C:index.js
+D:app.js
+答案: 【app.json】
+
+2、 问题:创建小程序页面时，应该在app.json文件的（ ）属性中进行。
+选项：
+A:pages
+B:window
+C:tabBar
+D:networkTimeout
+答案: 【pages】
+
+3、 问题:window属性用于设置小程序的状态栏、导航栏、标题、窗口背景色。其中（ ）用于设置导航栏背景颜色。
+选项：
+A:navigationBarBackgroundColor
+B:navigationBarTextStyle
+C:navigationBarTitleText
+D:navigationStyle
+答案: 【navigationBarBackgroundColor】
+
+4、 问题:window属性用于设置小程序的状态栏、导航栏、标题、窗口背景色。其中（ ）用于设置导航栏标题颜色。
+选项：
+A:navigationBarBackgroundColor
+B:navigationBarTextStyle
+C:navigationBarTitleText
+D:navigationStyle
+答案: 【navigationBarTextStyle】
+
+5、 问题:window属性用于设置小程序的状态栏、导航栏、标题、窗口背景色。其中（ ）用于设置导航栏标题文字内容。
+选项：
+A:navigationBarBackgroundColor
+B:navigationBarTextStyle
+C:navigationBarTitleText
+D:navigationStyle
+答案: 【navigationBarTitleText】
+
+6、 问题:tabBar用来配置小程序底部的Tab，它的属性（ ）是tab的列表，最少2个、最多5个 tab。
+选项：
+A:color
+B:selectedColor
+C:borderStyle
+D:list
+答案: 【list】
+
+7、 问题:list数组对象属性（ ）表示页面路径。
+选项：
+A:pagePath
+B:text
+C:iconPath
+D:selectedIconPath
+答案: 【pagePath】
+
+8、 问题:list数组对象属性（ ）表示选中时的图片路径，icon 大小限制为40kb，建议尺寸为81px*81px，不支持网络图片。
+选项：
+A:pagePath
+B:text
+C:iconPath
+D:selectedIconPath
+答案: 【selectedIconPath】
+
+9、 问题:每一个小程序页面也可以使用同名 .json 文件来对本页面的（ ）表现进行设置。
+选项：
+A:pages
+B:window
+C:tabBar
+D:networkTimeout
+答案: 【window】
+
+10、 问题:小程序中的App（Object object）函数用于（ ）
+选项：
+A:小程序注册
+B:小程序注销
+C:页面注册
+D:页面注销
+答案: 【小程序注册】
+
+11、 问题:页面中的Page（Object object）函数用于（ ）
+选项：
+A:小程序注册
+B:小程序注销
+C:页面注册
+D:页面注销
+答案: 【页面注册】
+
+12、 问题:小程序运行后，执行的第一个生命周期函数是 app.js 文件中的（ ）函数
+选项：
+A:onLaunch
+B:onShow
+C:onLoad
+D:onReady
+答案: 【onLaunch】
+
+13、 问题:小程序运行后，页面 index.js 中执行的第一个生命周期函数是（ ）
+选项：
+A:onLaunch
+B:onShow
+C:onLoad
+D:onReady
+答案: 【onLoad】
+
+14、 问题:监听小程序启动或切前台的回调函数是（ ）
+选项：
+A:onLaunch
+B:onShow
+C:onLoad
+D:onReady
+答案: 【onShow】
+
+15、 问题:监听页面初次渲染完成的回调函数是（ ）
+选项：
+A:onLoad
+B:onShow
+C:onReady
+D:onHide
+答案: 【onReady】
+
+16、 问题:页面绑定数据的初始值由（ ）提供？
+选项：
+A:data
+B:onLoad
+C:onShow
+D:onReady
+答案: 【data】
+
+17、 问题:如果在 index.js 中 Page()函数引用在 app.js 中的 APP() 函数中定义的全局变量和函数，就必须在 index.js 的所有函数之外利用（ ）函数创建全局对象，并利用全局对象引用全局变量和函数。
+选项：
+A:getApp()
+B:exports()
+C:require()
+D:Page()
+答案: 【getApp()】
+
+18、 问题:在 index.js 中所有函数之外定义的变量 x ，在本文件的 Page 函数中的引用方式为（ ）
+选项：
+A:this.x
+B:that.x
+C:x
+D:app.x
+答案: 【x】
+
+19、 问题:在 index.js 的 Page 函数的参数中定义的属性 x ，在 Page 函数中的引用方式为（ ）
+选项：
+A:this.x
+B:that.x
+C:x
+D:app.x
+答案: 【this.x】
+
+20、 问题:以下代码：var x=10; //语句1Page(&#123; var y=20; //语句2 onLoad:function(options)&#123; this.x=20; //语句3 &#125;, y=30; //语句4&#125;)以上语句中正确的是（ ）
+选项：
+A:语句1
+B:语句2
+C:语句3
+D:语句4
+答案: 【语句1】
+
+21、 问题:在 until.js 文件中定义的函数 utilFunc ，如果在 index.js 中引用，首先需要在 util.js 文件中利用 module.exports 或 exports 来输出该函数，然后在 index.js 中利用（ ）获取模块实例。
+选项：
+A:getApp()
+B:exports()
+C:require()
+D:Page()
+答案: 【require()】
+
+22、 问题:如果 length=3，则以下代码：2&#125;&#125;”&gt;23的输出结果为（ ）
+选项：
+A:1
+B:2
+C:3
+D:4
+答案: 【2】
+
+23、 问题:以下代码： view1 view2的输出结果为（ ）
+选项：
+A:view1
+B:view2
+C:view1 和 view2
+D:没有输出
+答案: 【view1 和 view2】
+
+24、 问题:navigationBarTextStyle 仅支持 black 和 white（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+25、 问题:小程序运行后，页面 index.js 中的函数是先执行 onReady 函数，然后再执行 onShow 函数（ ）
+选项：
+A:正确
+B:错误
+答案: 【错误】
+
+26、 问题:当页面由 index 切换到 jiaoxue 时，首先执行 index.js 文件中的 onHide 函数，然后再执行 jiaoxue.js 文件中的 onLoad 函数。（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+27、 问题:当 jiaoxue 页面显示时点击“切后台”按钮，首先执行 jiaoxue.js 文件中的 onHide 函数，然后再执行 app.js 文件中的 onHide 函数。（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+28、 问题:setData()函数同步将数据从逻辑层发送到视图层，同时改变对应的this.data的值（ ）
+选项：
+A:正确
+B:错误
+答案: 【错误】
+
+29、 问题:setData()函数用于将数据从逻辑层发送到视图层，同步改变对应的this.data的值（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+30、 问题:事件是视图层到逻辑层的通讯方式，它可以将用户的行为反馈到视图层进行处理（ ）
+选项：
+A:正确
+B:错误
+答案: 【错误】
+
+31、 问题:事件可以绑定在组件上，当触发事件，就会执行逻辑层中对应的事件处理函数。事件对象可以携带额外信息，如id,dataset,touches（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+32、 问题:所有绑定的数据都必须在data中进行初始化（ ）
+选项：
+A:正确
+B:错误
+答案: 【错误】
+
+33、 问题:require(path) 的参数 path 可以为文件相对路径，也可以为文件绝对路径（ ）
+选项：
+A:正确
+B:错误
+答案: 【错误】
+
+**第5周 渲染与引用 第5周 单元测验**
+1、 问题:如果score=101，则以下代码的输出结果为（ ）。 90&#125;&#125;’&gt;优秀 70&#125;&#125;’&gt;中等 &#123;&#123;item&#125;&#125;的运行结果为（ ）
+选项：
+A:a
+B:ar
+C:arr
+D:array
+答案: 【array】
+
+8、 问题:以下代码： &#123;&#123;index&#125;&#125;的运行结果为（ ）
+选项：
+A:0
+B:01
+C:012
+D:01234
+答案: 【01234】
+
+9、 问题:以下代码： &#123;&#123;item&#125;&#125;的运行结果为（ ）
+选项：
+A:1
+B:12
+C:123
+D:1234
+答案: 【123】
+
+10、 问题:以下代码： &#123;&#123;item&#125;&#125;的运行结果为（ ）
+选项：
+A:北
+B:北方
+C:北方工业
+D:北方工业大学
+答案: 【北方工业大学】
+
+11、 问题:以下代码： &#123;&#123;num&#125;&#125;的运行结果为（ ）
+选项：
+A:0
+B:012
+C:01234
+D:012345
+答案: 【012345】
+
+12、 问题:以下代码： &#123;&#123;i&#125;&#125;-&#123;&#123;j&#125;&#125; 的运行结果为（ ）
+选项：
+A:中-大中-学国-大国-学
+B:中-大国-大中-学国-学
+C:中-大国-学中-学国-大
+D:国-大国-学中-大中-学
+答案: 【国-大国-学中-大中-学】
+
+13、 问题:以下代码： &#123;&#123;i&#125;&#125;-&#123;&#123;j&#125;&#125; 的运行结果为（ ）
+选项：
+A:中-大 中-学国-大 国-学
+B:中-大中-学国-大国-学
+C:中-大 中-学 国-大 国-学
+D:中-大中-学国-大国-学
+答案: 【中-大 中-学国-大 国-学】
+
+14、 问题:定义模板时，要使用（ ）属性作为模板的名字。
+选项：
+A:data
+B:name
+C:is
+D:import
+答案: 【name】
+
+15、 问题:使用模板时，要使用（ ）属性引用模板的名字。
+选项：
+A:data
+B:name
+C:is
+D:import
+答案: 【is】
+
+16、 问题:使用模板时，要通过（ ）属性将模板需要的数据传入。
+选项：
+A:data
+B:name
+C:is
+D:import
+答案: 【data】
+
+17、 问题:利用（ ）可以引用目标文件中定义的template。
+选项：
+A:data
+B:name
+C:is
+D:import
+答案: 【import】
+
+18、 问题:WXML 提供两种文件引用方式：import和（ ）
+选项：
+A:data
+B:name
+C:src
+D:include
+答案: 【include】
+
+19、 问题:（ ）只能引用文件中定义的template，不能使用该文件中的其他内容。
+选项：
+A:include
+B:name
+C:src
+D:import
+答案: 【import】
+
+20、 问题:（ ）可以将该引用文件中除了template和wxs 之外的整个代码引入，相当于将目标文件中的代码拷贝到引用的位置。
+选项：
+A:include
+B:name
+C:src
+D:import
+答案: 【include】
+
+21、 问题:以下代码的运行结果为：（ ）
+选项：
+A:我是红色我是红色
+B:我是蓝色我是蓝色
+C:我是红色我是红色我是蓝色我是蓝色
+D:我是红色我是蓝色我是红色我是蓝色
+答案: 【我是红色我是蓝色我是红色我是蓝色】
+
+22、 问题:假设有3个WXML文件A、B和C，C import B，B import A，在C中可以使用B定义的template，在B中可以使用A定义的template，但是C不能使用A定义的template（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+23、 问题:在index页面文件夹中添加a.wxml文件，那么a.wxml文件不能使用在index.wxss文件中定义样式（ ）
+选项：
+A:正确
+B:错误
+答案: 【错误】
+
+**第6周 小程序组件-1 第6周 单元测验**
+1、 问题:form组件的提交事件是由（ ）组件来实现的。
+选项：
+A:form
+B:button
+C:view
+D:image
+答案: 【button】
+
+2、 问题:form组件的提交事件函数是由（ ）组件绑定的？
+选项：
+A:form
+B:button
+C:view
+D:image
+答案: 【button】
+
+3、 问题:要实现form组件的“提交”事件，其内部必须有一个属性form-type=’（ ）’的按钮
+选项：
+A:submit
+B:reset
+C:button
+D:form
+答案: 【submit】
+
+4、 问题:要实现form组件的“重置”事件，其内部必须有一个属性form-type=’（ ）’的按钮
+选项：
+A:submit
+B:reset
+C:button
+D:form
+答案: 【reset】
+
+5、 问题:如果要获取form组件内部input组件的value值，必须指定input组件的（ ）属性
+选项：
+A:id
+B:value
+C:name
+D:placeholder
+答案: 【name】
+
+6、 问题:flex布局中，justify-content属性表示沿（ ）轴的对齐方式
+选项：
+A:主轴
+B:交叉轴
+C:水平轴
+D:垂直轴
+答案: 【主轴】
+
+7、 问题:flex布局中，align-items属性表示沿（ ）轴的对齐方式
+选项：
+A:主轴
+B:交叉轴
+C:水平轴
+D:垂直轴
+答案: 【交叉轴】
+
+8、 问题:input组件的value值是（ ）类型？
+选项：
+A:number
+B:string
+C:boolean
+D:any
+答案: 【string】
+
+9、 问题:显示消息提示框的API函数是（ ）
+选项：
+A:wx.showToast(Object object)
+B:wx.showModal(Object object)
+C:wx.showLoading(Object object)
+D:wx.hideToast(Object object)
+答案: 【wx.showToast(Object object)】
+
+10、 问题:隐藏消息提示框的API函数是（ ）
+选项：
+A:wx.showToast(Object object)
+B:wx.showModal(Object object)
+C:wx.showLoading(Object object)
+D:wx.hideToast(Object object)
+答案: 【wx.hideToast(Object object)】
+
+11、 问题:显示模态对话框的API函数是（ ）
+选项：
+A:wx.showToast(Object object)
+B:wx.showModal(Object object)
+C:wx.showLoading(Object object)
+D:wx.hideToast(Object object)
+答案: 【wx.showModal(Object object)】
+
+12、 问题:显示loading 提示框的API函数是（ ）
+选项：
+A:wx.showModal(Object object)
+B:wx.showLoading(Object object)
+C:wx.hideToast(Object object)
+D:wx.hideLoading(Object object)
+答案: 【wx.showLoading(Object object)】
+
+13、 问题:隐藏loading 提示框的API函数是（ ）
+选项：
+A:wx.showModal(Object object)
+B:wx.showLoading(Object object)
+C:wx.hideToast(Object object)
+D:wx.hideLoading(Object object)
+答案: 【wx.hideLoading(Object object)】
+
+14、 问题:函数wx.showToast(Object object)的参数属性（ ）用于设置提示的内容
+选项：
+A:title
+B:icon
+C:image
+D:duration
+答案: 【title】
+
+15、 问题:函数wx.showToast(Object object)的参数属性（ ）用于设置提示框的图标
+选项：
+A:title
+B:icon
+C:image
+D:duration
+答案: 【icon】
+
+16、 问题:函数wx.showToast(Object object)的参数属性（ ）用于设置提示框显示的时长
+选项：
+A:title
+B:icon
+C:image
+D:duration
+答案: 【duration】
+
+17、 问题:函数wx.showToast(Object object)的参数属性icon的合法值有（ ）
+选项：
+A:success、loading和none
+B:image、success、loading和none
+C:success、fail和none
+D:success、fail和complete
+答案: 【success、loading和none】
+
+18、 问题:函数wx.showToast(Object object)的参数属性中包含的回调函数有（ ）
+选项：
+A:success、loading和none
+B:mask、success和fail
+C:success、fail和none
+D:success、fail和complete
+答案: 【success、fail和complete】
+
+19、 问题:要动态控制字体属性，那么字体属性应该通过（ ）来设置？
+选项：
+A:class
+B:style
+C:font
+D:font-style
+答案: 【style】
+
+20、 问题:radio组件必须和（ ）组件一起使用
+选项：
+A:checkbox
+B:radio-group
+C:checkbox-group
+D:view
+答案: 【radio-group】
+
+21、 问题:checkbox组件必须和（ ）组件一起使用
+选项：
+A:checkbox
+B:radio-group
+C:checkbox-group
+D:view
+答案: 【checkbox-group】
+
+22、 问题:下面的说法正确的是（ ）
+选项：
+A:radio组件有bindchange属性
+B:checkbox组件有bindchange属性
+C:radio-group组件有bindchange属性
+D:checkbox-group组件没有bindchange属性
+答案: 【radio-group组件有bindchange属性】
+
+23、 问题:radio组件的（ ）属性是它的标识，radio-group的 change 事件会携带radio的这个标识
+选项：
+A:value
+B:checked
+C:disabled
+D:color
+答案: 【value】
+
+24、 问题:决定radio组件是否被选中的属性是（ ）
+选项：
+A:value
+B:checked
+C:disabled
+D:color
+答案: 【checked】
+
+25、 问题:checkbox组件的（ ）属性是它的标识，checkbox-group的 change 事件会携带checkbox的这个标识。
+选项：
+A:value
+B:checked
+C:disabled
+D:color
+答案: 【value】
+
+26、 问题:决定checkbox组件是否被禁用的属性是（ ）
+选项：
+A:value
+B:checked
+C:disabled
+D:color
+答案: 【disabled】
+
+27、 问题:checkbox-group组件change事件的返回值是（ ）
+选项：
+A:string类型的变量
+B:number类型的变量
+C:string类型的数组
+D:number类型的数组
+答案: 【string类型的数组】
+
+28、 问题:radio-group组件change事件的返回值是（ ）
+选项：
+A:string类型的变量
+B:number类型的变量
+C:string类型的数组
+D:number类型的数组
+答案: 【string类型的变量】
+
+29、 问题:通过滑动slider组件的滑块来改变该组件的（ ）属性值
+选项：
+A:min
+B:max
+C:step
+D:value
+答案: 【value】
+
+30、 问题:slider组件value属性值的类型是（ ）类型
+选项：
+A:string
+B:number
+C:color
+D:boolean
+答案: 【number】
+
+31、 问题:通过slider组件的（ ）属性来设置是否显示它的value值
+选项：
+A:block-size
+B:block-color
+C:show-value
+D:bindchange
+答案: 【show-value】
+
+32、 问题:通过slider组件的（ ）属性来设置组件滑块的大小
+选项：
+A:block-size
+B:block-color
+C:show-value
+D:bindchange
+答案: 【block-size】
+
+33、 问题:通过slider组件的（ ）属性来设置组件滑块移动过程中发生的变化
+选项：
+A:block-color
+B:show-value
+C:bindchange
+D:bingdchanging
+答案: 【bingdchanging】
+
+34、 问题:通过slider组件的（ ）属性来设置组件滑块的颜色
+选项：
+A:block-size
+B:block-color
+C:show-value
+D:show-value
+答案: 【block-color】
+
+35、 问题:通过slider组件的（ ）属性来设置移动该组件滑块的步长
+选项：
+A:min
+B:max
+C:step
+D:value
+答案: 【step】
+
+36、 问题:通过slider组件的（ ）属性来设置滑块滑过区域的颜色
+选项：
+A:activeColor
+B:backgroundColor
+C:block-size
+D:block-color
+答案: 【activeColor】
+
+37、 问题:data-* 属性用于存储页面或应用程序的私有自定义数据，存储的数据能够被在（ ）文件中使用
+选项：
+A:wxml
+B:wxss
+C:js
+D:json
+答案: 【js】
+
+38、 问题:在js文件中，通过（ ）获取data- 的属性值
+选项：
+A:e.detail.value
+B:e.detail.data
+C:e.currentTarget.dataset
+D:e.currentTarget.dataset.
+答案: 【e.currentTarget.dataset.*】
+
+39、 问题:（ ）组件能够实现轮播图的效果
+选项：
+A:swiper
+B:switch
+C:slider
+D:picker
+答案: 【swiper】
+
+40、 问题:（ ）组件能够实现开关效果
+选项：
+A:swiper
+B:switch
+C:slider
+D:picker
+答案: 【switch】
+
+41、 问题:swiper组件的（ ）属性用于设置是否显示面板指示点
+选项：
+A:indicator-dots
+B:indicator-color
+C:indicator-active-color
+D:autoplay
+答案: 【indicator-dots】
+
+42、 问题:swiper组件的（ ）属性用于设置当前播放页面指示点的颜色
+选项：
+A:indicator-dots
+B:indicator-color
+C:indicator-active-color
+D:autoplay
+答案: 【indicator-active-color】
+
+43、 问题:swiper组件的（ ）属性用于设置轮播图是否自动播放
+选项：
+A:indicator-dots
+B:indicator-color
+C:indicator-active-color
+D:autoplay
+答案: 【autoplay】
+
+44、 问题:swiper组件的（ ）属性用于设置轮播图自动切换时间间隔
+选项：
+A:interval
+B:duration
+C:circular
+D:vertical
+答案: 【interval】
+
+45、 问题:swiper组件的（ ）属性用于设置轮播图是否采用衔接滑动
+选项：
+A:interval
+B:duration
+C:circular
+D:vertical
+答案: 【circular】
+
+46、 问题:swiper组件的（ ）属性用于设置轮播图滑动动画时长
+选项：
+A:interval
+B:duration
+C:circular
+D:vertical
+答案: 【duration】
+
+47、 问题:switch组件的（ ）属性用于设置该组件是否被选中
+选项：
+A:checked
+B:disabled
+C:type
+D:bindchange
+答案: 【checked】
+
+48、 问题:switch组件的type属性的有效值包括（ ）
+选项：
+A:switch和checkbox
+B:radio和checkbox
+C:switch和radio
+D:switch和checked
+答案: 【switch和checkbox】
+
+49、 问题:可以将获取的input组件的value值直接用于加法运算？
+选项：
+A:正确
+B:错误
+答案: 【错误】
+
+50、 问题:可以将获取的input组件的value值直接用于乘、除运算？
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+**第7周 小程序组件-2 第7周 单元测验**
+1、 问题:（ ）组件是从屏幕底部弹起的滚动选择器。
+选项：
+A:slider
+B:switch
+C:swiper
+D:picker
+答案: 【picker】
+
+2、 问题:picker组件支持的选择器类型有（ ）
+选项：
+A:普通选择器、多列选择器、时间选择器、日期选择器、省市区选择器
+B:只有时间选择器、日期选择器
+C:只有普通选择器、多列选择器
+D:只有时间选择器、日期选择器、省市区选择器
+答案: 【普通选择器、多列选择器、时间选择器、日期选择器、省市区选择器】
+
+3、 问题:picker组件利用（ ）属性设置选择器的类型？
+选项：
+A:range
+B:range-key
+C:value
+D:mode
+答案: 【mode】
+
+4、 问题:普通选择器和多列选择器的（ ）属性是数组类型，用于设置选择的内容。
+选项：
+A:range
+B:range-key
+C:value
+D:bindchange
+答案: 【range】
+
+5、 问题:日期选择器的（ ）属性表示选择器的粒度，有效值为 year, month, day，默认值为day。
+选项：
+A:value
+B:start
+C:end
+D:fields
+答案: 【fields】
+
+6、 问题:设置picker为省市区选择器时，其属性mode的值应为（ ）。
+选项：
+A:selector
+B:multiSelector
+C:date
+D:region
+答案: 【region】
+
+7、 问题:设置picker为普通选择器时，其属性mode的值应为（ ）。
+选项：
+A:selector
+B:multiSelector
+C:date
+D:region
+答案: 【selector】
+
+8、 问题:利用构造函数创建对象时，需要使用关键字（ ）。
+选项：
+A:this
+B:string
+C:new
+D:delete
+答案: 【new】
+
+9、 问题:image组件不支持（ ）图片格式。
+选项：
+A:JPG
+B:PNG
+C:SVG
+D:BMP
+答案: 【BMP】
+
+10、 问题:image组件的（ ）属性用于设置图片路径。
+选项：
+A:source
+B:resource
+C:src
+D:mode
+答案: 【src】
+
+11、 问题:image组件的（ ）属性用于设置图片的显示模式。
+选项：
+A:source
+B:resource
+C:src
+D:mode
+答案: 【mode】
+
+12、 问题:当image组件的mode值等于（ ）时，不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素。
+选项：
+A:scaleToFill
+B:aspectFit
+C:aspectFill
+D:widthFix
+答案: 【scaleToFill】
+
+13、 问题:当image组件的mode值等于（ ）时，保持纵横比缩放图片，只保证图片的短边能完全显示出来。
+选项：
+A:scaleToFill
+B:aspectFit
+C:aspectFill
+D:widthFix
+答案: 【aspectFill】
+
+14、 问题:当image组件的mode值等于（ ）时，宽度不变，高度自动变化，保持原图宽高比不变。
+选项：
+A:scaleToFill
+B:aspectFit
+C:aspectFill
+D:widthFix
+答案: 【widthFix】
+
+15、 问题:当image组件的mode值等于（ ）时，保持纵横比缩放图片，使图片的长边能完全显示出来。也就是说，可以完整地将图片显示出来。
+选项：
+A:scaleToFill
+B:aspectFit
+C:aspectFill
+D:widthFix
+答案: 【aspectFit】
+
+16、 问题:当image组件的mode值等于（ ）时，不缩放图片，只显示图片的左上边区域。
+选项：
+A:center
+B:left
+C:right
+D:top left
+答案: 【top left】
+
+17、 问题:当image组件的mode值等于（ ）时，不缩放图片，只显示图片的中间区域。
+选项：
+A:center
+B:left
+C:right
+D:top left
+答案: 【center】
+
+18、 问题:当image组件的mode值等于（ ）时，不缩放图片，只显示图片的右下边区域。
+选项：
+A:top left
+B:top right
+C:bottom left
+D:bottom right
+答案: 【bottom right】
+
+19、 问题:audio组件主要用于创建音频上下文、指定音频源、设置音频外观和触发音频事件等，其（ ）属性是该组件的唯一标识符？
+选项：
+A:id
+B:src
+C:loop
+D:controls
+答案: 【id】
+
+20、 问题:API函数AudioContext wx.createAudioContext(string id, Object this)可用于创建音频上下文对象，其参数id是（ ）组件的 id？
+选项：
+A:image
+B:audio
+C:video
+D:media
+答案: 【audio】
+
+21、 问题:音频上下文对象的（ ）函数可用于播放音频？
+选项：
+A:pause()
+B:play()
+C:seek()
+D:stop()
+答案: 【play()】
+
+22、 问题:音频上下文对象的（ ）函数可用于跳转到指定位置？
+选项：
+A:pause()
+B:play()
+C:seek()
+D:stop()
+答案: 【seek()】
+
+23、 问题:audio组件（ ）属性用于设置音频的资源地址？
+选项：
+A:id
+B:src
+C:loop
+D:controls
+答案: 【src】
+
+24、 问题:audio组件（ ）属性用于设置是否循环播放？
+选项：
+A:id
+B:src
+C:loop
+D:controls
+答案: 【loop】
+
+25、 问题:audio组件（ ）属性用于设置是否显示默认控件？
+选项：
+A:id
+B:src
+C:loop
+D:controls
+答案: 【controls】
+
+26、 问题:audio组件（ ）属性用于设置默认控件上的音频封面的图片资源地址？
+选项：
+A:poster
+B:name
+C:author
+D:binderror
+答案: 【poster】
+
+27、 问题:audio组件（ ）属性用于设置默认控件上的音频名字？
+选项：
+A:poster
+B:name
+C:author
+D:binderror
+答案: 【name】
+
+28、 问题:audio组件（ ）属性用于设置默认控件上的作者名字？
+选项：
+A:poster
+B:name
+C:author
+D:binderror
+答案: 【author】
+
+29、 问题:利用API函数VideoContext wx.createVideoContext(string id, Object this)可以创建视频上下文对象。其参数id为（ ）组件的 id？
+选项：
+A:image
+B:audio
+C:video
+D:media
+答案: 【video】
+
+30、 问题:视频上下文对象的（ ）方法可用于播放视频？
+选项：
+A:play()
+B:pause()
+C:stop()
+D:seek(number position)
+答案: 【play()】
+
+31、 问题:视频上下文对象的（ ）方法可用于跳转到指定位置？
+选项：
+A:play()
+B:pause()
+C:stop()
+D:seek(number position)
+答案: 【seek(number position)】
+
+32、 问题:视频上下文对象的（ ）方法可用于发送弹幕？
+选项：
+A:sendDanmu(Object data)
+B:playbackRate(number rate)
+C:requestFullScreen(Object object)
+D:exitFullScreen()
+答案: 【sendDanmu(Object data)】
+
+33、 问题:视频上下文对象的（ ）方法可用于退出全屏？
+选项：
+A:sendDanmu(Object data)
+B:playbackRate(number rate)
+C:requestFullScreen(Object object)
+D:exitFullScreen()
+答案: 【exitFullScreen()】
+
+34、 问题:视频上下文对象的（ ）方法可用于设置倍速播放？
+选项：
+A:sendDanmu(Object data)
+B:playbackRate(number rate)
+C:requestFullScreen(Object object)
+D:exitFullScreen()
+答案: 【playbackRate(number rate)】
+
+35、 问题:视频上下文对象的（ ）方法可用于显示状态栏？
+选项：
+A:requestFullScreen(Object object)
+B:exitFullScreen()
+C:showStatusBar()
+D:hideStatusBar()
+答案: 【showStatusBar()】
+
+36、 问题:API函数VideoContext.sendDanmu(Object data)的参数属性包括text和（ ）。
+选项：
+A:icon
+B:title
+C:color
+D:image
+答案: 【color】
+
+37、 问题:video视频组件的（ ）属性设置是否显示弹幕？
+选项：
+A:danmu-list
+B:danmu-btn
+C:enable-danmu
+D:autoplay
+答案: 【enable-danmu】
+
+38、 问题:以下代码：let color = Math.floor(Math.random() * 256).toString(16) 运行后，color的值为（ ）
+选项：
+A:0～256之间的16进制随机数
+B:0～255之间的16进制随机数
+C:0～256之间的10进制随机数
+D:0～255之间的10进制随机数
+答案: 【0～255之间的16进制随机数】
+
+39、 问题:正则表达式以符号（ ）开始，以符号$/结束。
+选项：
+A:/^
+B://
+C:/
+D:/*
+答案: 【/^】
+
+40、 问题:正则表达式：/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(.[a-zA-Z0-9-]+)*.[a-zA-Z0-9]&#123;2,6&#125;$/其中，@之前的表达式[a-zA-Z0-9_.-]+ 表示字符串必须由1个及1个以上的大小写字母、数字、下划线、点或横杠组成，+号表示前面字符出现次数必须（ ）。
+选项：
+A:大于或等于1
+B:小于或等于1
+C:大于或等于0
+D:小于或等于0
+答案: 【大于或等于1】
+
+41、 问题:正则表达式：/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(.[a-zA-Z0-9-]+)*.[a-zA-Z0-9]&#123;2,6&#125;$/其中，@之后的表达式[a-zA-Z0-9-]+表示字符串必须由1个及1个以上的大小写字母、（ ）或横杠组成
+选项：
+A:+
+B:-
+C:A
+D:数字
+答案: 【数字】
+
+42、 问题:正则表达式：/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(.[a-zA-Z0-9-]+).[a-zA-Z0-9]&#123;2,6&#125;$/其中，(.[a-zA-Z0-9-]+)表示后面字符串第一个字符必须是点，点后面字符串必须由1个及1个以上的大小写字母、数字或横杠组成。*表示匹配前面的子表达式（ ）次。
+选项：
+A:1
+B:2
+C:3
+D:任意
+答案: 【任意】
+
+43、 问题:正则表达式：/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(.[a-zA-Z0-9-]+)*.[a-zA-Z0-9]&#123;2,6&#125;$/其中，.[a-zA-Z0-9]&#123;2,6&#125;表示最后一个表达式由（ ）个字母或数字构成。
+选项：
+A:2～6
+B:1～2
+C:大于6
+D:任意
+答案: 【2～6】
+
+44、 问题:API函数wx.showModal(Object object)的参数属性（ ）用于是否显示取消按钮
+选项：
+A:title
+B:content
+C:showCancel
+D:cancelText
+答案: 【showCancel】
+
+45、 问题:API函数wx.showModal(Object object)的参数属性（ ）表示取消按钮的文字，最多 4 个字符。
+选项：
+A:title
+B:content
+C:showCancel
+D:cancelText
+答案: 【cancelText】
+
+46、 问题:API函数wx.showModal(Object object)的参数属性（ ）表示提示的内容。
+选项：
+A:title
+B:content
+C:showCancel
+D:cancelText
+答案: 【content】
+
+47、 问题:API函数wx.showModal(Object object)的参数属性cancelColor表示取消按钮的文字颜色，必须是（ ）格式的颜色。
+选项：
+A:16 进制
+B:函数
+C:white/black
+D:任意
+答案: 【16 进制】
+
+48、 问题:API函数wx.showModal(Object object)的参数属性confirmText表示确认按钮的文字，最多 （ ）个字符。
+选项：
+A:2
+B:3
+C:4
+D:5
+答案: 【4】
+
+49、 问题:小程序中页面栈最多（ ）层。
+选项：
+A:8
+B:10
+C:12
+D:14
+答案: 【10】
+
+50、 问题:普通选择器的value值是数组类型，表示选择项的下标（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+51、 问题:时间选择器的value值是数组类型，表示选择项的下标（ ）
+选项：
+A:正确
+B:错误
+答案: 【错误】
+
+52、 问题:模态对话框与非模态对话框的区别是，模态对话框显示时可以操作该应用程序的其他窗口界面，而非模态对话框显示时不能操作该应用程序的其他窗口界面。（ ）
+选项：
+A:正确
+B:错误
+答案: 【错误】
+
+53、 问题:API函数wx.navigateTo(Object object)表示保留当前页面，跳转到应用内的某个页面（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+54、 问题:API函数wx.navigateTo(Object object) 不能跳到 tabbar 页面。（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+55、 问题:API函数wx.navigateTo(Object object) 不能使用 wx.navigateBack返回到原页面。（ ）
+选项：
+A:正确
+B:错误
+答案: 【错误】
+
+**第8周 小程序API-1 第8周 单元测验**
+1、 问题:函数Math.random()能够产生随机数的范围是（ ）
+选项：
+A:(0, 1)
+B:[0, 1]
+C:[0, 1)
+D:(0, 1]
+答案: 【[0, 1)】
+
+2、 问题:函数Math.floor(99.9)执行后的返回值是（ ）
+选项：
+A:98
+B:99
+C:100
+D:101
+答案: 【99】
+
+3、 问题:函数wx.onAccelerometerChange(function callback)用于监听（ ）的变化事件。
+选项：
+A:速度
+B:加速度
+C:温度
+D:方向
+答案: 【加速度】
+
+4、 问题:监听加速度变化的监听频率是通过（ ）函数来设置的？
+选项：
+A: wx.onAccelerometerChange(function callback)
+B:wx.stopAccelerometer(Object object)
+C:wx.startAccelerometer(Object object)
+D:Math.random()
+答案: 【wx.startAccelerometer(Object object)】
+
+5、 问题:监听加速度变化的监听频率是通过函数wx.startAccelerometer(Object object)的参数object的（ a ）属性来设置的？
+选项：
+A:interval
+B:success
+C:fail
+D:complete
+答案: 【interval】
+
+6、 问题:以下代码运行后，result的值为（ ）var result = 0; for (var i = 1; i &lt;= 10; i++) &#123; result = result * i &#125;
+选项：
+A:0
+B:1
+C:9的阶乘
+D:10的阶乘
+答案: 【0】
+
+7、 问题:以下代码运行后，result的值为（ ）var result = 1;for (var i = 0; i &lt;= 10; i++) &#123; result = result * i &#125;
+选项：
+A:0
+B:1
+C:9的阶乘
+D:10的阶乘
+答案: 【0】
+
+8、 问题:以下代码运行后，result的值为（ ）var result = 1; for (var i = 1; i &lt; 10; i++) &#123; result = result * i&#125;
+选项：
+A:0
+B:1
+C:9的阶乘
+D:10的阶乘
+答案: 【9的阶乘】
+
+9、 问题:以下代码运行后，result的值为（ ）var result = 1;for (var i = 1; i &lt;=10; i++) &#123; result = result * i&#125;
+选项：
+A:0
+B:1
+C:9的阶乘
+D:10的阶乘
+答案: 【10的阶乘】
+
+10、 问题:以下代码运行后，result的值为（ ）var result = 1; for (var i = 1; i &lt;=10; i++) &#123; result = result + i&#125;
+选项：
+A:等于1到10的和
+B:大于1到10的和
+C:小于1到10的和
+D:等于1到9的和
+答案: 【大于1到10的和】
+
+11、 问题:以下代码运行后，result的值为（ ）var result = 0;for (var i = 1; i &lt;=10; i+=2) &#123; result = result + i &#125;
+选项：
+A:等于1到10之间所有偶数的和
+B:等于1到10之间所有奇数的和
+C:大于1到10之间所有奇数的和
+D:小于1到10之间所有奇数的和
+答案: 【等于1到10之间所有奇数的和】
+
+12、 问题:以下代码运行后，result的值为（ ）var result = 0;for (var i = 1; i &lt;=10; i++) &#123; result = result + i*i &#125;
+选项：
+A:等于1到10之间所有数的平方和
+B:大于1到10之间所有数的平方和
+C:小于1到10之间所有数的平方和
+D:等于1到9之间所有数的平方和
+答案: 【等于1到10之间所有数的平方和】
+
+13、 问题:以下代码运行后，result的值为（ ）var result = 0;for (var i = 2; i &lt;=10; i+=2) &#123; result = result + i*i &#125;
+选项：
+A:等于1到10之间所有数的平方和
+B:等于1到10之间所有奇数的平方和
+C:等于1到10之间所有偶数的平方和
+D:以上说法都不对
+答案: 【等于1到10之间所有偶数的平方和】
+
+14、 问题:以下代码运行后，result的值为（ ）var result = 0;for (var i = 2; i &lt;=10; i+=2) &#123; result = ii &#125;
+选项：
+A:等于2到10之间所有数的平方的乘积
+B:等于2到10之间所有奇数的平方的乘积
+C:等于2到10之间所有偶数的平方的乘积
+D:以上说法都不对
+答案: 【以上说法都不对】
+
+15、 问题:API函数wx.createCanvasContext(string canvasId, Object this)的参数canvasId为（ ）组件的id？
+选项：
+A:画布
+B:画笔
+C:按钮
+D:矩形
+答案: 【画布】
+
+16、 问题:CanvasContext对象用于绘制图形和设置图形样式，其属性（ ）用于设置图形的填充颜色？
+选项：
+A:fillStyle
+B:strokeStyle
+C:shadowOffsetX
+D:shadowOffsetY
+答案: 【fillStyle】
+
+17、 问题:CanvasContext对象用于绘制图形和设置图形样式，其属性（ ）用于设置阴影相对于形状在水平方向的偏移？
+选项：
+A:fillStyle
+B:strokeStyle
+C:shadowOffsetX
+D:shadowOffsetY
+答案: 【shadowOffsetX】
+
+18、 问题:CanvasContext对象用于绘制图形和设置图形样式，其属性（ ）用于设置图形的边框颜色？
+选项：
+A:fillStyle
+B:strokeStyle
+C:shadowOffsetX
+D:shadowOffsetY
+答案: 【strokeStyle】
+
+19、 问题:CanvasContext对象用于绘制图形和设置图形样式，其属性（ ）用于设置图形阴影的模糊级别？
+选项：
+A:shadowOffsetX
+B:shadowOffsetY
+C:shadowColor
+D:shadowBlur
+答案: 【shadowBlur】
+
+20、 问题:CanvasContext对象用于绘制图形和设置图形样式，其属性（ ）用于设置阴影的颜色？
+选项：
+A:shadowOffsetX
+B:shadowOffsetY
+C:shadowColor
+D:shadowBlur
+答案: 【shadowColor】
+
+21、 问题:CanvasContext对象用于绘制图形和设置图形样式，其属性（ ）用于设置线条的端点样式？
+选项：
+A:lineWidth
+B:lineCap
+C:lineJoin
+D:miterLimit
+答案: 【lineCap】
+
+22、 问题:CanvasContext对象用于绘制图形和设置图形样式，其属性（ ）用于设置线条的宽度？
+选项：
+A:lineWidth
+B:lineCap
+C:lineJoin
+D:miterLimit
+答案: 【lineWidth】
+
+23、 问题:CanvasContext对象用于绘制图形和设置图形样式，其属性（ ）用于设置线条的交点样式？
+选项：
+A:globalAlpha
+B:lineCap
+C:lineJoin
+D:miterLimit
+答案: 【lineJoin】
+
+24、 问题:CanvasContext对象用于绘制图形和设置图形样式，其属性（ ）用于设置虚线偏移量？
+选项：
+A:globalAlpha
+B:lineCap
+C:lineJoin
+D:lineDashOffset
+答案: 【lineDashOffset】
+
+25、 问题:CanvasContext对象用于绘制图形和设置图形样式，其属性（ ）用于全局画笔透明度？
+选项：
+A:globalAlpha
+B:lineCap
+C:lineJoin
+D:lineDashOffset
+答案: 【globalAlpha】
+
+26、 问题:将之前在绘图上下文中的描述（路径、变形、样式）画到 canvas 中的函数是（ ）。
+选项：
+A:draw(boolean reserve, function callback)
+B:createLinearGradient(number x0, number y0, number x1, number y1)
+C:createCircularGradient(number x, number y, number r)
+D:createPattern(string image, string repetition)
+答案: 【draw(boolean reserve, function callback)】
+
+27、 问题:创建一个线性的渐变颜色的函数是（ ）。
+选项：
+A:draw(boolean reserve, function callback)
+B:createLinearGradient(number x0, number y0, number x1, number y1)
+C:createCircularGradient(number x, number y, number r)
+D:createPattern(string image, string repetition)
+答案: 【createLinearGradient(number x0, number y0, number x1, number y1)】
+
+28、 问题:创建一个圆形渐变颜色，起点在圆心，终点在圆环的函数是（ ）。
+选项：
+A:draw(boolean reserve, function callback)
+B:createLinearGradient(number x0, number y0, number x1, number y1)
+C:createCircularGradient(number x, number y, number r)
+D:createPattern(string image, string repetition)
+答案: 【createCircularGradient(number x, number y, number r)】
+
+29、 问题:把路径移动到画布中的指定点，不创建线条的函数是（ ）。
+选项：
+A:beginPath()
+B:moveTo(number x, number y)
+C:lineTo(number x, number y
+D:quadraticCurveTo(number cpx, number cpy, number x, number y)
+答案: 【moveTo(number x, number y)】
+
+30、 问题:创建一条弧线的函数是（ ）。
+选项：
+A:arc(number x, number y, number r, number sAngle, number eAngle, boolean counterclockwise)
+B:rect(number x, number y, number width, number height)
+C:arcTo(number x1, number y1, number x2, number y2, number radius)
+D:fillRect(number x, number y, number width, number height)
+答案: 【arc(number x, number y, number r, number sAngle, number eAngle, boolean counterclockwise)】
+
+31、 问题:函数arc(number x, number y, number r, number sAngle, number eAngle, boolean counterclockwise)的参数eAngle表示（ ）。
+选项：
+A:圆弧的圆心坐标
+B:圆弧半径
+C:圆弧的终止角度
+D:圆弧的终止弧度
+答案: 【圆弧的终止弧度】
+
+32、 问题:函数arc(number x, number y, number r, number sAngle, number eAngle, boolean counterclockwise)的参数counterclockwise表示（ ）。
+选项：
+A:圆弧的起始弧度
+B:圆弧的终止弧度
+C:圆弧的方向是否为逆时针
+D:圆弧的方向是否为顺时针
+答案: 【圆弧的方向是否为逆时针】
+
+33、 问题:函数rotate(number rotate)是以（ ）为中心旋转当前坐标轴？
+选项：
+A:图形的中心点
+B:图形的左上角
+C:图形的左下角
+D:坐标原点
+答案: 【坐标原点】
+
+34、 问题:函数rotate(number rotate)用于（ ）？
+选项：
+A:把当前坐标轴顺时针旋转rotate角度
+B:把当前坐标轴逆时针旋转rotate角度
+C:把当前坐标轴顺时针旋转rotate弧度
+D:把当前坐标轴逆时针旋转rotate弧度
+答案: 【把当前坐标轴顺时针旋转rotate角度】
+
+35、 问题:函数CanvasContext.translate(number x, number y)是对（ ）进行变换。
+选项：
+A:图形的中心点
+B:图形的左上角
+C:图形的左下角
+D:坐标原点
+答案: 【坐标原点】
+
+36、 问题:函数CanvasContext.translate(number x, number y)的参数x表示（ ）
+选项：
+A:水平方向坐标
+B:水平坐标平移量
+C:竖直方向坐标
+D:竖直坐标平移量
+答案: 【水平坐标平移量】
+
+37、 问题:函数CanvasContext.scale(number scaleWidth, number scaleHeight)用于（ ）
+选项：
+A:只能在水平方向缩放图形
+B:只能竖直方向缩放图形
+C:在水平方向和竖直方向都能缩放图形
+D:在水平方向和竖直方向都不能缩放图形
+答案: 【在水平方向和竖直方向都能缩放图形】
+
+38、 问题:函数wx.startAccelerometer(Object object)的参数属性object.interval 的合法值包括（ ）
+选项：
+A:game
+B:ui
+C:normal
+D:100ms/次
+答案: 【game;
+ui;
+normal】
+
+39、 问题:函数wx.onAccelerometerChange(function callback)的参数callback的属性包括：（ ）
+选项：
+A:x
+B:y
+C:z
+D:w
+答案: 【x;
+y;
+z】
+
+40、 问题:函数wx.startAccelerometer(Object object)用于启动加速度监听事件（ ）。
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+41、 问题:函数wx.stopAccelerometer()用于停止加速度监听事件（ ）。
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+42、 问题:函数wx.onAccelerometerChange(function callback)调用后，自动启动加速度监听事件（ ）。
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+43、 问题:监听加速度变化事件的API函数wx.onAccelerometerChange(function callback)一般要在生命周期函数中进行调用（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+44、 问题:API函数wx.createCanvasContext(string canvasId, Object this)用于创建 画布的绘图上下文对象（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+45、 问题:以下代码片段的运行结果是否正确？（ ）const ctx = wx.createCanvasContext(‘myCanvas’)ctx.beginPath()ctx.moveTo(10, 10)ctx.lineTo(150, 10)ctx.stroke()ctx.beginPath()ctx.setLineCap(‘ square ‘)ctx.setLineWidth(10)ctx.moveTo(10, 30)ctx.lineTo(150, 30)ctx.stroke()ctx.beginPath()ctx.setLineCap(’round’)ctx.setLineWidth(10)ctx.moveTo(10, 50)ctx.lineTo(150, 50)ctx.stroke()ctx.beginPath()ctx.setLineCap(‘butt’)ctx.setLineWidth(10)ctx.moveTo(10, 70)ctx.lineTo(150, 70)ctx.stroke()ctx.draw()运行结果：
+选项：
+A:正确
+B:错误
+答案: 【错误】
+
+46、 问题:以下代码片段的运行结果是否正确？（ ）const ctx = wx.createCanvasContext(‘myCanvas’)ctx.beginPath()ctx.moveTo(10, 10)ctx.lineTo(100, 50)ctx.lineTo(10, 90)ctx.stroke()ctx.beginPath()ctx.setLineJoin(‘miter’)ctx.setLineWidth(10)ctx.moveTo(50, 10)ctx.lineTo(140, 50)ctx.lineTo(50, 90)ctx.stroke()ctx.beginPath()ctx.setLineJoin(’round’)ctx.setLineWidth(10)ctx.moveTo(90, 10)ctx.lineTo(180, 50)ctx.lineTo(90, 90)ctx.stroke()ctx.beginPath()ctx.setLineJoin(‘bevel’)ctx.setLineWidth(10)ctx.moveTo(130, 10)ctx.lineTo(220, 50)ctx.lineTo(130, 90)ctx.stroke()ctx.draw() 运行结果：
+选项：
+A:正确
+B:错误
+答案: 【错误】
+
+47、 问题:以下代码片段的运行结果是否正确？（ ）const ctx = wx.createCanvasContext(‘myCanvas’)ctx.save()ctx.setFillStyle(‘red’)ctx.fillRect(10, 10, 150, 100)ctx.restore()ctx.fillRect(50, 50, 150, 100)ctx.draw()运行结果：
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+48、 问题:以下代码片段的运行结果是否正确？（ ）const ctx = wx.createCanvasContext(‘myCanvas’)ctx.setFillStyle(‘red’)ctx.setShadow(10, 50, 50, ‘blue’)ctx.fillRect(10, 10, 150, 75)ctx.draw()运行结果：
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+49、 问题:以下代码片段的运行结果是否正确？（ ）const ctx = wx.createCanvasContext(‘myCanvas’)ctx.setStrokeStyle(‘red’)ctx.moveTo(150, 20)ctx.lineTo(150, 170)ctx.stroke()ctx.setFontSize(15)ctx.setTextAlign(‘left’)ctx.fillText(‘textAlign=left’, 150, 60)ctx.setTextAlign(‘center’)ctx.fillText(‘textAlign=center’, 150, 80)ctx.setTextAlign(‘right’)ctx.fillText(‘textAlign=right’, 150, 100)ctx.draw()运行结果：
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+50、 问题:以下代码片段的运行结果是否正确？（ ）const ctx = wx.createCanvasContext(‘myCanvas’)ctx.setStrokeStyle(‘red’)ctx.moveTo(5, 75)ctx.lineTo(295, 75)ctx.stroke()ctx.setFontSize(20)ctx.setTextBaseline(‘top’)ctx.fillText(‘top’, 5, 75)ctx.setTextBaseline(‘middle’)ctx.fillText(‘middle’, 50, 75)ctx.setTextBaseline(‘bottom’)ctx.fillText(‘bottom’, 120, 75)ctx.setTextBaseline(‘normal’)ctx.fillText(‘normal’, 200, 75)ctx.draw()运行结果：
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+51、 问题:以下代码片段的运行结果是否正确？（ ）const ctx = wx.createCanvasContext(‘myCanvas’)const grd = ctx.createLinearGradient(0, 0, 200, 0)grd.addColorStop(0, ‘red’)grd.addColorStop(1, ‘white’)ctx.setFillStyle(grd)ctx.fillRect(10, 10, 150, 80)ctx.draw()运行结果：
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+52、 问题:以下代码片段的运行结果是否正确？（ ）const ctx = wx.createCanvasContext(‘myCanvas’)const grd = ctx.createCircularGradient(75, 50, 50)grd.addColorStop(0, ‘red’)grd.addColorStop(1, ‘white’)ctx.setFillStyle(grd)ctx.fillRect(10, 10, 150, 80)ctx.draw()运行结果：
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+53、 问题:以下代码片段的运行结果是否正确？（ ）const ctx = wx.createCanvasContext(‘myCanvas’)ctx.setFillStyle(‘red’)ctx.fillRect(10, 10, 150, 100)ctx.draw()ctx.fillRect(50, 50, 150, 100)ctx.draw(true)运行结果：
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+54、 问题:以下代码片段的运行结果是否正确？（ ）const ctx = wx.createCanvasContext(‘myCanvas’)ctx.setFillStyle(‘red’)ctx.fillRect(10, 10, 150, 100)ctx.draw()ctx.fillRect(50, 50, 150, 100)ctx.draw()运行结果：
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+55、 问题:以下代码片段的运行结果是否正确？（ ）const ctx = wx.createCanvasContext(‘myCanvas’)ctx.strokeRect(10, 10, 150, 100)ctx.translate(20, 20)ctx.strokeRect(10, 10, 150, 100)ctx.translate(20, 20)ctx.strokeRect(10, 10, 150, 100)ctx.draw()运行结果：
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+56、 问题:以下代码片段的运行结果是否正确？（ ）const ctx = wx.createCanvasContext(‘myCanvas’)ctx.strokeRect(10, 10, 25, 15)ctx.scale(2, 2)ctx.strokeRect(10, 10, 25, 15)ctx.scale(2, 2)ctx.strokeRect(10, 10, 25, 15)ctx.draw()运行结果：
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+57、 问题:以下代码片段的运行结果是否正确？（ ）const ctx = wx.createCanvasContext(‘myCanvas’)ctx.strokeRect(100, 10, 150, 100)ctx.rotate(20 * Math.PI / 180)ctx.strokeRect(100, 10, 150, 100)ctx.rotate(20 * Math.PI / 180)ctx.strokeRect(100, 10, 150, 100)ctx.draw()运行结果：
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+**第9周 小程序API-2 第9周 单元测验**
+1、 问题:当在 canvas 中移动时且有绑定手势事件时，禁止屏幕滚动以及下拉刷新的cavans组件的属性是（ ）
+选项：
+A:type
+B:canvas-id
+C:disable-scroll
+D:bindtouchstart
+答案: 【disable-scroll】
+
+2、 问题:手指长按画布（ ） ms 之后，触发画布的bindlongtap事件？
+选项：
+A:300
+B:500
+C:700
+D:900
+答案: 【500】
+
+3、 问题:canvas 标签默认宽度是（ ）。
+选项：
+A:100px
+B:300px
+C:500px
+D:700px
+答案: 【300px】
+
+4、 问题:canvas 标签默认高度是（ ）
+选项：
+A:50px
+B:100px
+C:150px
+D:200px
+答案: 【150px】
+
+5、 问题:如果在视图层组件中设置了data-param属性的值，那么在逻辑层可以利用（ ）获取该参数值？
+选项：
+A:.param
+B:.currentTarget.param
+C:.currentTarget.dataset.param
+D:.currentTarget.dataset
+答案: 【.currentTarget.dataset.param】
+
+6、 问题:创建动画实例后，调用实例的方法来描述动画，最后通过动画实例的 （ ）方法导出动画数据传递给组件的 animation 属性。
+选项：
+A:import
+B:export
+C:output
+D:outlet
+答案: 【export】
+
+7、 问题:函数Animation wx.createAnimation(Object object)的参数属性（ ）用于设置动画的持续时间。
+选项：
+A:duration
+B:timingFunction
+C:delay
+D:transformOrigin
+答案: 【duration】
+
+8、 问题:函数Animation wx.createAnimation(Object object)的参数属性（ ）用于设置动画的效果。
+选项：
+A:duration
+B:timingFunction
+C:delay
+D:transformOrigin
+答案: 【timingFunction】
+
+9、 问题:函数Animation wx.createAnimation(Object object)的参数属性（ ）用于设置动画的延迟时间。
+选项：
+A:duration
+B:timingFunction
+C:delay
+D:transformOrigin
+答案: 【delay】
+
+10、 问题:函数Animation wx.createAnimation(Object object)的参数属性（ ）用于设置动画的基点位置。
+选项：
+A:duration
+B:timingFunction
+C:delay
+D:transformOrigin
+答案: 【transformOrigin】
+
+11、 问题:如果动画从头到尾的速度是相同的，应设置其timingFunction的值为（ ）
+选项：
+A:linear
+B:ease
+C:ease-in
+D:ease-in-out
+答案: 【linear】
+
+12、 问题:如果动画以低速开始，然后加快，在结束前变慢，应设置其timingFunction的值为（ ）
+选项：
+A:linear
+B:ease
+C:ease-in
+D:ease-in-out
+答案: 【ease】
+
+13、 问题:如果动画以低速开始，应设置其timingFunction的值为（ ）
+选项：
+A:linear
+B:ease
+C:ease-in
+D:ease-in-out
+答案: 【ease-in】
+
+14、 问题:如果动画以低速开始和结束，应设置其timingFunction的值为（ ）
+选项：
+A:linear
+B:ease
+C:ease-in
+D:ease-in-out
+答案: 【ease-in-out】
+
+15、 问题:如果动画以低速结束，应设置其timingFunction的值为（ ）
+选项：
+A:ease-in-out
+B:ease-out
+C:step-start
+D:step-end
+答案: 【ease-out】
+
+16、 问题:如果动画第一帧就跳至结束状态直到结束，应设置其timingFunction的值为（ ）
+选项：
+A:ease-in-out
+B:ease-out
+C:step-start
+D:step-end
+答案: 【step-start】
+
+17、 问题:如果动画一直保持开始状态，最后一帧跳到结束状态，应设置其timingFunction的值为（ ）
+选项：
+A:ease-in-out
+B:ease-out
+C:step-start
+D:step-end
+答案: 【step-end】
+
+18、 问题:动画对象的（ ）方法表示一组动画完成。可以在一组动画中调用任意多个动画方法，一组动画中的所有动画会同时开始，一组动画完成后才会进行下一组动画。
+选项：
+A:export()
+B:step(Object object)
+C:matrix()
+D:matrix3d()
+答案: 【step(Object object)】
+
+19、 问题:API函数wx.chooseImage(Object object)的参数属性count表示最多可以选择的图片张数，其默认值为（ ）。
+选项：
+A:7
+B:8
+C:9
+D:10
+答案: 【9】
+
+20、 问题:API函数wx.chooseImage(Object object)的参数属性sizeType用于所选图片的尺寸，其默认值为（ ）。
+选项：
+A: [‘original’, ‘compressed’]
+B: ‘original’
+C:’compressed’
+D: ”
+答案: 【 [‘original’, ‘compressed’]】
+
+21、 问题:API函数wx.chooseImage(Object object)的参数属性sourceType用于选择图片的来源，其默认值为（ ）。
+选项：
+A:[‘album’, ‘camera’]
+B:’album’
+C:’camera’
+D:”
+答案: 【[‘album’, ‘camera’]】
+
+22、 问题:API函数wx.chooseVideo(Object object)的参数属性（ ）用于设置选择视频的来源。
+选项：
+A:sourceType
+B:compressed
+C:maxDuration
+D:camera
+答案: 【sourceType】
+
+23、 问题:API函数wx.chooseVideo(Object object)的参数属性（ ）用于设置是否压缩所选择的视频文件。
+选项：
+A:sourceType
+B:compressed
+C:maxDuration
+D:camera
+答案: 【compressed】
+
+24、 问题:API函数wx.chooseVideo(Object object)的参数属性（ ）用于设置拍摄视频最长拍摄时间。
+选项：
+A:sourceType
+B:compressed
+C:maxDuration
+D:camera
+答案: 【maxDuration】
+
+25、 问题:API函数wx.chooseVideo(Object object)的参数属性（ ）用于设置默认拉起的是前置或者后置摄像头。
+选项：
+A:sourceType
+B:compressed
+C:maxDuration
+D:camera
+答案: 【camera】
+
+26、 问题:map组件的（ ）属性用于设置地图中心的经度。
+选项：
+A:longitude
+B:latitude
+C:scale
+D:markers
+答案: 【longitude】
+
+27、 问题:map组件的（ ）属性用于设置地图中心的纬度。
+选项：
+A:longitude
+B:latitude
+C:scale
+D:markers
+答案: 【latitude】
+
+28、 问题:map组件的（ ）属性用于设置地图缩放级别，取值范围为5-18。
+选项：
+A:longitude
+B:latitude
+C:scale
+D:markers
+答案: 【scale】
+
+29、 问题:map组件的scale属性的默认值是（ ）。
+选项：
+A:4
+B:8
+C:12
+D:16
+答案: 【16】
+
+30、 问题:map组件的markers属性用于在地图上显示标记的位置，是数组类型，每个数组元素是一个对象，每个对象的（ ）属性用于设置标记点的名称。
+选项：
+A:latitude
+B:label
+C:title
+D:iconPath
+答案: 【title】
+
+31、 问题:map组件的markers属性用于在地图上显示标记的位置，是数组类型，每个数组元素是一个对象，每个对象的（ ）属性用于设置标记点的图标。
+选项：
+A:latitude
+B:label
+C:title
+D:iconPath
+答案: 【iconPath】
+
+32、 问题:map组件的markers属性用于在地图上显示标记的位置，是数组类型，每个数组元素是一个对象，每个对象的（ ）属性用于在标记点旁边增加标签。
+选项：
+A:latitude
+B:label
+C:title
+D:iconPath
+答案: 【label】
+
+33、 问题:API函数wx.getLocation(Object object)用于获取当前的地理位置和速度，其参数属性object.success 回调函数的对象参数属性（ ）表示垂直精度。
+选项：
+A:accuracy
+B:altitude
+C:verticalAccuracy
+D:horizontalAccuracy
+答案: 【verticalAccuracy】
+
+34、 问题:API函数wx.getLocation(Object object)用于获取当前的地理位置和速度，其参数属性object.success 回调函数的对象参数属性（ ）表示高度。
+选项：
+A:accuracy
+B:altitude
+C:verticalAccuracy
+D:horizontalAccuracy
+答案: 【altitude】
+
+35、 问题:API函数wx.openLocation(Object object)用于使用微信内置地图查看位置，其参数属性（ ）为接口调用成功的回调函数。
+选项：
+A:scale
+B:name
+C:address
+D:success
+答案: 【success】
+
+36、 问题:对以下代码片段的准确描述是（ ）wx.getLocation(&#123; type: ‘gcj02’, //返回可以用于wx.openLocation的经纬度 success (res) &#123; const latitude = res.latitude const longitude = res.longitude wx.openLocation(&#123; latitude, longitude, scale: 18 &#125;)&#125;&#125;)
+选项：
+A:获取位置
+B:打开位置
+C:获取打开的位置
+D:打开获取的位置
+答案: 【打开获取的位置】
+
+37、 问题:对以下代码片段的准确描述是（ ）wx.getLocation(&#123; type: ‘wgs84’, success (res) &#123; const latitude = res.latitude const longitude = res.longitude const speed = res.speed const accuracy = res.accuracy &#125; &#125;)
+选项：
+A:获取当前位置的纬度
+B:获取当前位置的纬度和经度
+C:获取当前位置的纬度、经度和速度
+D:获取当前位置的纬度、经度、速度和准确度
+答案: 【获取当前位置的纬度、经度、速度和准确度】
+
+38、 问题:以下代码片段的运行结果是否正确？（ ）const ctx = wx.createCanvasContext(‘myCanvas’) // Draw coordinatesctx.arc(100, 75, 50, 0, 2 * Math.PI)ctx.setFillStyle(‘#EEEEEE’)ctx.fill() ctx.beginPath()ctx.moveTo(40, 75)ctx.lineTo(160, 75)ctx.moveTo(100, 15)ctx.lineTo(100, 135)ctx.setStrokeStyle(‘#AAAAAA’)ctx.stroke() ctx.setFontSize(12)ctx.setFillStyle(‘black’)ctx.fillText(‘0’, 165, 78)ctx.fillText(‘0.5PI’, 83, 145)ctx.fillText(‘1PI’, 15, 78)ctx.fillText(‘1.5*PI’, 83, 10) // Draw pointsctx.beginPath()ctx.arc(100, 75, 2, 0, 2 * Math.PI)ctx.setFillStyle(‘lightgreen’)ctx.fill() ctx.beginPath()ctx.arc(100, 25, 2, 0, 2 * Math.PI)ctx.setFillStyle(‘blue’)ctx.fill() ctx.beginPath()ctx.arc(150, 75, 2, 0, 2 * Math.PI)ctx.setFillStyle(‘red’)ctx.fill() // Draw arcctx.beginPath()ctx.arc(100, 75, 50, 0, 1.5 * Math.PI)ctx.setStrokeStyle(‘#333333’)ctx.stroke() ctx.draw()运行结果：
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+39、 问题:函数Animation wx.createAnimation(Object object)用于创建动画实例。（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+40、 问题:函数Animation Animation.rotate(number angle)用于从原点逆时针旋转一个角度（ ）
+选项：
+A:正确
+B:错误
+答案: 【错误】
+
+41、 问题:API函数wx.chooseImage(Object object)用于选择图片，图片来源只能从本地相册选择（ ）
+选项：
+A:正确
+B:错误
+答案: 【错误】
+
+42、 问题:API函数wx.chooseImage(Object object)用于选择图片，图片来源既可以从本地相册选择，也可以使用相机拍照（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+43、 问题:API函数wx.chooseVideo(Object object)用于选择视频来源是拍摄视频还是从手机相册中选视频（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+**第10周 小程序API-3 第10周 单元测验**
+1、 问题:API函数（ ）用于将文件保存到本地。
+选项：
+A:wx.saveFile(Object object)
+B:wx.getSavedFileList(Object object)
+C:wx.getSavedFileInfo(Object object)
+D:wx.removeSavedFile(Object object)
+答案: 【wx.saveFile(Object object)】
+
+2、 问题:API函数（ ）用于获取该小程序下已保存的本地缓存文件列表。
+选项：
+A:wx.saveFile(Object object)
+B:wx.getSavedFileList(Object object)
+C:wx.getSavedFileInfo(Object object)
+D:wx.removeSavedFile(Object object)
+答案: 【wx.getSavedFileList(Object object)】
+
+3、 问题:API函数（ ）用于获取本地文件的文件信息。
+选项：
+A:wx.saveFile(Object object)
+B:wx.getSavedFileList(Object object)
+C:wx.getSavedFileInfo(Object object)
+D:wx.removeSavedFile(Object object)
+答案: 【wx.getSavedFileInfo(Object object)】
+
+4、 问题:API函数（ ）用于删除本地缓存文件。
+选项：
+A:wx.saveFile(Object object)
+B:wx.getSavedFileList(Object object)
+C:wx.getSavedFileInfo(Object object)
+D:wx.removeSavedFile(Object object)
+答案: 【wx.removeSavedFile(Object object)】
+
+5、 问题:函数wx.saveFile(Object object)的参数属性（ ）为需要保存的文件的临时路径。
+选项：
+A:tempFilePath
+B:success
+C:fail
+D:complete
+答案: 【tempFilePath】
+
+6、 问题:函数wx.getSavedFileInfo(Object object)的参数属性object.success (Object res)的参数属性（ ）为文件保存时的时间戳，从1970/01/01 08:00:00 到当前时间的秒数。
+选项：
+A:size
+B:createTime
+C:success
+D:fail
+答案: 【createTime】
+
+7、 问题:函数wx.getSavedFileInfo(Object object)的参数属性object.success (Object res)的参数属性（ ）为本地文件大小，以字节为单位。
+选项：
+A:size
+B:createTime
+C:success
+D:fail
+答案: 【size】
+
+8、 问题:函数wx.removeSavedFile(Object object)的参数属性（ ）为要删除的文件路径。
+选项：
+A:size
+B:filePath
+C:success
+D:fail
+答案: 【filePath】
+
+9、 问题:对以下代码片段作用的最准确描述是（ ） wx.chooseImage(&#123; success: function(res) &#123; const tempFilePaths = res.tempFilePaths wx.saveFile(&#123; tempFilePath: tempFilePaths[0], success (res) &#123; const savedFilePath = res.savedFilePath &#125; &#125;) &#125;&#125;)
+选项：
+A:选择图片
+B:保存文件
+C:保存打开的第一张图片
+D:保存打开的所有图片
+答案: 【保存打开的第一张图片】
+
+10、 问题:对以下代码片段作用的最准确描述是（ ） wx.getSavedFileList(&#123; success (res) &#123; console.log(res.fileList) &#125;&#125;)
+选项：
+A:选择文件
+B:保存文件
+C:获取已保存的所有文件
+D:获取已保存的第一个文件
+答案: 【获取已保存的所有文件】
+
+11、 问题:对以下代码片段作用的最准确描述是（ ） wx.getSavedFileList(&#123; success (res) &#123; if (res.fileList.length &gt; 0)&#123; wx.removeSavedFile(&#123; filePath: res.fileList[0].filePath, complete (res) &#123; console.log(res) &#125; &#125;) &#125; &#125;&#125;)
+选项：
+A:获取已保存的所有文件
+B:获取已保存的第一个文件
+C:删除已保存的所有文件
+D:删除已保存的第一个文件
+答案: 【删除已保存的第一个文件】
+
+12、 问题:API函数（ ）用于将数据异步存储在本地缓存指定的 key 中。
+选项：
+A:wx.setStorage(Object object)
+B:wx.setStorageSync(string key, any data)
+C:wx.getStorage(Object object)
+D:any wx.getStorageSync(string key)
+答案: 【wx.setStorage(Object object)】
+
+13、 问题:API函数（ ）用于将数据同步存储在本地缓存指定的 key 中。
+选项：
+A:wx.setStorage(Object object)
+B:wx.setStorageSync(string key, any data)
+C:wx.getStorage(Object object)
+D:any wx.getStorageSync(string key)
+答案: 【wx.setStorageSync(string key, any data)】
+
+14、 问题:API函数（ ）用于从本地缓存中异步获取指定 key 的内容。
+选项：
+A:wx.setStorage(Object object)
+B:wx.setStorageSync(string key, any data)
+C:wx.getStorage(Object object)
+D:any wx.getStorageSync(string key)
+答案: 【wx.getStorage(Object object)】
+
+15、 问题:API函数（ ）用于从本地缓存中同步获取指定 key 的内容。
+选项：
+A:wx.setStorage(Object object)
+B:wx.setStorageSync(string key, any data)
+C:wx.getStorage(Object object)
+D:any wx.getStorageSync(string key)
+答案: 【any wx.getStorageSync(string key)】
+
+16、 问题:API函数（ ）用于异步获取当前storage的相关信息。
+选项：
+A:wx.getStorageInfo(Object object)
+B:Object wx.getStorageInfoSync()
+C:wx.removeStorage(Object object)
+D:wx.removeStorageSync(string key)
+答案: 【wx.getStorageInfo(Object object)】
+
+17、 问题:API函数（ ）用于同步获取当前storage的相关信息。
+选项：
+A:wx.getStorageInfo(Object object)
+B:Object wx.getStorageInfoSync()
+C:wx.removeStorage(Object object)
+D:wx.removeStorageSync(string key)
+答案: 【Object wx.getStorageInfoSync()】
+
+18、 问题:API函数（ ）用于从本地缓存中异步移除指定 key对应的数据。
+选项：
+A:wx.getStorageInfo(Object object)
+B:Object wx.getStorageInfoSync()
+C:wx.removeStorage(Object object)
+D:wx.removeStorageSync(string key)
+答案: 【wx.removeStorage(Object object)】
+
+19、 问题:API函数（ ）用于从本地缓存中同步移除指定 key对应的数据。
+选项：
+A:wx.getStorageInfo(Object object)
+B:Object wx.getStorageInfoSync()
+C:wx.removeStorage(Object object)
+D:wx.removeStorageSync(string key)
+答案: 【wx.removeStorageSync(string key)】
+
+20、 问题:API函数（ ）用于从本地缓存中异步清除所有数据。
+选项：
+A:wx.removeStorage(Object object)
+B:wx.removeStorageSync(string key)
+C:wx.clearStorage(Object object)
+D:wx.clearStorageSync()
+答案: 【wx.clearStorage(Object object)】
+
+21、 问题:API函数（ ）用于从本地缓存中同步清除所有数据。
+选项：
+A:wx.removeStorage(Object object)
+B:wx.removeStorageSync(string key)
+C:wx.clearStorage(Object object)
+D:wx.clearStorageSync()
+答案: 【wx.clearStorageSync()】
+
+22、 问题:函数wx.setStorage(Object object)的参数属性（ ）表示本地缓存中指定的 key。
+选项：
+A:key
+B:data
+C:success
+D:fail
+答案: 【key】
+
+23、 问题:函数wx.setStorage(Object object)的参数属性（ ）表示需要存储的内容。
+选项：
+A:key
+B:data
+C:success
+D:fail
+答案: 【data】
+
+24、 问题:函数Object wx.getStorageInfoSync()的返回值属性object.success(Object res) 的参数属性（ ）表示当前占用空间的大小。
+选项：
+A:Keys
+B:data
+C:currentSize
+D:limitSize
+答案: 【currentSize】
+
+25、 问题:函数Object wx.getStorageInfoSync()的返回值属性object.success(Object res) 的参数属性（ ）表示限制的空间大小。
+选项：
+A:Keys
+B:data
+C:currentSize
+D:limitSize
+答案: 【limitSize】
+
+26、 问题:对以下代码片段作用的最准确描述是（ ） wx.setStorage(&#123; key:”key”, data:”value”&#125;)
+选项：
+A:将数据value异步存储在本地缓存指定的 key 中
+B:将数据data异步存储在本地缓存指定的 key 中
+C:将数据value同步存储在本地缓存指定的 key 中
+D:将数据data同步存储在本地缓存指定的 key 中
+答案: 【将数据value异步存储在本地缓存指定的 key 中】
+
+27、 问题:对以下代码片段作用的最准确描述是（ ） try &#123; wx.setStorageSync(‘key’, ‘value’)&#125; catch (e) &#123; &#125;
+选项：
+A:将数据value异步存储在本地缓存指定的 key 中
+B:将数据data异步存储在本地缓存指定的 key 中
+C:将数据value同步存储在本地缓存指定的 key 中
+D:将数据data同步存储在本地缓存指定的 key 中
+答案: 【将数据value同步存储在本地缓存指定的 key 中】
+
+28、 问题:对以下代码片段作用的最准确描述是（ ） wx.getStorage(&#123; key: ‘key’, success (res) &#123; console.log(res.data) &#125;&#125;)
+选项：
+A:从本地缓存中异步获取指定 key 的内容data
+B:从本地缓存中同步获取指定 key 的内容data
+C:从本地缓存中异步获取指定 key 的内容res
+D:从本地缓存中同步获取指定 key 的内容res
+答案: 【从本地缓存中异步获取指定 key 的内容data】
+
+29、 问题:对以下代码片段作用的最准确描述是（ ） try &#123; var value = wx.getStorageSync(‘key’) if (value) &#123; // Do something with return value &#125;&#125; catch (e) &#123; // Do something when catch error&#125;
+选项：
+A:从本地缓存中异步获取指定 key 的内容，并把该内容存储在data中。
+B:从本地缓存中同步获取指定 key 的内容，并把该内容存储在data中。
+C:从本地缓存中异步获取指定 key 的内容，并把该内容存储在value中。
+D:从本地缓存中同步获取指定 key 的内容，并把该内容存储在value中。
+答案: 【从本地缓存中同步获取指定 key 的内容，并把该内容存储在value中。】
+
+30、 问题:对以下代码片段作用的最准确描述是（ ） wx.getStorageInfo(&#123; success (res) &#123; console.log(res.keys) console.log(res.currentSize) console.log(res.limitSize) &#125;&#125;)
+选项：
+A:异步获取当前storage的相关信息。
+B:同步获取当前storage的相关信息。
+C:异步获取当前storage中指定key的文件信息。
+D:同步获取当前storage中指定key的文件信息。
+答案: 【异步获取当前storage的相关信息。】
+
+31、 问题:对以下代码片段作用的最准确描述是（ ） try &#123; const res = wx.getStorageInfoSync() console.log(res.keys) console.log(res.currentSize) console.log(res.limitSize)&#125; catch (e) &#123; // Do something when catch error&#125;
+选项：
+A:异步获取当前storage的相关信息。
+B:同步获取当前storage的相关信息。
+C:异步获取当前storage中指定key的文件信息。
+D:同步获取当前storage中指定key的文件信息。
+答案: 【同步获取当前storage的相关信息。】
+
+32、 问题:对以下代码片段作用的最准确描述是（ ） wx.removeStorage(&#123; key: ‘key’, success (res) &#123; console.log(res) &#125;&#125;)
+选项：
+A:从本地缓存中异步移除指定 key
+B:从本地缓存中同步移除指定 key
+C:异步清空本地数据缓存
+D:同步清空本地数据缓存
+答案: 【从本地缓存中异步移除指定 key】
+
+33、 问题:对以下代码片段作用的最准确描述是（ ） try &#123; wx.removeStorageSync(‘key’)&#125; catch (e) &#123; // Do something when catch error&#125;
+选项：
+A:从本地缓存中异步移除指定 key
+B:从本地缓存中同步移除指定 key
+C:异步清空本地数据缓存
+D:同步清空本地数据缓存
+答案: 【从本地缓存中同步移除指定 key】
+
+34、 问题:对以下代码片段作用的最准确描述是（ ） wx.clearStorage()
+选项：
+A:从本地缓存中异步移除指定 key
+B:从本地缓存中同步移除指定 key
+C:异步清空本地数据缓存
+D:同步清空本地数据缓存
+答案: 【异步清空本地数据缓存】
+
+35、 问题:对以下代码片段作用的最准确描述是（ ） try &#123; wx.clearStorageSync()&#125; catch(e) &#123; // Do something when catch error&#125;
+选项：
+A:从本地缓存中异步移除指定 key
+B:从本地缓存中同步移除指定 key
+C:异步清空本地数据缓存
+D:同步清空本地数据缓存
+答案: 【同步清空本地数据缓存】
+
+36、 问题:API函数（ ）用于获取网络类型
+选项：
+A:wx.getNetworkType(Object object)
+B:wx.onNetworkStatusChange(function callback)
+C:wx.getConnectedWifi(Object object)
+D:wx.onWifiConnected(function callback)
+答案: 【wx.getNetworkType(Object object)】
+
+37、 问题:API函数（ ）用于监听网络状态变化事件
+选项：
+A:wx.getNetworkType(Object object)
+B:wx.onNetworkStatusChange(function callback)
+C:wx.getConnectedWifi(Object object)
+D:wx.onWifiConnected(function callback)
+答案: 【wx.onNetworkStatusChange(function callback)】
+
+38、 问题:API函数（ ）用于用于获取已连接中的 Wi-Fi 信息
+选项：
+A:wx.getNetworkType(Object object)
+B:wx.onNetworkStatusChange(function callback)
+C:wx.getConnectedWifi(Object object)
+D:wx.onWifiConnected(function callback)
+答案: 【wx.getConnectedWifi(Object object)】
+
+39、 问题:函数wx.onNetworkStatusChange(function callback) 的参数callback为网络状态变化事件的回调函数，该回调参数的参数Object res的属性（ ）表示当前是否有网络连接。
+选项：
+A:isConnected
+B:networkType
+C:SSID
+D:BSSID
+答案: 【isConnected】
+
+40、 问题:函数wx.onNetworkStatusChange(function callback) 的参数callback为网络状态变化事件的回调函数，该回调参数的参数Object res的属性（ ）表示网络类型。
+选项：
+A:isConnected
+B:networkType
+C:SSID
+D:BSSID
+答案: 【networkType】
+
+41、 问题:对以下代码片段作用的最准确描述是（ ） wx.onNetworkStatusChange(function (res) &#123; console.log(res.isConnected) console.log(res.networkType)&#125;)
+选项：
+A:监听网络状态变化，包括是否已经连接网络及网络类型
+B:监听是否已经联网
+C:监听已经连接的网络类型，包括2g、3g、4g和Wifi
+D:监听是否连接Wifi
+答案: 【监听网络状态变化，包括是否已经连接网络及网络类型】
+
+42、 问题:对以下代码片段作用的最准确描述是（ ） wx.getNetworkType(&#123; success (res) &#123; const networkType = res.networkType &#125;&#125;)
+选项：
+A:监听网络状态变化，包括是否已经连接网络及网络类型
+B:监听是否已经联网
+C:获取已经连接的网络类型，包括2g、3g、4g和Wifi等
+D:获取已经连接的Wifi
+答案: 【获取已经连接的网络类型，包括2g、3g、4g和Wifi等】
+
+43、 问题:API函数（ ）用于启动罗盘监听事件
+选项：
+A:wx.startCompass(Object object)
+B:wx.onCompassChange(function callback)
+C:wx.startAccelerometer(Object object)
+D:wx.startGyroscope(Object object)
+答案: 【wx.startCompass(Object object)】
+
+44、 问题:API函数（ ）用于启动启动加速度监听事件
+选项：
+A:wx.startCompass(Object object)
+B:wx.onCompassChange(function callback)
+C:wx.startAccelerometer(Object object)
+D:wx.startGyroscope(Object object)
+答案: 【wx.startAccelerometer(Object object)】
+
+45、 问题:API函数（ ）用于启动启动陀螺仪监听事件
+选项：
+A:wx.startCompass(Object object)
+B:wx.onCompassChange(function callback)
+C:wx.startAccelerometer(Object object)
+D:wx.startGyroscope(Object object)
+答案: 【wx.startGyroscope(Object object)】
+
+46、 问题:API函数（ ）用于监听罗盘变化事件
+选项：
+A:wx.startCompass(Object object)
+B:wx.onCompassChange(function callback)
+C:wx.startAccelerometer(Object object)
+D:wx.startGyroscope(Object object)
+答案: 【wx.onCompassChange(function callback)】
+
+47、 问题:API函数（ ）用于监听加速度变化事件
+选项：
+A:wx.startCompass(Object object)
+B:wx.onCompassChange(function callback)
+C:wx.onAccelerometerChange(function callback)
+D:wx.stopAccelerometer(Object object)
+答案: 【wx.onAccelerometerChange(function callback)】
+
+48、 问题:API函数（ ）用于监听陀螺仪变化事件
+选项：
+A:wx.onCompassChange(function callback)
+B:wx.startGyroscope(Object object)
+C:wx.stopGyroscope(Object object)
+D:wx.onGyroscopeChange(function callback)
+答案: 【wx.onGyroscopeChange(function callback)】
+
+49、 问题:函数wx.onCompassChange(function callback)的监听频率是（ ）
+选项：
+A:3 次/秒
+B:5 次/秒
+C:7 次/秒
+D:9 次/秒
+答案: 【5 次/秒】
+
+50、 问题:以下代码片段运行后，在console面板显示的结果是（ ） wx.onCompassChange(function (res) &#123; console.log(res.direction)&#125;)
+选项：
+A:罗盘面对的方向度数
+B:罗盘面对的方向名称
+C:罗盘旋转的速度
+D:罗盘旋转的加速度
+答案: 【罗盘面对的方向度数】
+
+51、 问题:以下代码片段运行后，在console面板显示的结果是（ ） wx.onAccelerometerChange(function (res) &#123; console.log(res.x) console.log(res.y) console.log(res.z)&#125;)
+选项：
+A:移动设备在x、y、z轴的速度值
+B:移动设备在x、y、z轴的加速度值
+C:移动设备在x轴的加速度值
+D:移动设备在x和y轴的加速度值
+答案: 【移动设备在x、y、z轴的加速度值】
+
+52、 问题:函数wx.startAccelerometer(Object object)的参数属性object.interval的合法值不包括（ ）
+选项：
+A:game
+B:ui
+C:normal
+D:default
+答案: 【default】
+
+53、 问题:函数wx.startAccelerometer(Object object)的参数属性object.interval的默认值是（ ）
+选项：
+A:game
+B:ui
+C:normal
+D:default
+答案: 【game】
+
+54、 问题:用于扫码的API函数是（ ）
+选项：
+A:wx.scanCode(Object object)
+B:wx.makePhoneCall(Object object)
+C:wx.addPhoneContact(Object object)
+D:wx.onMemoryWarning(function callback)
+答案: 【wx.scanCode(Object object)】
+
+55、 问题:用于打电话的API函数是（ ）
+选项：
+A:wx.scanCode(Object object)
+B:wx.makePhoneCall(Object object)
+C:wx.addPhoneContact(Object object)
+D:wx.onMemoryWarning(function callback)
+答案: 【wx.makePhoneCall(Object object)】
+
+56、 问题:用于添加联系人信息的API函数是（ ）
+选项：
+A:wx.scanCode(Object object)
+B:wx.makePhoneCall(Object object)
+C:wx.addPhoneContact(Object object)
+D:wx.onMemoryWarning(function callback)
+答案: 【wx.addPhoneContact(Object object)】
+
+57、 问题:函数wx.scanCode(Object object)的参数属性（ ）用于设置是否只能从相机扫码，不允许从相册选择图片
+选项：
+A:onlyFromCamera
+B:scanType
+C:success
+D:fail
+答案: 【onlyFromCamera】
+
+58、 问题:函数wx.scanCode(Object object)的参数属性（ ）用于设置扫码类型
+选项：
+A:onlyFromCamera
+B:scanType
+C:success
+D:fail
+答案: 【scanType】
+
+59、 问题:函数wx.scanCode(Object object)的参数属性object.scanType 的值（ ）表示扫码类型为一维码
+选项：
+A:barCode
+B:qrCode
+C:datamatrix
+D:pdf417
+答案: 【barCode】
+
+60、 问题:函数wx.scanCode(Object object)的参数属性object.scanType 的值（ ）表示扫码类型为二维码
+选项：
+A:barCode
+B:qrCode
+C:datamatrix
+D:pdf417
+答案: 【qrCode】
+
+61、 问题:函数wx.scanCode(Object object)的参数属性object.success 回调函数的参数属性（ ）表示扫码的内容
+选项：
+A:result
+B:scanType
+C:charSet
+D:path
+答案: 【result】
+
+62、 问题:函数wx.scanCode(Object object)的参数属性object.success 回调函数的参数属性（ ）表示扫码的类型
+选项：
+A:result
+B:scanType
+C:charSet
+D:path
+答案: 【scanType】
+
+63、 问题:函数wx.scanCode(Object object)的参数属性object.success 回调函数的参数属性（ ）表示扫码的字符集
+选项：
+A:result
+B:scanType
+C:charSet
+D:path
+答案: 【charSet】
+
+64、 问题:函数wx.makePhoneCall(Object object)的参数属性（ ）表示需要拨打的电话号码。
+选项：
+A:phoneNumber
+B:success
+C:fail
+D:complete
+答案: 【phoneNumber】
+
+65、 问题:函数wx.addPhoneContact(Object object) 的参数属性（ ）表示需要添加的联系人的名字
+选项：
+A:firstName
+B:lastName
+C:mobilePhoneNumber
+D:weChatNumber
+答案: 【firstName】
+
+66、 问题:函数wx.addPhoneContact(Object object) 的参数属性（ ）表示需要添加的联系人的姓氏
+选项：
+A:firstName
+B:lastName
+C:mobilePhoneNumber
+D:weChatNumber
+答案: 【lastName】
+
+67、 问题:函数wx.addPhoneContact(Object object) 的参数属性（ ）表示需要添加的联系人的电话号码
+选项：
+A:firstName
+B:lastName
+C:mobilePhoneNumber
+D:weChatNumber
+答案: 【mobilePhoneNumber】
+
+68、 问题:函数wx.addPhoneContact(Object object) 的参数属性（ ）表示需要添加的联系人的微信号码。
+选项：
+A:firstName
+B:lastName
+C:mobilePhoneNumber
+D:weChatNumber
+答案: 【weChatNumber】
+
+69、 问题:以下代码片段实现了（ ）功能 wx.makePhoneCall(&#123; phoneNumber: ‘1340000’&#125;)
+选项：
+A:扫一维码
+B:扫二维码
+C:拨打电话
+D:添加联系人信息
+答案: 【拨打电话】
+
+70、 问题:函数wx.getSavedFileInfo(Object object)用于获取临时文件信息。（ ）
+选项：
+A:正确
+B:错误
+答案: 【错误】
+
+71、 问题:函数wx.getFileInfo()用于获取临时文件信息。（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+72、 问题:Wifi的SSID是服务集标识（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+73、 问题:Wifi的BSSID 是指站点的 MAC 地址（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+74、 问题:Wifi的signalStrength属性 是指Wi-Fi是否安全（ ）
+选项：
+A:正确
+B:错误
+答案: 【错误】
+
+75、 问题:调用函数wx.onCompassChange(function callback)后能够自动开启罗盘监听事件（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+76、 问题:调用函数wx.onAccelerometerChange(function callback)后能够自动开启加速度监听事件（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+77、 问题:函数wx.onAccelerometerChange(function callback)的监听频率根据wx.startAccelerometer() 的 interval 参数来决定。（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+78、 问题:函数wx.onGyroscopeChange(function callback)的监听频率根据wx.startGyroscope() 的 interval 参数来决定。（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+79、 问题:以下代码片段表示只允许从相机扫码（ ） wx.scanCode(&#123; success (res) &#123; console.log(res) &#125;&#125;)
+选项：
+A:正确
+B:错误
+答案: 【错误】
+
+80、 问题:以下代码片段表示只允许从相机扫码（ ） wx.scanCode(&#123; onlyFromCamera: true, success (res) &#123; console.log(res) &#125;&#125;)
+选项：
+A:正确
+B:错误
+答案: 【正确】
+
+81、 问题:利用函数wx.addPhoneContact(Object object) 添加联系人信息时，只能通过“新增联系人”的方式添加。（ ）
+选项：
+A:正确
+B:错误
+答案: 【错误】
+
+82、 问题:利用函数wx.addPhoneContact(Object object) 添加联系人信息时，既可以通过“新增联系人”的方式添加，也可以通过“添加到已有联系人”的方式添加。（ ）
+选项：
+A:正确
+B:错误
+答案: 【正确】
+</code></pre>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">桑落</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://Sang63.github.io/2022/05/08/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91-%E9%A2%98%E5%BA%93/">http://Sang63.github.io/2022/05/08/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91-%E9%A2%98%E5%BA%93/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">桑落</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">学习笔记</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'TSwmvYtq8NbovieGulCHBgfI-9Nh9j0Va',
+        appKey: 'nNmKV4MDnI3U1DdUuhg0aJEU',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just go go'
+    });
+</script>
+
+<!--酷Q推送-->
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2022/05/08/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91-%E9%A2%98%E5%BA%93/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="微信小程序开发-题库">
+                        
+                        <span class="card-title">微信小程序开发-题库</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            桑落
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">学习笔记</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/04/22/VueRouter%E8%B7%AF%E7%94%B1%E4%BD%BF%E7%94%A8/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="VueRouter路由使用">
+                        
+                        <span class="card-title">VueRouter路由使用</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            桑落
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Vue3/">
+                        <span class="chip bg-color">Vue3</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <a href="/about" target="_blank">桑落</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">65.3k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Sang63/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2780287233@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2780287233" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2780287233" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="300"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
